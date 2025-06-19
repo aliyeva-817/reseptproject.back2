@@ -1,14 +1,20 @@
 module.exports = [
-   {
-    "title": "Pomidor Yumurta",
-    "ingredients": ["pomidor", "yumurta", "duz"],
-    "instructions": "Pomidoru doğrayın, tavada qızardın, sonra üzərinə 2-3 ədəd yumurta əlavə edib qarışdırın və bişirin.",
-   "image": "uploads/pomidor_yumurta.jpeg"
-
+  {
+    title: "Pomidor Yumurta",
+    category: "Breakfast",
+    ingredients: ["pomidor", "yumurta", "duz"],
+    instructions: [
+      "1. Pomidorları doğrayın.",
+      "2. Tavada pomidorları bir az qızardın.",
+      "3. Üzərinə 2-3 ədəd yumurta əlavə edin.",
+      "4. Yaxşıca qarışdırın və bişirin."
+    ],
+    image: "uploads/pomidor_yumurta.jpeg"
   },
   {
-    "title": "Kakaolu Keks",
-    "ingredients": [
+    title: "Kakaolu Keks",
+    category: "Dessert",
+    ingredients: [
       "yumurta",
       "şəkər tozu",
       "süd",
@@ -19,12 +25,21 @@ module.exports = [
       "qabartma tozu",
       "vanilin"
     ],
-    "instructions": "3 ədəd yumurtanı və 1 stəkan şəkəri ağarana qədər mikserlə çalın. 1 stəkan süd və 1 stəkan bitki yağı əlavə edib qarışdırın. 3 xörək qaşığı kakao, 2 stəkan un, 1 çimdik duz, 1 paket qabartma tozu və 1 paket vanilini ələyib qarışığa qatın. Hamarlanana qədər qarışdırın. Yağlanmış keks qəlibinə tökün. Əvvəlcədən isidilmiş sobada 180°C-də 30-35 dəqiqə bişirin. Çöp ilə yoxlayın – təmiz çıxırsa, hazırdır!",
-    "image": "uploads/kakaolu_keks.png"
+    instructions: [
+      "1. 3 ədəd yumurtanı və 1 stəkan şəkəri ağarana qədər mikserlə çalın.",
+      "2. 1 stəkan süd və 1 stəkan bitki yağı əlavə edib qarışdırın.",
+      "3. Kakao, un, duz, qabartma tozu və vanilini ələyib qarışığa qatın.",
+      "4. Hamarlanana qədər qarışdırın.",
+      "5. Yağlanmış keks qəlibinə tökün.",
+      "6. 180°C-də əvvəlcədən isidilmiş sobada 30-35 dəqiqə bişirin.",
+      "7. Çöp ilə yoxlayın – təmiz çıxırsa, hazırdır!"
+    ],
+    image: "uploads/kakaolu_keks.jpeg"
   },
   {
-    "title": "Yay Salatı",
-    "ingredients": [
+    title: "Yay Salatı",
+    category: "Salad",
+    ingredients: [
       "xiyar",
       "pomidor",
       "şirin bibər",
@@ -35,12 +50,21 @@ module.exports = [
       "duz",
       "qara istiot"
     ],
-    "instructions": "Xiyarı yuyub nazik dilimlərə doğrayın. Pomidorları kub şəklində doğrayın. Bibəri incə zolaqlar və ya halqalar şəklində doğrayın. Soğanı yarımhalqa formasında incə doğrayın. Yaşıllıqları xırda doğrayın. Limon suyu, zeytun yağı, duz və istiot əlavə edib yaxşıca qarışdırın. Salatı soyuducuda bir az saxlayıb sərin şəkildə servis edin.",
-    "image": "https://example.com/uploads/yay_salati.png"
+    instructions: [
+      "1. Xiyarları nazik dilimlərə doğrayın.",
+      "2. Pomidorları kub şəklində doğrayın.",
+      "3. Bibəri halqa və ya zolaq formasında doğrayın.",
+      "4. Soğanı yarımhalqa formasında incə doğrayın.",
+      "5. Cəfərini xırda doğrayın.",
+      "6. Limon suyu, zeytun yağı, duz və istiot əlavə edin.",
+      "7. Yaxşıca qarışdırın və bir az soyuducuda saxlayın."
+    ],
+    image: "https://example.com/uploads/yay_salati.png"
   },
   {
-    "title": "Ətli Buğlama",
-    "ingredients": [
+    title: "Ətli Buğlama",
+    category: "Main",
+    ingredients: [
       "qoyun əti",
       "soğan",
       "bolqar bibəri",
@@ -54,12 +78,22 @@ module.exports = [
       "cəfəri",
       "su"
     ],
-    "instructions": "500 q əti orta ölçüdə doğra. Qazanın dibinə bir az yağ tök, ətləri yerləşdir. 3 ədəd soğanı halqa-halqa doğrayıb ətin üzərinə düzüb yay. 2-3 ədəd kartofu, 2 ədəd bolqar bibərini və 2 ədəd pomidoru da halqa şəklində doğrayıb qat-qat düz. 2-3 diş sarımsağı və 1 ədəd acı bibəri əlavə et. Üzərinə duz və istiot səp, istəyə görə göyərti də əlavə et. 0.5 stəkan su əlavə edib, qapağı ört və zəif odda 45-60 dəqiqə bişməyə qoy.",
-    "image": "uploads/etli_buglama.png"
+    instructions: [
+      "1. 500 q əti orta ölçüdə doğrayın.",
+      "2. Qazana bir az yağ tökün və əti yerləşdirin.",
+      "3. Soğanları halqa formasında doğrayın və ətin üzərinə düzün.",
+      "4. Kartof, bibər və pomidoru da halqa-halqa doğrayın və qat-qat düzün.",
+      "5. Sarımsaq və acı bibəri əlavə edin.",
+      "6. Duz, istiot və istəyə görə göyərti əlavə edin.",
+      "7. 0.5 stəkan su töküb, qapağını örtün.",
+      "8. Zəif odda 45-60 dəqiqə bişirin."
+    ],
+    image: "uploads/etli_buglama.jpg"
   },
   {
-    "title": "Evdə Dondurma",
-    "ingredients": [
+    title: "Dondurma",
+    category: "Dessert",
+    ingredients: [
       "südlü krem",
       "süd",
       "şəkər",
@@ -67,206 +101,218 @@ module.exports = [
       "limon suyu",
       "duz"
     ],
-    "instructions": "1 stəkan şəkər və 1 stəkan südü bir qazanda qarışdırın və şəkər tamamilə əriyənə qədər orta istilikdə 2-3 dəqiqə qarışdırın. 1 çay qaşığı vanil şəkərini əlavə edib qarışdırmağa davam edin. 1 stəkan südlü krem və 1 xörək qaşığı limon suyunu əlavə edin, amma qarışımı qaynatmayın. Qarışımı soyudun və dondurucuya qoyun. 1 saat sonra qarışdırın, sonra 4-6 saat yenidən dondurun. Dondurma tam donduqdan sonra 1 çimdik duz əlavə edib yaxşıca qarışdırın.",
-    "image": "uploads/ev_dondurma.png"
-  },
-  {
-    "title": "Şah Plov",
-    "ingredients": [
-      "düyü",
-      "ət",
-      "soğan",
-      "alça",
-      "ərik qurusu",
-      "kişmiş",
-      "şabalıd",
-      "kərə yağı",
-      "zəfəran",
-      "qaynar su",
-      "duz",
-      "qara istiot",
-      "sarıkök",
-      "yuxa"
+    instructions: [
+      "1. 1 stəkan şəkər və 1 stəkan südü qazanda qarışdırın.",
+      "2. Şəkər əriyənə qədər orta istilikdə 2-3 dəqiqə qarışdırın.",
+      "3. 1 çay qaşığı vanil şəkəri əlavə edin və qarışdırın.",
+      "4. 1 stəkan südlü krem və 1 xörək qaşığı limon suyu əlavə edin (qaynatmayın).",
+      "5. Qarışımı soyudun və dondurucuya qoyun.",
+      "6. 1 saat sonra çıxarıb qarışdırın və yenidən dondurucuya qoyun.",
+      "7. 4-6 saat sonra tam donmuş halda çıxarın və 1 çimdik duz əlavə edin.",
+      "8. Servis etmədən əvvəl yaxşıca qarışdırın."
     ],
-    "instructions": "600 qr düyünü duzlu suda yarıbişmiş halda qaynadın və süzün. 600 qr əti bişirib doğrayın. 4-5 ədəd soğanı qızılı rəng alana qədər qovurun, sonra ət, 50 qr kişmiş, 120 qr ərik, 100 qr alça, 150 qr şabalıd və ədviyyatları əlavə edib qarışdırın. 1 qr zəfəranı 100 ml qaynar suda dəmləyin. Qazana kərə yağı ilə yağlanmış 5-10 ədəd yuxanı qat-qat düzün, içlik və düyünü növbə ilə əlavə edin. Üstünü yuxa ilə bağlayıb üzərinə 250 qr kərə yağı səpin. 200°C-də sobada 1–2 saat dəmləyin. Lavaş qızardıqda plov hazırdır.",
-    "image": "uploads/shah_plov.png"
-  },
-  {
-    "title": "Əridilmiş Qənd (Karamel)",
-    "ingredients": ["şəkər tozu", "su", "duz", "kərə yağı", "qaymaq"],
-    "instructions": "Quru karamel üçün: Təmiz, qalın dibli bir tavaya 1 stəkan şəkəri əlavə edin. Orta odda əridin, qaşıqla qarışdırmaq əvəzinə tavanı silkələyin. Şəkər tam əridib qızılı-qəhvəyi rəng alanda ocaqdan götürün. Su ilə karamel üçün: Tavanın içində şəkəri və 2-3 xörək qaşığı suyu qarışdırın. Orta odda qarışığı qaynadın, şəkər əriməyə başlayacaq. Qarışdırmadan bişirin, şəkər qızılı rəng aldıqda ocaqdan götürün. Sos halına gətirmək üçün: Ocaqdan götürdükdən sonra içərisinə 1 xörək qaşığı kərə yağı və ya 2-3 xörək qaşığı qaymaq əlavə edib qarışdırın.",
-    "image": "uploads/karamel.png"
-  },
-  {
-    "title": "Sucuklu Tost",
-    "ingredients": ["tost çörəyi", "sucuk", "kaşar pendiri", "kərə yağı", "zeytun yağı"],
-    "instructions": "Sucukları tavada hər iki üzünü qızarana qədər 1-2 dəqiqə bişirin. Yağ əlavə etməyə ehtiyac yoxdur. Tostu düzəltmək üçün çörəyin bir üzünə kərə yağı sürtün. İç tərəfə əvvəlcə pendir, sonra qızarmış sucuk dilimlərini düzün. Daha çox pendir sevirsinizsə, yenidən pendir əlavə edə bilərsiniz. Tost aparatına və ya tavaya qoyaraq hər iki tərəfini qızarana qədər bişirin. Pendir əriyəndə tost hazırdır.",
-    "image": "uploads/sucuklu_tost.png"
-  },
-  {
-    "title": "Üzümlü Keks",
-    "ingredients": ["yumurta", "şəkər", "süd", "duru yağ", "un", "qabartma tozu", "vanilin", "quru üzüm"],
-    "instructions": "3 ədəd yumurtanı və 1 stəkan şəkəri mikserlə çalın. 1 stəkan süd və 1 stəkan duru yağı əlavə edib qarışdırın. Üzərinə 2.5 stəkan ələnmiş un, 1 paket qabartma tozu və 1 paket vanil əlavə edin və qarışdırın. Sonda 1 stəkan unlanmış quru üzümləri əlavə edin. Hazır qarışığı yağlanmış qəlibə tökün və əvvəlcədən 180°C-də isidilmiş sobada 30-35 dəqiqə bişirin.",
-    "image": "uploads/uzumlu_keks.png"
-  },
-  {
-    "title": "Makaron Salatı",
-    "ingredients": ["makaron", "qarğıdalı", "kolbasa", "toyuq", "xiyar", "bolqar bibəri", "mayonez", "qatıq", "duz", "istiot"],
-    "instructions": "250 q bişmiş makaron, 1 stəkan qarğıdalı, 1 stəkan doğranmış kolbasa və ya toyuq, 1 stəkan doğranmış xiyar və bolqar bibəri, 3-4 xörək qaşığı mayonez və ya qatığı bir qabda qarışdırın. Duz və istiot əlavə edib soyuducuda 30 dəqiqə saxlayın və sonra servis edin.",
-    "image": "uploads/makaron_salati.png"
+    image: "uploads/dondurma.jpg"
   },
    {
-    "title": "Kartof Salatı",
-    "ingredients": [
-      "kartof",
-      "yumurta",
-      "soğan",
-      "mayonez",
-      "xardal",
-      "duz",
-      "istiot",
-      "göyərti",
-      "turşu xiyar"
+    title: "Şah Plov",
+    category: "Main",
+    ingredients: ["düyü", "ət", "soğan", "alça", "ərik qurusu", "kişmiş", "şabalıd", "kərə yağı", "zəfəran", "qaynar su", "duz", "qara istiot", "sarıkök", "yuxa"],
+    instructions: [
+      "1. 600 qr düyünü duzlu suda yarıbişmiş halda qaynadın və süzün.",
+      "2. 600 qr əti bişirib doğrayın.",
+      "3. 4-5 ədəd soğanı qızılı rəng alana qədər qovurun.",
+      "4. Qovrulmuş soğana ət, kişmiş, ərik, alça, şabalıd və ədviyyatlar əlavə edin və qarışdırın.",
+      "5. 1 qr zəfəranı 100 ml qaynar suda dəmləyin.",
+      "6. Qazana kərə yağı ilə yağlanmış yuxaları qat-qat düzün.",
+      "7. İçlik və düyünü növbəli şəkildə əlavə edin.",
+      "8. Üzərini yuxa ilə bağlayın, üstünə 250 qr kərə yağı səpin.",
+      "9. 200°C-də sobada 1–2 saat dəmləyin. Lavaş qızardıqda plov hazırdır."
     ],
-    "instructions": "Kartofları qabıqlı halda qaynadın. Soyuduqdan sonra qabığını soyub kub şəklində doğrayın. Yumurtaları da bərk qaynadıb doğrayın. Soğanı xırda doğrayın, acılığını azaltmaq üçün bir az suda saxlaya bilərsiniz. Bütün doğranmış ərzaqları bir qaba əlavə edin. Üzərinə mayonez, xardal, duz və istiotu əlavə edib yaxşıca qarışdırın. Doğranmış göyərti və turşu xiyar da əlavə edə bilərsiniz. Soyuq şəkildə servis edin.",
-    "image": "uploads/kartof_salati.png"
+    image: "uploads/sah_plov.jpg"
   },
   {
-    "title": "Hot Dog",
-    "ingredients": [
-      "sosis",
-      "hot dog çörəyi",
-      "ketçup",
-      "mayonez",
-      "xardal",
-      "turşu xiyar",
-      "soğan",
-      "pendir"
+    title: "Əridilmiş Qənd (Karamel)",
+    category: "Dessert",
+    ingredients: ["şəkər tozu", "su", "duz", "kərə yağı", "qaymaq"],
+    instructions: [
+      "1. Quru karamel üçün: tavaya 1 stəkan şəkər əlavə edin və orta odda əridin.",
+      "2. Qarışdırmadan tavanı silkələyərək şəkərin əriməsini gözləyin.",
+      "3. Şəkər qızılı rəng aldıqda ocaqdan götürün.",
+      "4. Su ilə karamel üçün: şəkəri 2-3 x.q. su ilə qarışdırın və qaynadın.",
+      "5. Şəkər qızılı rəng alanda ocaqdan götürün.",
+      "6. Sos halı üçün: içərisinə 1 x.q. kərə yağı və ya 2-3 x.q. qaymaq əlavə edin və qarışdırın."
     ],
-    "instructions": "Sosisləri 5–7 dəqiqə qaynat və ya tavada/qrildə qızart. Çörəyi ortadan tam olmayan şəkildə kəs. İçinə sosis yerləşdir, üzərinə ketçup, mayonez və xardal əlavə et. Doğranmış xiyar, soğan və pendir də əlavə edə bilərsən. İsti halda servis et.",
-    "image": "uploads/hot_dog.png"
+    image: "uploads/karamel.jpeg"
   },
   {
-    "title": "Spagetti",
-    "ingredients": [
-      "spagetti",
-      "duzlu su",
-      "zeytun yağı",
-      "soğan",
-      "sarımsaq",
-      "pomidor",
-      "tomat pastası",
-      "duz",
-      "istiot",
-      "ədviyyatlar",
-      "pendir"
+    title: "Sucuklu Tost",
+    category: "Breakfast",
+    ingredients: ["tost çörəyi", "sucuk", "kaşar pendiri", "kərə yağı", "zeytun yağı"],
+    instructions: [
+      "1. Sucukları tavada hər iki üzünü 1-2 dəqiqə qızardın.",
+      "2. Tost çörəyinin bir üzünə kərə yağı sürtün.",
+      "3. İçinə əvvəlcə pendir, sonra sucuk dilimlərini düzün.",
+      "4. İstəyə görə yenidən pendir əlavə edin.",
+      "5. Tost aparatında və ya tavada hər iki tərəfini qızardın.",
+      "6. Pendir əriyəndə tost hazırdır."
     ],
-    "instructions": "Spagettini duzlu suda qaynadıb süz. Tavada zeytun yağında doğranmış soğan və sarımsağı qovur. Üzərinə doğranmış pomidor və ya tomat pastası, duz, istiot və sevdiyin ədviyyatları əlavə et. 10 dəqiqə bişir. Bişmiş spagettini sousun içinə əlavə edib qarışdır. Üzərinə rəndələnmiş pendir səp və isti halda servis et.",
-    "image": "uploads/spagetti.png"
+    image: "uploads/sucuklu_tost.webp"
   },
   {
-    "title": "Qril Toyuq",
-    "ingredients": [
-      "toyuq",
-      "qatıq",
-      "zeytun yağı",
-      "limon suyu",
-      "sarımsaq",
-      "qırmızı bibər tozu",
-      "istiot",
-      "duz",
-      "kəklikotu",
-      "quru nanə"
+    title: "Üzümlü Keks",
+    category: "Dessert",
+    ingredients: ["yumurta", "şəkər", "süd", "duru yağ", "un", "qabartma tozu", "vanilin", "quru üzüm"],
+    instructions: [
+      "1. 3 yumurtanı və 1 stəkan şəkəri mikserlə çalın.",
+      "2. Süd və duru yağı əlavə edib qarışdırın.",
+      "3. Ələnmiş un, qabartma tozu və vanil əlavə edin və qarışdırın.",
+      "4. Unlanmış quru üzümləri qarışıma əlavə edin.",
+      "5. Yağlanmış qəlibə tökün.",
+      "6. 180°C-də 30-35 dəqiqə bişirin."
     ],
-    "instructions": "Bütün ərzaqları – qatıq, zeytun yağı, limon suyu, əzilmiş sarımsaq və ədviyyatları bir qabda qarışdıraraq marinad hazırlayın. Toyuq hissələrini bu qarışığa əlavə edin, yaxşıca qarışdırın və soyuducuda ən az 2 saat saxlayın. Qril və ya tavada hər iki tərəfini bişirin. Tam bişənədək qızardın və servis edin.",
-    "image": "uploads/qril_toyuq.png"
+    image: "uploads/uzumlu_keks.webp"
   },
   {
-    "title": "Qozlu Konfetlər",
-    "ingredients": [
-      "peçenye",
-      "qoz",
-      "qatılaşdırılmış süd"
+    title: "Makaron Salatı",
+    category: "Salad",
+    ingredients: ["makaron", "qarğıdalı", "kolbasa", "toyuq", "xiyar", "bolqar bibəri", "mayonez", "qatıq", "duz", "istiot"],
+    instructions: [
+      "1. 250 q makaronu qaynadıb soyudun.",
+      "2. Qarğıdalı, doğranmış kolbasa/toyuq, xiyar və bolqar bibərini əlavə edin.",
+      "3. Mayonez və ya qatıq əlavə edin.",
+      "4. Duz və istiot səpərək qarışdırın.",
+      "5. Soyuducuda 30 dəqiqə saxlayıb servis edin."
     ],
-    "instructions": "Peçenyeni blenderdə və ya əl ilə xırda doğrayın. Qozu da doğrayıb əlavə edin. Qatılaşdırılmış süd əlavə edib yoğurun. Əlinizlə kiçik toplar düzəldin və istəyə görə qoz, kokos və ya kakao tozuna bulayıb soyuducuda saxlayın.",
-    "image": "uploads/qozlu_konfet.png"
+    image: "uploads/makaron_salati.jpg"
   },
   {
-    "title": "Qaymaqlı Toyuq",
-    "ingredients": [
-      "toyuq filesi",
-      "soğan",
-      "sarımsaq",
-      "qaymaq",
-      "duru yağ",
-      "duz",
-      "istiot",
-      "göbələk",
-      "kərə yağı",
-      "rozmarin",
-      "cəfəri"
+    title: "Kartof Salatı",
+    category: "Salad",
+    ingredients: ["kartof", "yumurta", "soğan", "mayonez", "xardal", "duz", "istiot", "göyərti", "turşu xiyar"],
+    instructions: [
+      "1. Kartofları qabıqlı halda qaynadın, soyudub doğrayın.",
+      "2. Yumurtaları bərk qaynadın və doğrayın.",
+      "3. Soğanı doğrayın və acılığını azaltmaq üçün suda saxlayın.",
+      "4. Bütün ərzaqları qarışdırma qabına əlavə edin.",
+      "5. Mayonez, xardal, duz və istiot əlavə edib qarışdırın.",
+      "6. Üzərinə göyərti və turşu xiyar əlavə edin.",
+      "7. Soyuq servis edin."
     ],
-    "instructions": "Toyuq filesini doğrayın. Tavada duru yağda yüngül qızardın. Soğan və sarımsağı əlavə edib qovurun. Qaymaq və ədviyyatlar əlavə edib 10-15 dəqiqə bişirin. Üzərinə doğranmış cəfəri və ya rozmarin səpib servis edin.",
-    "image": "uploads/qaymaqli_toyuq.png"
+    image: "uploads/kartof_salati.webp"
   },
   {
-    "title": "Limonlu Kek",
-    "ingredients": [
-      "yumurta",
-      "şəkər tozu",
-      "qatıq",
-      "duru yağ",
-      "un",
-      "qabartma tozu",
-      "vanil",
-      "limon suyu",
-      "limon qabığı"
+    title: "Hot Dog",
+    category: "Fast Food",
+    ingredients: ["sosis", "hot dog çörəyi", "ketçup", "mayonez", "xardal", "turşu xiyar", "soğan", "pendir"],
+    instructions: [
+      "1. Sosisləri 5–7 dəqiqə qaynadın və ya tavada qızardın.",
+      "2. Çörəyi ortadan kəsin.",
+      "3. Sosisləri çörəyə yerləşdirin.",
+      "4. Üzərinə ketçup, mayonez, xardal əlavə edin.",
+      "5. Doğranmış xiyar, soğan və pendir əlavə edin.",
+      "6. İsti halda servis edin."
     ],
-    "instructions": "Yumurtaları və şəkəri çalın. Üzərinə qatıq, duru yağ, limon suyu və limon qabığı əlavə edin. Ayrı qabda un, qabartma tozu və vanili ələyib qarışdırın. Yağlanmış qəlibə tökün və 180°C-də 35-40 dəqiqə bişirin.",
-    "image": "uploads/limonlu_kek.png"
+    image: "uploads/hotdog.jpg"
   },
   {
-    "title": "Kremli Göbələk Şorbası",
-    "ingredients": [
-      "göbələk",
-      "soğan",
-      "sarımsaq",
-      "kərə yağı",
-      "un",
-      "süd",
-      "su və ya bulyon",
-      "qaymaq",
-      "duz",
-      "istiot",
-      "cəfəri",
-      "şüyüd"
+    title: "Spagetti",
+    category: "Main",
+    ingredients: ["spagetti", "duzlu su", "zeytun yağı", "soğan", "sarımsaq", "pomidor", "tomat pastası", "duz", "istiot", "ədviyyatlar", "pendir"],
+    instructions: [
+      "1. Spagettini duzlu suda qaynadın və süzün.",
+      "2. Tavada zeytun yağında soğan və sarımsağı qovurun.",
+      "3. Üzərinə pomidor və ya tomat pastası əlavə edin.",
+      "4. Duz, istiot və ədviyyatları əlavə edib 10 dəqiqə bişirin.",
+      "5. Spagettini sousa əlavə edib qarışdırın.",
+      "6. Üzərinə pendir səpib isti halda servis edin."
     ],
-    "instructions": "Göbələkləri doğrayın. Tavada kərə yağında soğan və sarımsağı qovurun. Göbələkləri əlavə edib bişirin. Un əlavə edib 1-2 dəqiqə qovurun. Süd və su əlavə edib qarışdırın. Qaynadıqdan sonra qaymaq əlavə edin və bişirin. Üzərini göyərti ilə bəzəyin.",
-    "image": "uploads/kremli_gobelek_sorbasi.png"
+    image: "uploads/spagetti.jpg"
   },
   {
-    "title": "Tuna Salatı",
-    "ingredients": [
-      "tuna balığı",
-      "soğan",
-      "pomidor",
-      "xiyar",
-      "limon suyu",
-      "zeytun yağı",
-      "cəfəri",
-      "şüyüd",
-      "duz",
-      "istiot",
-      "qarğıdalı",
-      "zeytun",
-      "kahı",
-      "yumurta"
+    title: "Qril Toyuq",
+    category: "Main",
+    ingredients: ["toyuq", "qatıq", "zeytun yağı", "limon suyu", "sarımsaq", "qırmızı bibər tozu", "istiot", "duz", "kəklikotu", "quru nanə"],
+    instructions: [
+      "1. Qatıq, zeytun yağı, limon suyu, əzilmiş sarımsaq və ədviyyatları bir qabda qarışdıraraq marinad hazırlayın.",
+      "2. Toyuq hissələrini marinadın içinə əlavə edin və yaxşıca qarışdırın.",
+      "3. Soyuducuda ən az 2 saat saxlayın.",
+      "4. Qril və ya tavada hər iki tərəfini tam bişənədək qızardın.",
+      "5. İsti halda servis edin."
     ],
-    "instructions": "Tuna balığını süz. Doğranmış tərəvəz və göyərti ilə qarışdır. Limon suyu, zeytun yağı, duz və istiotu əlavə edib qarışdırın. İstəyə görə yumurta, zeytun və qarğıdalı əlavə edə bilərsiniz.",
-    "image": "uploads/tuna_salati.png"
+    image: "uploads/qril_toyuq.avif"
+  },
+  {
+    title: "Qozlu Konfetlər",
+    category: "Dessert",
+    ingredients: ["peçenye", "qoz", "qatılaşdırılmış süd"],
+    instructions: [
+      "1. Peçenyeni blenderdə və ya əl ilə xırda doğrayın.",
+      "2. Qozu doğrayıb əlavə edin.",
+      "3. Qatılaşdırılmış süd əlavə edərək qarışığı yoğurun.",
+      "4. Əlinizlə kiçik toplar düzəldin.",
+      "5. İstəyə görə qoz, kokos və ya kakao tozuna bulayıb soyuducuda saxlayın."
+    ],
+    image: "uploads/qozlu_konfet.jpg"
+  },
+  {
+    title: "Qaymaqlı Toyuq",
+    category: "Main",
+    ingredients: ["toyuq filesi", "soğan", "sarımsaq", "qaymaq", "duru yağ", "duz", "istiot", "göbələk", "kərə yağı", "rozmarin", "cəfəri"],
+    instructions: [
+      "1. Toyuq filesini doğrayın və tavada duru yağda yüngül qızardın.",
+      "2. Soğan və sarımsağı əlavə edib qovurun.",
+      "3. Göbələkləri əlavə edib 3-5 dəqiqə bişirin.",
+      "4. Qaymaq və ədviyyatları əlavə edib 10-15 dəqiqə bişirin.",
+      "5. Üzərinə doğranmış cəfəri və ya rozmarin səpib servis edin."
+    ],
+    image: "uploads/qaymaqli_toyuq2.jpg"
+  },
+  {
+    title: "Limonlu Kek",
+    category: "Dessert",
+    ingredients: ["yumurta", "şəkər tozu", "qatıq", "duru yağ", "un", "qabartma tozu", "vanil", "limon suyu", "limon qabığı"],
+    instructions: [
+      "1. Yumurtaları və şəkəri mikserlə çalın.",
+      "2. Üzərinə qatıq, duru yağ, limon suyu və limon qabığı əlavə edin.",
+      "3. Ayrı qabda un, qabartma tozu və vanili ələyin.",
+      "4. Quru qarışığı nəm qarışıma əlavə edib hamarlanana qədər qarışdırın.",
+      "5. Qarışığı yağlanmış qəlibə tökün.",
+      "6. 180°C-də 35-40 dəqiqə bişirin."
+    ],
+    image: "uploads/limonlu_kek.webp"
+  },
+  {
+    title: "Kremli Göbələk Şorbası",
+    category: "Soup",
+    ingredients: ["göbələk", "soğan", "sarımsaq", "kərə yağı", "un", "süd", "su və ya bulyon", "qaymaq", "duz", "istiot", "cəfəri", "şüyüd"],
+    instructions: [
+      "1. Göbələkləri doğrayın.",
+      "2. Tavada kərə yağında soğan və sarımsağı qovurun.",
+      "3. Göbələkləri əlavə edib bir neçə dəqiqə bişirin.",
+      "4. Un əlavə edib 1-2 dəqiqə qovurun.",
+      "5. Süd və su (və ya bulyon) əlavə edib qarışdırın.",
+      "6. Qaynadıqdan sonra qaymaq əlavə edin və bir az daha bişirin.",
+      "7. Üzərini doğranmış göyərti ilə bəzəyin və servis edin."
+    ],
+    image: "uploads/gobelek_sorbasi.jpg"
+  },
+  {
+    title: "Tuna Salatı",
+    category: "Salad",
+    ingredients: ["tuna balığı", "soğan", "pomidor", "xiyar", "limon suyu", "zeytun yağı", "cəfəri", "şüyüd", "duz", "istiot", "qarğıdalı", "zeytun", "kahı", "yumurta"],
+    instructions: [
+      "1. Tuna balığını süzüb hazır vəziyyətə gətirin.",
+      "2. Doğranmış pomidor, xiyar, soğan və göyərtiləri qarışdırın.",
+      "3. Limon suyu, zeytun yağı, duz və istiotu əlavə edin.",
+      "4. Qarğıdalı və zeytun əlavə edin.",
+      "5. İstəyə görə dilimlənmiş qaynadılmış yumurta əlavə edin.",
+      "6. Kahı yarpaqları üzərinə servis edin."
+    ],
+    image: "uploads/tuna_salati.jpg"
   },
    {
     title: "Sezar Salatı",
+    category: "Salad",
     ingredients: [
       "romen kahı (və ya adi kahı)",
       "kruton (qurudulmuş çörək kubikləri)",
@@ -281,12 +327,20 @@ module.exports = [
       "duz",
       "istiot"
     ],
-    instructions:
-      "Sous üçün: Bir qabda 1 yumurta sarısı (və ya 1 çay qaşığı xardal), 1 diş əzilmiş sarımsaq, 2 xörək qaşığı limon suyu və 1 çay qaşığı Worchester sousunu qarışdır. Tədricən 4 xörək qaşığı zeytun yağını əlavə edib qarışdırmağa davam et. 2 xörək qaşığı Parmesan pendiri, duz və istiot əlavə edib sousu tamamla.\n\nSalat üçün: 1 ədəd kahını doğrayıb dərin salat qabına yerləşdir. Üzərinə 1 stəkan kruton və 1/2 stəkan rəndələnmiş Parmesan pendirini əlavə et. İstəyə görə qızardılmış toyuq dilimləri də əlavə edə bilərsən. Hazırladığın sousu salatın üzərinə gəzdir və qarışdır.",
-    image: "uploads/sezar_salati.png"
+    instructions: [
+      "1. Sous üçün: yumurta sarısı (və ya xardal), əzilmiş sarımsaq, limon suyu və Worchester sousunu qarışdırın.",
+      "2. Tədricən zeytun yağı əlavə edib qarışdırmağa davam edin.",
+      "3. Parmesan, duz və istiotu əlavə edib sousu tamamlayın.",
+      "4. Kahını doğrayıb salat qabına yerləşdirin.",
+      "5. Üzərinə kruton və rəndələnmiş Parmesan əlavə edin.",
+      "6. İstəyə görə qızardılmış toyuq dilimləri əlavə edin.",
+      "7. Sousu üzərinə gəzdirib qarışdırın."
+    ],
+    image: "uploads/sezar_salati.jpg"
   },
   {
     title: "İspanaq Qovurması",
+    category: "Main",
     ingredients: [
       "təzə ispanaq",
       "soğan",
@@ -296,12 +350,19 @@ module.exports = [
       "qara istiot",
       "qırmızı pul bibər (istəyə görə)"
     ],
-    instructions:
-      "500 qram ispanaqları təmizləyib yaxşıca yuyun və doğrayın. Tavada 2 xörək qaşığı yağı qızdırın və 1 ədəd doğranmış soğanı qovurun. Əgər 1 diş sarımsaq istifadə edirsinizsə, əlavə edib bir az daha qovurun. Daha sonra doğranmış ispanaqları əlavə edin. Orta odda ispanaqlar suyunu buraxıb çəkənədək bişirin. Duz, qara istiot və istəyə görə qırmızı pul bibər əlavə edib qarışdırın. İstəsəniz, qatıqla servis edə bilərsiniz.",
-    image: "uploads/ispanaq_qovurmasi.png"
+    instructions: [
+      "1. İspanaqları təmizləyib yuyun və doğrayın.",
+      "2. Tavada yağı qızdırın və soğanı qovurun.",
+      "3. İstəyə görə sarımsaq əlavə edin.",
+      "4. Doğranmış ispanaqları əlavə edib orta odda bişirin.",
+      "5. Duz, istiot və qırmızı bibər əlavə edib qarışdırın.",
+      "6. İstəyə görə qatıqla servis edin."
+    ],
+    image: "uploads/ispanaq_qovurmasi.jpg"
   },
   {
     title: "Kakaolu Qurabiye",
+    category: "Dessert",
     ingredients: [
       "yumşalmış kərə yağı",
       "yumurta",
@@ -312,12 +373,19 @@ module.exports = [
       "un (ələnmiş)",
       "istəyə görə: damla şokolad, qoz, fındıq"
     ],
-    instructions:
-      "125 qram yumşalmış kərə yağı və 1 stəkan şəkər tozunu bir qabda qarışdırın. Üzərinə 1 ədəd yumurta və 1 paket vanilin əlavə edib yaxşıca çırpın. Daha sonra 2 yemək qaşığı kakao əlavə edin və qarışdırın. 1 paket qabartma tozu və 2–2.5 stəkan unu az-az əlavə edərək yumşaq, ələ yapışmayan xəmir yoğurun. Xəmirdən kiçik toplar düzəldib yağlı kağız sərilmiş soba sinisinə düzün. İstəyə görə üstünə damla şokolad və ya qoz-fındıq da əlavə edə bilərsiniz. Əvvəlcədən 180°C-də isidilmiş sobada 12–15 dəqiqə bişirin. Qurabiyəni çox qurutmamaq üçün diqqətli olun.",
-    image: "uploads/kakaolu_qurabiye.png"
+    instructions: [
+      "1. Kərə yağı və şəkəri qarışdırın.",
+      "2. Yumurtanı və vanilini əlavə edib qarışdırın.",
+      "3. Kakao, qabartma tozu və un əlavə edərək yumşaq xəmir yoğurun.",
+      "4. Xəmirdən toplar düzəldib siniyə düzün.",
+      "5. Üzərinə şokolad və ya qoz əlavə edə bilərsiniz.",
+      "6. 180°C-də 12–15 dəqiqə bişirin."
+    ],
+    image: "uploads/kakaolu_qurabiye.jpeg"
   },
   {
     title: "Toyuq Supu",
+    category: "Soup",
     ingredients: [
       "toyuq budu və ya sinəsi",
       "soğan",
@@ -330,12 +398,20 @@ module.exports = [
       "istiot",
       "dəfnə yarpağı (istəyə görə)"
     ],
-    instructions:
-      "1 ədəd toyuğu yuyub bir qazana qoyun, üzərinə 1.5–2 litr su əlavə edib qaynadın. Qaynamağa başlayanda çıxan köpüyü yığın. 1 ədəd soğanı bütöv halda əlavə edin (yalnız dad üçün). 1–2 ədəd kökü dilimləyib qazana əlavə edin. Toyuq yarıbişmiş olduqda 1 ədəd doğranmış kartofu əlavə edin. Toyuq tam bişdikdə çıxarıb tikə-tikə doğrayın və yenidən qazana əlavə edin. 50–70 qram vermişel və ya düyü əlavə edib 5–7 dəqiqə daha bişirin. Sonda duz, istiot və doğranmış göyərti əlavə edin. İstəyə görə 1 ədəd dəfnə yarpağı və bir az kərə yağı da əlavə edə bilərsiniz.",
-    image: "uploads/toyuq_supu.png"
+    instructions: [
+      "1. Toyuğu qazana qoyun, üzərinə su əlavə edib qaynadın.",
+      "2. Qaynama zamanı köpüyü yığın.",
+      "3. Soğanı bütöv şəkildə əlavə edin.",
+      "4. Kök və kartofu doğrayıb qazana əlavə edin.",
+      "5. Toyuq bişdikdən sonra çıxarın, doğrayın və qazana qaytarın.",
+      "6. Vermişel və ya düyü əlavə edib 5–7 dəqiqə bişirin.",
+      "7. Sonda duz, istiot və göyərti əlavə edin."
+    ],
+    image: "uploads/toyuq_supu.jpg"
   },
   {
-    title: "Lahmacun (Türk pizzası)",
+    title: "Lahmacun",
+    category: "Main",
     ingredients: [
       "un",
       "lıq su",
@@ -353,12 +429,21 @@ module.exports = [
       "qırmızı bibər tozu",
       "qara bibər"
     ],
-    instructions:
-      "Xəmiri hazırlamaq üçün 1 çay qaşığı mayanı və 1 çay qaşığı şəkəri 1 stəkan ilıq suda həll edin və 5 dəqiqə gözləyin. Daha sonra 3 stəkan un, 1 çay qaşığı duz və 2 yemək qaşığı zeytun yağı ilə birlikdə yumşaq bir xəmir yoğurun. Üzərini örtüb 1 saat mayalanmağa qoyun.\n\nİçlik üçün 1 ədəd iri soğan, 2–3 diş sarımsaq, 2 ədəd pomidor, 1 ədəd bibər və 1/2 dəstə cəfərini blenderdə xırdalayın. Daha sonra 250 qram qiymə, 1 yemək qaşığı tomat pastası, ədviyyatlar (1 çay qaşığı duz, qara bibər və qırmızı bibər tozu) və 2 yemək qaşığı zeytun yağı ilə yaxşıca qarışdırın.\n\nXəmiri kiçik kündələrə bölüb nazik açın. Üzərinə hazırladığınız içlikdən yayın. Lahmacunları əvvəlcədən 220°C-də isidilmiş sobada 8–10 dəqiqə bişirin.\n\nServis zamanı üzərinə limon sıxaraq, cəfəri və ayranla birlikdə təqdim edə bilərsiniz.",
-    image: "uploads/lahmacun.png"
+    instructions: [
+      "1. Mayanı və şəkəri ilıq suda həll edin.",
+      "2. Un, duz və zeytun yağı ilə yumşaq xəmir yoğurun, mayalandırın.",
+      "3. İçlik üçün tərəvəzləri və sarımsağı blenderdə xırdalayın.",
+      "4. Ət, tomat pastası və ədviyyatları əlavə edin, qarışdırın.",
+      "5. Xəmiri kündələrə bölüb nazik açın.",
+      "6. İçliyi üzərinə yayın.",
+      "7. 220°C-də 8–10 dəqiqə bişirin.",
+      "8. Üzərinə limon sıxaraq və cəfəri ilə servis edin."
+    ],
+    image: "uploads/lahmacun.webp"
   },
   {
     title: "Toyuq Plovu",
+    category: "Main",
     ingredients: [
       "düyü",
       "toyuq hissəsi (bud, sinə və s.)",
@@ -368,443 +453,1403 @@ module.exports = [
       "sarıkök",
       "toyuq suyu"
     ],
-    instructions:
-      "5-6 ədəd toyuq hissələrini duzlu suda qaynadın və suyunu saxlayın. 2 stəkan düyünü əvvəlcədən isladıb yuyun. Qazana 3 xörək qaşığı yağ töküb, düyünü yüngül qovurun. Üzərinə 4 stəkan toyuq suyu və ədviyyatları (duz, istiot, sarıkök) əlavə edin. Qapağını örtüb bişirin. Toyuq hissələrini istəyə görə ayrıca qızardıb plovun yanında servis edə bilərsiniz.",
-    image: "uploads/toyuq_plovu.png"
+    instructions: [
+      "1. Toyuq hissələrini duzlu suda qaynadın və suyunu saxlayın.",
+      "2. Düyünü isladın və yuyun.",
+      "3. Qazana yağ əlavə edib düyünü yüngül qovurun.",
+      "4. Toyuq suyu və ədviyyatları əlavə edib qapaqlı bişirin.",
+      "5. Toyuqları ayrıca qızardıb plovun yanında servis edə bilərsiniz."
+    ],
+    image: "uploads/toyuqlu_plov.jpg"
+  },
+     {
+    "title": "Ətli Pide",
+    "category": "Main",
+    "ingredients": ["un", "su", "quru maya", "şəkər", "duz", "yağ", "qiymə", "soğan", "pomidor", "yaşıl bibər", "istiot"],
+    "instructions": [
+      "1. 1 ç.q. quru mayanı 1 stəkan ilıq su və 1 ç.q. şəkərlə qarışdırın və 5 dəqiqə saxlayın.",
+      "2. 3 stəkan un, 1 ç.q. duz və 2 x.q. yağ əlavə edib xəmir yoğurun.",
+      "3. Xəmiri 1 saat mayalandırın.",
+      "4. İçlik üçün 300 q qiymə, 1 baş doğranmış soğan, 1 pomidor, 1 yaşıl bibər, duz və istiotu qarışdırın.",
+      "5. Xəmiri kündələyin, yayaraq içliyi qoyun və kənarlarını bükün.",
+      "6. 200°C-də sobada 20 dəqiqə bişirin."
+    ],
+    "image": "uploads/toyuqli_pide.jpeg"
   },
   {
-    title: "Ətli Pide",
-    ingredients: [
-      "un",
-      "lıq su",
-      "quru maya",
-      "şəkər",
-      "duz",
-      "yağ",
-      "qiymə",
-      "soğan",
-      "pomidor",
-      "yaşıl bibər",
-      "duz",
-      "istiot"
+    "title": "Acılı Əzmə",
+    "category": "Side",
+    "ingredients": ["qırmızı bibər", "yaşıl bibər", "pomidor", "soğan", "tomat pastası", "zeytun yağı", "narşərab", "kişniş", "duz", "istiot", "paprika", "pul bibər", "quru nanə"],
+    "instructions": [
+      "1. 2 qırmızı bibər, 2 yaşıl bibər, 3 pomidor və 1 soğanı doğrayıb blenderdən keçirin.",
+      "2. 1 x.q. tomat pastasını 1/3 stəkan zeytun yağı ilə qarışdırın.",
+      "3. Tərəvəzləri qarışdırıb bir qaba yığın.",
+      "4. Üzərinə 2 x.q. narşərab, 0.5 dəstə doğranmış kişniş, 1 ç.q. duz, 0.5 ç.q. istiot, paprika, pul bibər və quru nanə əlavə edib qarışdırın.",
+      "5. Soyuducuda saxlayıb kabab yanında servis edin."
     ],
-    instructions:
-      "1 çay qaşığı mayanı 1 stəkan ilıq su və 1 çay qaşığı şəkərlə qarışdırın və 5 dəqiqə gözləyin. Üzərinə 3 stəkan un, 1 çay qaşığı duz və 2 xörək qaşığı yağ əlavə edib yumşaq xəmir yoğurun. Üzərini örtüb 1 saat mayalanmağa qoyun. İçlik üçün 200–300 q qiymə, 1 baş doğranmış soğan, 1 ədəd pomidor, 1 ədəd yaşıl bibər, duz və istiotu qarışdırın. Mayalanmış xəmiri kündələyib oval şəkildə yayaraq içliyi içinə qoyun, kənarlarını yüngül bükün. Əvvəlcədən 200°C-də isidilmiş sobada 20 dəqiqə bişirin.",
-    image: "uploads/pide.png"
+    "image": "uploads/acili_ezme.jpg"
   },
   {
-    title: "Acılı Əzmə",
-    ingredients: [
-      "qırmızı bibər",
-      "yaşıl bibər",
-      "pomidor",
-      "soğan",
-      "tomat pastası",
-      "zeytun yağı",
-      "nar şərab (narşərab)",
-      "kişniş",
-      "duz",
-      "istiot",
-      "paprika",
-      "pul bibər",
-      "quru nanə"
+    "title": "Şəkərbura",
+    "category": "Dessert",
+    "ingredients": ["süd", "yağ", "yumurta", "quru maya", "şəkər tozu", "duz", "un", "qoz", "hil"],
+    "instructions": [
+      "1. 1 stəkan ilıq südə 1 ç.q. maya və 1 x.q. şəkər tozu əlavə edin, 10 dəqiqə saxlayın.",
+      "2. 1 stəkan yağ, 1 yumurta və bir çimdik duz əlavə edin.",
+      "3. 4–5 stəkan un əlavə edib yumşaq xəmir yoğurun.",
+      "4. 2 stəkan qozu doğrayın, 1 stəkan şəkər tozu və 1 ç.q. hil ilə qarışdırın.",
+      "5. Xəmirdən kündələr götürüb içliklə doldurun, şəkərbura formasında büküb naxışlayın.",
+      "6. 160–170°C sobada üstü qızarmadan bişirin."
     ],
-    instructions:
-      "2 ədəd qırmızı bibəri, 2 ədəd yaşıl bibəri, 3 ədəd pomidoru və 1 ədəd soğanı xırda doğrayın və ya blenderdən keçirin. Ayrı qabda 1 xörək qaşığı tomat pastasını 1/3 armud stəkan zeytun yağı ilə qarışdırın. Bütün doğranmış ərzaqları və tomat qarışığını birləşdirin. Üzərinə 2 xörək qaşığı nar şərab, duz, istiot, paprika, pul bibər, quru nanə və 1/2 dəstə doğranmış kişnişi əlavə edib yaxşıca qarışdırın. Qızartmaların, kabab və ət yeməklərinin yanında servis edin. Soyuducuda bir qədər saxladıqdan sonra daha da ləzzətli olur.",
-    image: "uploads/acili_ezme.png"
+    "image": "uploads/sekerbura.jpg"
   },
   {
-    title: "Şəkərbura",
-    ingredients: [
-      "süd",
-      "duru yağ (bitki yağı və ya kərə yağı qarışığı)",
-      "yumurta",
-      "quru maya",
-      "şəkər tozu",
-      "duz",
-      "un",
-      "qoz ləpəsi (və ya fındıq, badam)",
-      "hil (istəyə görə)"
+    "title": "Plov",
+    "category": "Main",
+    "ingredients": ["düyü", "zəfəran", "kərə yağı", "duz", "lavaş"],
+    "instructions": [
+      "1. 500 q düyünü yuyub 1 saat suda saxlayın.",
+      "2. Su qaynadın, 1 ç.q. duz əlavə edib düyünü 7–8 dəqiqə bişirin, sonra süzün.",
+      "3. Qazanın dibinə 100 q yağ töküb lavaş düzün.",
+      "4. Düyünü qat-qat tökün, hər qata yağ əlavə edin.",
+      "5. 1 ç.q. zəfəranı isti suda dəmləyin və üstünə tökün.",
+      "6. Qapağı dəsmalla örtüb zəif odda 30–40 dəqiqə dəmləyin."
     ],
-    instructions:
-      "1 stəkan ilıq südə 1 çay qaşığı quru maya və 1 yemək qaşığı şəkər tozu əlavə edib qarışdırın, 5–10 dəqiqə mayalanmağa qoyun. Sonra 1 stəkan duru yağ, 1 ədəd yumurta və bir çimdik duz əlavə edin. Tədricən 4–5 stəkan un əlavə edib yumşaq, ələ yapışmayan xəmir yoğurun. Xəmiri 1 saat isti yerdə üstü örtülü şəkildə dincə qoyun. 2 stəkan qozu xırda doğrayın və 1 stəkan şəkər tozu ilə, istəyə görə 1 çay qaşığı hil əlavə edib qarışdırın. Xəmirdən kiçik kündələr götürün. Hər kündəni yayıb ortasına içlik qoyun və yarımay formasında bükün. Üzərinə bıçaqla və ya xüsusi alətlə naxışlar vurun. Sobada 160–170°C-də üstü çox qızarmadan bişirin.",
-    image: "uploads/shekerbura.png"
+    "image": "uploads/plov.jpg"
   },
   {
-    title: "Plov (Azərbaycan düyü pilavı)",
-    ingredients: [
-      "uzun düyü",
-      "zəfəran",
-      "kərə yağı",
-      "duz",
-      "lavaş və ya nazik çörək"
+    "title": "Gürzə",
+    "category": "Main",
+    "ingredients": ["un", "yumurta", "duz", "su", "zeytun yağı", "qiymə", "soğan", "istiot", "nanə", "bibər pastası", "şüyüd", "sarıkök"],
+    "instructions": [
+      "1. 500 q un, 1 ədəd yumurta, 1 çay qaşığı duz və su ilə bərk xəmir yoğurun.",
+      "2. 1 xörək qaşığı zeytun yağı əlavə edin və xəmiri dincə qoyun.",
+      "3. 500 q qiymə, 1 doğranmış soğan, duz, istiot və nanəni qarışdırın.",
+      "4. Xəmirdən kündələr hazırlayıb yayaraq içliklə doldurun və bükün.",
+      "5. Duzlu suda qaynadaraq bişirin.",
+      "6. Sous üçün: 1 ç.q. bibər pastası, 2 x.q. su, doğranmış şüyüd, 2 x.q. zeytun yağı, nanə və sarıkökü qarışdırın və bişmiş gürzənin üzərinə tökün."
     ],
-    instructions:
-      "500 qram uzun düyünü yaxşıca yuyun və 1 saat suda isladın. Böyük qazanda su qaynadın, duz əlavə edib düyünü əlavə edin və 7–8 dəqiqə yarıbişmiş halda bişirib süzün. Qazanın dibinə 100 qram yağ töküb, lavaş və ya çörək parçaları düzün. Düyünü qat-qat qazanda yığın, hər qata əridilmiş yağ tökün. 1 çay qaşığı zəfəranı isti suda dəmləyib üstünə səpin. Qazanın qapağını dəsmalla bürüyün və zəif odda 30–40 dəqiqə dəm alın. Qızarmış qazmaqla birlikdə süfrəyə verin.",
-    image: "uploads/plov.png"
+    "image": "uploads/gurze.jpg"
   },
   {
-    title: "Qutab (Göyərti və ya ətli)",
-    ingredients: [
-      "un",
-      "su",
-      "duz",
-      "göyərti (ispanaq, keşniş, şüyüd) və ya qiymə ət və soğan"
+    "title": "Karamel dadında tort",
+    "category": "Dessert",
+    "ingredients": ["yumurta", "şəkər tozu", "kərə yağı", "qatıq", "vanilin", "qabartma tozu", "un", "kakao", "labne", "qatılaşdırılmış süd"],
+    "instructions": [
+      "1. 6 yumurta və 2 stəkan şəkəri mikserlə çalın.",
+      "2. 1/2 stəkan kərə yağı və 1 stəkan qatıq əlavə edib qarışdırın.",
+      "3. 1 paket vanilin, 1 paket qabartma tozu və 2.5 stəkan unu az-az əlavə edin.",
+      "4. 1 x.q. kakao əlavə edib qarışdırın.",
+      "5. Xəmiri yağlanmış qəlibə töküb 180°C-də bişirin.",
+      "6. Krem üçün: 150 q labne və 1 banka qatılaşdırılmış südü qarışdırın.",
+      "7. Soyumuş tortun içini və üzünü krem ilə örtün."
     ],
-    instructions:
-      "2 stəkan undan, 1/2 stəkan sudan və 1 çay qaşığı duzdan yumşaq xəmir yoğurun və 15–20 dəqiqə dincə qoyun. Xəmirdən kiçik kündələr götürüb nazik dairə formasında yayın. İçliyi yerləşdirin, aypara formasında qatlayın və kənarlarını bərkidin. Tavada hər iki tərəfini qızarana qədər bişirin. Üzərinə yağ sürtüb qatıqla süfrəyə verin.",
-    image: "uploads/qutab.png"
+    "image": "uploads/karamel_tort2.jpg"
   },
   {
-    title: "Kartof Salatı",
-    ingredients: [
-      "kartof",
-      "yumurta",
-      "şüyüd",
-      "yaşıl soğan",
-      "mayonez"
+    "title": "Paytaxt Salatı",
+    "category": "Salad",
+    "ingredients": ["kartof", "kök", "xiyar", "bibər", "redis", "alma", "toyuq", "yumurta", "göy noxud", "yaşıl soğan", "duz", "istiot", "smetana", "mayonez", "xardal"],
+    "instructions": [
+      "1. 3–4 kartof və 2 kökü qaynadıb doğrayın.",
+      "2. 5 yumurtanı qaynadıb kubik doğrayın.",
+      "3. Xiyar, redis, alma və bişmiş toyuğu doğrayın.",
+      "4. 2 banka göy noxudu süzün, yaşıl soğanı doğrayın.",
+      "5. Hamısını bir qabda qarışdırın, duz və istiot əlavə edin.",
+      "6. Sos üçün: 2 x.q. smetana, 3 x.q. mayonez və 1 ç.q. xardalı qarışdırın.",
+      "7. Sosu salata əlavə edib qarışdırın."
     ],
-    instructions:
-      "Yarım kiloqram kartofları bol suda yuyub yumşalana qədər bişirin. 4 ədəd yumurtanı bərk qaynadın və qabıqlarını soyun. Kartof, yumurta, 6 ədəd yaşıl soğan və yarım dəstə şüyüdü doğrayın. Dərin qabda doğranmış ərzaqları 2 yemək qaşığı mayonezlə qarışdırın və dərhal servis edin.",
-    image: "uploads/kartof_salati_2.png"
+    "image":"uploads/paytaxt_salati.jpg"
   },
   {
-    title: "Labneli Qızardılmış Çörək",
-    ingredients: [
-      "bibər",
-      "mini pomidor",
-      "zeytun yağı",
-      "sarımsaq",
-      "duz",
-      "kənd çörəyi",
-      "labne",
-      "qoz ləpəsi (istəyə görə)"
+    "title": "Mimoza Salatı",
+    "category": "Salad",
+    "ingredients": ["kartof", "kök", "yumurta", "ton balığı", "soğan", "mayonez", "duz", "istiot", "şüyüd"],
+    "instructions": [
+      "1. 3 kartof və 3–4 kökü qaynadın, soyub rəndələyin.",
+      "2. 6–8 yumurtanı bərk qaynadın, ağını və sarısını ayırıb rəndələyin.",
+      "3. 2 konserve ton balığını süzün və 1/4 stəkan mayonez, duz və istiotla qarışdırın.",
+      "4. Salatı qat-qat düzün: kartof → mayonez → ton balığı → soğan → kök → mayonez → yumurta ağı → mayonez → yumurta sarısı.",
+      "5. Üzərinə doğranmış şüyüd səpərək servis edin."
     ],
-    instructions:
-      "Tavaya 4 yemək qaşığı zeytun yağı töküb doğranmış 4 ədəd bibəri qısıq alovda qovurun. 4 mini pomidoru ortadan iki yerə bölün və 2 diş doğranmış sarımsağı əlavə edib bir neçə dəqiqə soteləyin. 4 dilim kənd çörəyini qızardın, üzərinə 4 yemək qaşığı labne sürtün və üstünə bibər-pomidor qarışığını yerləşdirin. İstəyə görə iri doğranmış qoz səpərək servis edin.",
-    image: "uploads/labneli_corek.png"
+    "image": "uploads/mimoza_salati.jpg"
   },
   {
-    title: "Limonlu Keks",
-    ingredients: [
-      "yumurta",
-      "şəkər tozu",
-      "süd",
-      "duru yağ",
-      "vanil",
-      "qabartma tozu",
-      "limonun suyu və qabığı",
-      "un"
+    "title": "Çoban Salatı",
+    "category": "Salad",
+    "ingredients": ["pomidor", "xiyar", "yaşıl bibər", "soğan", "cəfəri", "zeytun yağı", "limon suyu", "duz", "istiot", "sumak", "pul bibər"],
+    "instructions": [
+      "1. 2–4 pomidor, 2–3 xiyar doğrayın.",
+      "2. 1 yaşıl bibər və 1/2 soğanı doğrayın.",
+      "3. Cəfərini incə doğrayın və hamısını bir qabda qarışdırın.",
+      "4. Üzərinə 2 x.q. zeytun yağı, 1 x.q. limon suyu, duz, istiot əlavə edin.",
+      "5. İstəyə görə 1/2 ç.q. sumak və ya pul bibər də əlavə edin və qarışdırın."
     ],
-    instructions:
-      "3 ədəd yumurtanı və 1 stəkan şəkər tozunu ağarana qədər çalın. Üzərinə 1 stəkan süd və 1 stəkandan bir az az duru yağı əlavə edib qarışdırın. 1 ədəd limonun suyunu və rəndələnmiş qabığını da əlavə edin. Ayrı qabda 2.5 stəkan unu, 1 paket vanil və 1 paket qabartma tozunu qarışdırıb ələyin, tədricən qarışığa əlavə edin. Xəmiri yağlanmış qəlibə töküb əvvəlcədən 180°C-də isidilmiş sobada 35–40 dəqiqə bişirin.",
-    image: "uploads/limonlu_keks_2.png"
+    "image": "uploads/coban_salati.jpg"
   },
   {
-    title: "Dağıstan Xəngəli",
-    ingredients: [
-      "sümüklü dana əti",
-      "kartof",
-      "soğan",
-      "duz",
-      "istiot",
-      "kərə yağı",
-      "bulyon",
-      "un",
-      "maya",
-      "ılıq su",
-      "əridilmiş kərə yağı",
-      "qatıq",
-      "sarımsaq"
+    "title": "Mangal Salatı",
+    "category": "Salad",
+    "ingredients": ["badımcan", "pomidor", "qırmızı bibər", "yaşıl bibər", "soğan", "cəfəri", "zeytun yağı", "duz", "istiot"],
+    "instructions": [
+      "1. 2 badımcan, 2 qırmızı bibər, 3 pomidor və 1/2 soğanı sobada 220°C-də qızardın.",
+      "2. Qabığını soyub doğrayın və qaba yığın.",
+      "3. Üzərinə 2 x.q. zeytun yağı, duz, istiot və 2 x.q. doğranmış cəfəri əlavə edib qarışdırın."
     ],
-    instructions:
-      "1.5 kq sümüklü dana ətini bulyonda qaynadın. 600 qram kartofu və 4 ədəd soğanı doğrayıb ətə əlavə edin, duz və istiotu qatıb bişirin. 500 qram un, 0.5 çay qaşığı duz, bir çimdik maya və ılıq su ilə xəmir yoğurun, 10 dəqiqə saxlayın, sonra nazik yayaraq lavaşlar hazırlayın. Lavaşları buxarda yumşaldıb əridilmiş kərə yağı ilə yağlayın. Qat-qat düzüb, ət və sousla birlikdə servis edin. Sous üçün qatıq və əzilmiş sarımsağı qarışdırın.",
-    image: "uploads/xengel.png"
+    "image": "uploads/mangal_salati.webp"
   },
   {
-    title: "Cemli Piroq",
-    ingredients: [
-      "yumurta",
-      "şəkər tozu",
-      "süd",
-      "duru yağ",
-      "un",
-      "vanil",
-      "qabartma tozu",
-      "çiyələk",
-      "su",
-      "nişasta"
+    "title": "Nar Salatı",
+    "category": "Salad",
+    "ingredients": ["nar", "kartof", "çuğundur", "kök", "yumurta", "toyuq", "mayonez", "qoz", "duz", "istiot"],
+    "instructions": [
+      "1. 1 iri narın dənələrini ayırın.",
+      "2. 2 kartof, 2–3 çuğundur, 2 kök və 2 yumurtanı bişirib sürtgəcdən keçirin.",
+      "3. 150 q toyuq döş ətini bişirib doğrayın.",
+      "4. Salatı qat-qat düzün: kartof → mayonez → yumurta → çuğundur → kök → toyuq.",
+      "5. Hər qata duz və istiot əlavə edin.",
+      "6. Üstünə nar və 2/3 stəkan qoz səpərək 1–2 saat soyuducuda saxlayın."
     ],
-    instructions:
-      "6 ədəd yumurtanı və 1 stəkan şəkər tozunu çalın. Yarım stəkan süd və yarım stəkan duru yağı əlavə edin. 2 stəkan un, 1 paket vanil və 1 paket qabartma tozunu qarışdırıb xəmirə qatın. İçlik üçün 300 qram çiyələyi, yarım stəkan şəkər tozu və 50 qram suyu qaynadırıq, 2 çay qaşığı nişasta və 50 q su qarışığını əlavə edib qatılaşdırırıq. Xəmiri qəlibə töküb içliyi əlavə edin və sobada 180°C-də bişirin.",
-    image: "uploads/cemli_piroq.png"
-  },
-  {
-    title: "Gürzə",
-    ingredients: [
-      "un",
-      "yumurta",
-      "duz",
-      "su",
-      "zeytun yağı",
-      "qiymə",
-      "soğan",
-      "istiot",
-      "nanə",
-      "bibər pastası",
-      "şüyüd",
-      "sarıkök"
-    ],
-    instructions:
-      "500 qram un, 1 ədəd yumurta, 1 çay qaşığı duz və aparana qədər su ilə bərk xəmir yoğurun, 1 xörək qaşığı zeytun yağı əlavə edin. İçlik üçün 500 qram qiymə, 1 ədəd soğan, duz, istiot və nanəni qarışdırın. Xəmirdən kündələr götürüb yayaraq içliyi yerləşdirin və bükün. Qaynayan duzlu suda bişirin. Sous üçün 1 çay qaşığı bibər pastası, 2 xörək qaşığı su, doğranmış şüyüd, 2 xörək qaşığı zeytun yağı, nanə və sarıkökü qarışdırın və bişmiş gürzənin üzərinə töküb servis edin.",
-    image: "uploads/gurze.png"
-  },
-  {
-  title: "Karamel dadında tort",
-  ingredients: [
-    "yumurta",
-    "şəkər tozu",
-    "kərə yağı",
-    "qatıq",
-    "vanilin",
-    "qabartma tozu",
-    "un",
-    "kakao",
-    "labne",
-    "qatılaşdırılmış süd"
-  ],
-  instructions:
-    "6 ədəd yumurtanı və 2 stəkan şəkər tozunu mikserlə yaxşıca çalın. Üzərinə 1/2 stəkan yumşalmış kərə yağı və 1 stəkan qatıq əlavə edib qarışdırın. 1 paçka vanilin, 1 paçka qabartma tozu və 2.5 stəkan unu az-az əlavə edin. 1 yemək qaşığı kakao əlavə edib qarışdırın. Xəmiri yağlanmış soba qəlibinə tökərək 180°C-də bişirin. Krem üçün 150 qram labne və 1 banka qatılaşdırılmış südü qarışdırın. Soyumuş tortun arasına və üstünə krem çəkin.",
-  image: "uploads/karamel_tort.png"
-},
-{
-  title: "Paytaxt Salatı",
-  ingredients: [
-    "kartof",
-    "kök",
-    "xiyar və ya kərəviz turşusu",
-    "rəngli bibər və ya xiyar",
-    "redis",
-    "alma",
-    "toyuq və ya mal eti",
-    "yumurta",
-    "göy noxud (konserv)",
-    "yaşıl soğan",
-    "duz",
-    "istiot",
-    "smetana",
-    "mayonez",
-    "xardal"
-  ],
-  instructions:
-    "3–4 ədəd kartofu və 2 orta kökü qaynadın, soyun və kiçik kubiklərə doğrayın. 5 yumurta bişirib doğrayın. 1 böyük xiyar və ya 5 kiçik turşu xiyarı, təxminən 5 radis, və 1 alma doğrayın. 2 döş ətini (toyuq və ya mal) bişirib soyub kubiklə doğrayın. 2 banka göy noxudu süzün. 5 göy soğanı doğrayın. Bütün doğranmış ərzaqları böyük qaba yığın, duz və istiot əlavə edin. Ayrı qabda 2 xörək qaşığı smetana, 3 xörək qaşığı mayonez və 1 çay qaşığı xardalı qarışdırın. Sosu salata əlavə edib yaxşıca qarışdırın.",
-  image: ""
-},
-{
-  title: "Mimoza Salatı",
-  ingredients: [
-    "kartof",
-    "kök",
-    "yumurta",
-    "konserv ton balığı",
-    "soğan",
-    "maye mayonez",
-    "duz",
-    "istiot",
-    "şüyüd (bəzək üçün)"
-  ],
-  instructions:
-    "3 orta kartof və 3–4 böyük kökü soyub qaynadın. 6–8 yumurtanı bərk qaynadın. Kartof, kök və yumurta ağı ayrıca rəndələyin. 2 konserve ton balığını süzün, ¼ stəkan mayonez və duz-istiotla qarışdırın. Salatı qat-qat düzün: kartof → az mayonez → ton balığı → soğan → kök → az mayonez → yumurta ağı → mayonez → yumurta sarısı və üzərinə doğranmış şüyüd səpin. Xidmət etməzdən əvvəl ən az 2 saat soyuducuda saxlayın.",
-  image: ""
-},
-{
-    title: "Çoban Salatı",
-    ingredients: [
-      "pomidor",
-      "xiyar",
-      "yaşıl bibər",
-      "soğan",
-      "cəfəri",
-      "zeytun yağı",
-      "limon suyu",
-      "duz",
-      "istiot",
-      "sumak (istəyə görə)",
-      "pul bibər (istəyə görə)"
-    ],
-    instructions:
-      "2–4 ədəd orta pomidoru və 2–3 xiyar (təxminən 2 medium) soyu soyub kubik doğrayın. 1 yaşıl bibər və ½ kiçik soğanı xırda doğrayın. Bir ovuc cəfərini incə doğrayın. Bütün doğranmış tərəvəzləri qaba yığın. Üzərinə 2 xörək qaşığı zeytun yağı, 1 xörək qaşığı limon suyu əlavə edib duz və istiotu qarışdırın. İstəyə bağlı olaraq ½ çay qaşığı sumak və ya pul bibər səpə bilərsiniz. Qarışdırıb bir neçə dəqiqə saxladıqdan sonra servis edin." ,
-    image: ""
-  },
-  {
-    title: "Mangal Salatı",
-    ingredients: [
-      "badımcan",
-      "pomidor",
-      "qırmızı bibər",
-      "yaşıl bibər (isti)",
-      "soğan",
-      "cəfəri",
-      "zeytun yağı",
-      "duz",
-      "istiot"
-    ],
-    instructions:
-      "2 böyük badımcan, 2 qırmızı bibər, 3 pomidor və ½ qırmızı soğanı mangalda və ya sobada (220 °C) 40–60 dəqiqə qızardın, qabığını soyun və doğrayın. Doğranmış tərəvəzləri qaba yığın. Üzərinə 2 xörək qaşığı zeytun yağı, duz və istiot əlavə edin. 2 xörək qaşığı incə doğranmış cəfərini qarışdırın. Bütün ərzaqları yaxşıca qarışdırıb tez servis edin.",
-    image: ""
+    "image": "uploads/nar_salati.jpg"
   },
    {
-    title: "Nar Salatı",
-    ingredients: [
-      "nar",
-      "kartof",
-      "çəngəl çuğundur (və ya çuğundur)",
-      "kök",
-      "yumurta",
-      "toyuq döş əti",
-      "mayonez",
-      "ləvəng qoz",
-      "duz",
-      "istiot"
+    "title": "Göbələk Salatı",
+    "category": "Salad",
+    "ingredients": ["göbələk", "toyuq filesi", "kök", "xiyar", "yumurta", "holland pendiri", "qoz", "şüyüd", "mayonez", "duz", "istiot"],
+    "instructions": [
+      "1. 500 q göbələyi doğrayıb zeytun yağında qızardın.",
+      "2. 300 q toyuq filesini bişirib doğrayın.",
+      "3. 3 böyük kök, 1 xiyar və 2–4 yumurtanı doğrayın.",
+      "4. 100 q holland pendiri kubik doğrayın.",
+      "5. Bütün ərzaqları qaba yığın, 30 q qoz əlavə edin.",
+      "6. 4 x.q. mayonez, duz, istiot əlavə edib qarışdırın.",
+      "7. Üzərinə doğranmış 1 dəstə şüyüd səpib servis edin."
     ],
-    instructions:
-      "1 ədəd iri narın dənələrini ayırın. 2 ədəd orta kartof, 2–3 çuğundur, 2 kiçik kök və 2 yumurtanı bişirib soyudun. 150 qram toyuq döş ətini bişirib incə doğrayın. Hamısını ayrı‑ayrı sürtgəcdən keçirin. Salat qabında qat‑qat düzün: birinci kartof → mayonez, yumurta → çuğundur → kök → toyuq döşü, hər qatın üstünə duz‑istiot əlavə edin. Ən yuxarıda nar dənələri və 2/3 stəkan qoz səpin. Servis etməzdən əvvəl 1–2 saat soyuducuda saxlayın." ,
-    image: ""
+    "image": "uploads/gobelek_salati.png"
   },
   {
-    title: "Göbələk Salatı",
-    ingredients: [
-      "göbələk (qızardılmış və ya konserv)",
-      "toyuq filesi",
-      "kök",
-      "xiyar və ya turşu xiyar",
-      "yumurta",
-      "holland pendiri",
-      "qoz",
-      "şüyüd",
-      "mayonez",
-      "duz",
-      "istiot"
+    "title": "Toyuq Salatı",
+    "category": "Salad",
+    "ingredients": ["toyuq file", "kahı", "cherry pomidor", "zeytun yağı", "limon suyu", "xardal", "çeddar pendiri", "duz", "istiot"],
+    "instructions": [
+      "1. 2 toyuq file bişirib uzun zolaqlar şəklində doğrayın.",
+      "2. 1 baş kahı və 8 ədəd cherry pomidor doğrayın.",
+      "3. 50 q çeddar pendiri incə doğrayın.",
+      "4. Bütün ərzaqları bir qabda qarışdırın.",
+      "5. Sos üçün 2 x.q. zeytun yağı, 1 x.q. limon suyu, 1 ç.q. xardal, duz və istiotu qarışdırın.",
+      "6. Sosu salata töküb qarışdırın."
     ],
-    instructions:
-      "500 qram göbələyi təmizləyib doğrayın və zeytun yağında qızardın. 300 qram toyuq filesini bişirib doğrayın. 3 böyük kökü və 1 xiyar (və ya turşu xiyarı) doğrayın. 2–4 yumurtanı bərk qaynadın və doğrayın. 100 qram holland pendirini kubik doğrayın. Bütün ərzaqları qaba yığın, üzərinə 30 qram qoz əlavə edin. 4 xörək qaşığı mayonez, duz və istiotu əlavə edib yaxşıca qarışdırın. Üzərinə doğranmış 1 dəstə şüyüd səpərək xidmət edin." ,
-    image: ""
+    "image": "uploads/toyuq_salati.jpg"
   },
   {
-    title: "Toyuq Salatı",
-    ingredients: [
-      "toyuq şnitzel və ya file",
-      "kahı",
-      "cherry pomidor",
-      "zeytun yağı",
-      "limon suyu",
-      "xardal",
-      "çeddar pendiri",
-      "duz",
-      "istiot"
+    "title": "Hamburger",
+    "category": "Main",
+    "ingredients": ["mal əti", "yumurta", "çörək qırıntısı", "Worcestershire sousu", "duz", "istiot", "hamburger çörəyi", "pendir", "ketçup", "xardal", "salat"],
+    "instructions": [
+      "1. 500 q mal əti, 1 yumurta, ¾ st çörək qırıntısı, 1 x.q. Worcestershire sousu, duz və istiotu qarışdırın.",
+      "2. 4 köftə düzəldin, ortasını barmaqla basın.",
+      "3. Orta atəşdə hər iki tərəfini 4–6 dəq bişirin.",
+      "4. Hamburger çörəyinə köftə, pendir, ketçup, xardal və salat qoyub servis edin."
     ],
-    instructions:
-      "2 ədəd toyuq şnitzel və ya fileti qablaşdırmada göstərilən qaydada bişirin, sonra uzun zolaqlar şəklində kəsin. 1 baş kahı və 8 cherry pomidoru doğrayın. 50 qram çeddar pendirini incə doğrayın. Bütün ərzaqları qabda qarışdırın. Sos üçün 2 xörək qaşığı zeytun yağı, 1 xörək qaşığı limon suyu, 1 çay qaşığı xardal, duz və istiotu çalın. Sosu salata töküb yaxşıca qarışdırın." ,
-    image: ""
+    "image": ""
   },
   {
-    title: "Hamburger (klassik)",
-    ingredients: [
-      "mal əti",
+    "title": "Düşbərə (mantı)",
+    "category": "Main",
+    "ingredients": ["un", "yumurta", "duz", "su", "qiymə", "soğan", "şüyüd", "qatıq", "əridilmiş yağ", "sarımsaq", "paprika"],
+    "instructions": [
+      "1. 3 st un, 2 yumurta, ½ ç.q. duz və ½ st su ilə xəmir yoğurun.",
+      "2. İçlik üçün qiymə, soğan və doğranmış şüyüdü qarışdırın.",
+      "3. Xəmiri yayın, kvadratlar kəsin, içlik qoyub bağlayın.",
+      "4. Qaynayan duzlu suda 5–7 dəq bişirin.",
+      "5. Üzərinə qatıq, əridilmiş yağ, sarımsaq və paprika əlavə edib servis edin."
+    ],
+    "image": ""
+  },
+  {
+    "title": "Lavaş",
+    "category": "Bread",
+    "ingredients": ["un", "su", "maya", "duz", "süd", "zeytun yağı"],
+    "instructions": [
+      "1. 500 q un, 10 q maya, 1 ç.q. duz, 150 ml süd, 150 ml su və 3 x.q. zeytun yağı ilə xəmir yoğurun.",
+      "2. Xəmiri 1 saat mayalanmağa qoyun.",
+      "3. Nazik yayın və tavada/sobada hər iki tərəfini 1–2 dəq bişirin."
+    ],
+    "image": ""
+  },
+  {
+    "title": "Blincik",
+    "category": "Dessert",
+    "ingredients": ["un", "süd", "yumurta", "şəkər", "duz", "bitki yağı"],
+    "instructions": [
+      "1. 2 st un, 2½ st süd, 2 yumurta, 1 x.q. şəkər, ½ ç.q. duz və 1 x.q. bitki yağı qarışdırın.",
+      "2. Tavada hər iki tərəfini 1–2 dəq bişirin.",
+      "3. İstəyə görə pendir, ət və ya meyvə ilə servis edin."
+    ],
+    "image": ""
+  },
+  {
+    "title": "Pancake (Amerika)",
+    "category": "Dessert",
+    "ingredients": ["un", "baking powder", "şəkər", "duz", "süd", "yumurta", "əridilmiş kərə yağı", "vanil"],
+    "instructions": [
+      "1. 1½ st un, 2½ ç.q. baking powder, ½ ç.q. duz və 1 x.q. şəkəri qarışdırın.",
+      "2. 1¼ st süd, 1 yumurta, 3 x.q. əridilmiş kərə yağı və 2 ç.q. vanil əlavə edin.",
+      "3. Qarışımı ¼ st ölçüsü ilə tavaya tökün və hər iki tərəfini 2–3 dəq bişirin."
+    ],
+    "image": ""
+  },
+  {
+    "title": "Waffle",
+    "category": "Dessert",
+    "ingredients": ["un", "baking powder", "şəkər", "duz", "süd", "yumurta", "əridilmiş kərə yağı", "vanil"],
+    "instructions": [
+      "1. 2 st un, 4 ç.q. baking powder, 2 x.q. şəkər və ½ ç.q. duzu qarışdırın.",
+      "2. 1½ st süd, 2 yumurta, ½ st əridilmiş kərə yağı və 1 ç.q. vanil əlavə edin.",
+      "3. Qarışımı waffle cihazında qızılı rəng alana qədər bişirin."
+    ],
+    "image": ""
+  },
+  {
+    "title": "Kakaolu Keks",
+    "category": "dessert",
+    "ingredients": [
       "yumurta",
-      "çörək qırıntısı",
-      "Worcestershire sousu",
+      "şəkər tozu",
+      "süd",
+      "bitki yağı",
+      "kakao tozu",
+      "un",
+      "duz",
+      "qabartma tozu",
+      "vanilin"
+    ],
+    "instructions": [
+      "1. 3 ədəd yumurtanı və 1 stəkan şəkəri ağarana qədər mikserlə çalın.",
+      "2. 1 stəkan süd və 1 stəkan bitki yağı əlavə edib qarışdırın.",
+      "3. 3 xörək qaşığı kakao, 2 stəkan un, 1 çimdik duz, 1 paket qabartma tozu və 1 paket vanilini ələyərək əlavə edin.",
+      "4. Hamarlanana qədər qarışdırın.",
+      "5. Yağlanmış keks qəlibinə tökün.",
+      "6. 180°C-də əvvəlcədən isidilmiş sobada 30-35 dəqiqə bişirin.",
+      "7. Çöp ilə yoxlayın – təmiz çıxırsa, hazırdır!"
+    ],
+    "image": "uploads/kakaolu_keks.jpeg"
+  },
+  {
+    "title": "Kaşarlı Tost",
+    "category": "breakfast",
+    "ingredients": [
+      "tost çörəyi",
+      "kaşar pendiri",
+      "kərə yağı"
+    ],
+    "instructions": [
+      "1. 2 dilim tost çörəyinin arasına 2 dilim kaşar pendiri qoyun.",
+      "2. Hər iki tərəfinə az miqdarda kərə yağı sürtün.",
+      "3. Tost aparatına qoyub 4-5 dəqiqə ərzində pendir əriyənə qədər bişirin.",
+      "4. İsti halda servis edin."
+    ],
+    "image": "uploads/kasarli_tost.jpeg"
+  },
+  {
+    "title": "Üç Bacı Dolması",
+    "category": "main",
+    "ingredients": [
+      "badımcan",
+      "bibər",
+      "pomidor",
+      "qiymə",
+      "düyü",
+      "soğan",
+      "tomat pastası",
       "duz",
       "istiot",
-      "hamburger çörəyi",
-      "pendir",
-      "ketçup",
-      "xardal",
-      "salat"
+      "göyərti"
     ],
-    instructions:
-      "500 g 80/20 əsaslı mal ətini 1 yumurta, ¾ stəkan çörək qırıntısı, 1 xörək qaşığı Worcestershire sousu, duz və istiotu qarışdırın. Dörd ədəd köftə düzəldin, ortasına barmağınızla azca basın. Orta atəşdə hər iki tərəfini 4–6 dəqiqə bişirin. Hamburger çörəyinin arasına qoyun, istəyə görə pendir, kətçup, xardal və salat əlavə edib servis edin." ,
-    image: ""
+    "instructions": [
+      "1. Badımcan, bibər və pomidorun içini oyub duzlu suda saxlayın.",
+      "2. 300 q qiymə, 4 xörək qaşığı düyü, 1 doğranmış soğan, 1 xörək qaşığı tomat pastası, duz, istiot və göyərti ilə içlik hazırlayın.",
+      "3. İçliyi tərəvəzlərə doldurun.",
+      "4. Qazana düzərək azacıq su əlavə edin və qapaqlı şəkildə 40 dəqiqə bişirin.",
+      "5. İsti halda servis edin."
+    ],
+    "image": "uploads/ucbaci_dolmasi.jpeg"
   },
   {
-    title: "Düşbərə (mantı)",
-    ingredients: [
+    "title": "Yarpaq Dolması",
+    "category": "main",
+    "ingredients": [
+      "üzüm yarpağı",
+      "qiymə",
+      "düyü",
+      "soğan",
+      "duz",
+      "istiot",
+      "göyərti",
+      "kərə yağı"
+    ],
+    "instructions": [
+      "1. Yarpaqları 5 dəqiqə isti suda saxlayaraq yumşaldın.",
+      "2. 400 q qiymə, 5 xörək qaşığı düyü, 2 doğranmış soğan, göyərti, duz və istiotla içlik hazırlayın.",
+      "3. Hər yarpağa 1 çay qaşığı içlik qoyub bükün.",
+      "4. Qazana düzərək üzərinə su və 50 q kərə yağı əlavə edin.",
+      "5. Üstünə boşqab qoyub zəif odda 45 dəqiqə bişirin."
+    ],
+    "image": "uploads/yarpaq_dolmasi.jpeg"
+  },
+  {
+    "title": "Paxlava",
+    "category": "dessert",
+    "ingredients": [
       "un",
       "yumurta",
+      "süd",
+      "maya",
+      "kərə yağı",
+      "qoz ləpəsi",
+      "şəkər tozu",
+      "bal",
+      "vanilin"
+    ],
+    "instructions": [
+      "1. 500 q un, 2 yumurta, 150 ml süd, 1 çay qaşığı maya və vanilinlə xəmir yoğurun, 30 dəqiqə saxlayın.",
+      "2. 200 q qozu 150 q şəkərlə qarışdırın.",
+      "3. Xəmirdən 10 qat yayaraq aralarına yağ sürtün və içlik səpin.",
+      "4. Kəsib üzərinə yumurta sarısı çəkin.",
+      "5. 180°C sobada 35-40 dəqiqə bişirin.",
+      "6. Sobadan çıxardıqdan sonra üzərinə 2 xörək qaşığı bal səpin."
+    ],
+    "image": "uploads/paxlava.jpeg"
+  },
+  {
+    "title": "Şorqoğal",
+    "category": "breakfast",
+    "ingredients": [
+      "un",
+      "süd",
+      "maya",
+      "kərə yağı",
+      "yumurta",
+      "zərdə",
       "duz",
+      "istiot"
+    ],
+    "instructions": [
+      "1. 600 q un, 200 ml süd, 1 çay qaşığı maya, 200 q yağ, duzla xəmir yoğurun və 1 saat saxlayın.",
+      "2. Zərdə və istiotla içlik hazırlayın.",
+      "3. Xəmiri yayaraq içlik qoyub rulet formasında bükün.",
+      "4. Dairəvi formalarda kəsib yağlı kağız sərilmiş soba listinə düzün.",
+      "5. Üzərinə yumurta sarısı sürtün.",
+      "6. 180°C-də 25-30 dəqiqə bişirin."
+    ],
+    "image": "uploads/sorgogal.jpeg"
+  },
+    {
+    "title": "Avokadolu Tost",
+    "category": "Breakfast",
+    "ingredients": [
+      "çörək",
+      "avokado",
+      "yumurta",
+      "duz",
+      "istiot",
+      "limon suyu"
+    ],
+    "instructions": [
+      "1. Çörəyi tost aparatında və ya tavada qızardın.",
+      "2. 1 ədəd yetişmiş avokadonu çəngəllə əzin.",
+      "3. Üzərinə bir neçə damcı limon suyu, duz və istiot əlavə edib qarışdırın.",
+      "4. Avokado qarışığını qızarmış çörəyin üzərinə yayın.",
+      "5. Üzərinə istəyə görə 1 ədəd qaynadılmış və ya yarıbişmiş yumurta əlavə edin.",
+      "6. İstəyə görə küncüt və ya çili lopası ilə bəzəyin və dərhal servis edin."
+    ],
+    "image": "uploads/avocado_toast.jpeg"
+  },
+  {
+    "title": "Omlet",
+    "category": "Breakfast",
+    "ingredients": [
+      "yumurta",
+      "süd",
+      "duz",
+      "istiot",
+      "kərə yağı"
+    ],
+    "instructions": [
+      "1. 2-3 ədəd yumurtanı bir qaba qırın.",
+      "2. Üzərinə 2 yemək qaşığı süd, bir az duz və istiot əlavə edin, yaxşıca çalın.",
+      "3. Tavaya 1 çay qaşığı kərə yağı əlavə edib əridin.",
+      "4. Yumurtalı qarışımı tavaya tökün və orta odda bişirin.",
+      "5. Omletin altı qızardıqda, üstünü qatlayın və bir neçə saniyə daha bişirin.",
+      "6. İsti-isti servis edin."
+    ],
+    "image": "uploads/omlet.jpeg"
+  },
+  {
+    "title": "Yulaf Sıyığı (Porridge)",
+    "category": "Breakfast",
+    "ingredients": [
+      "yulaf",
+      "süd",
+      "bal",
+      "banan",
+      "duz"
+    ],
+    "instructions": [
+      "1. Kiçik qazana yarım stəkan yulaf və 1 stəkan süd əlavə edin.",
+      "2. Orta odda qarışdıraraq bişirin, qarışım qatılaşana qədər (təxminən 5-7 dəqiqə).",
+      "3. Az miqdarda duz əlavə edin.",
+      "4. Ocaqdan götürdükdən sonra 1 çay qaşığı bal əlavə edib qarışdırın.",
+      "5. Üzərinə dilimlənmiş banan və istəyə görə qoz, darçın əlavə edin.",
+      "6. İsti şəkildə servis edin."
+    ],
+    "image": "uploads/yulaf_siyigi.jpeg"
+  },
+   {
+    "title": "Düşbərə",
+    "category": "Soup",
+    "ingredients": [
+      "un",
+      "yumurta",
       "su",
+      "duz",
       "qiymə",
       "soğan",
-      "şüyüd və ya nanə",
-      "qatıq",
-      "əridilmiş yağ",
-      "sarımsaq",
-      "paprika"
+      "istiot",
+      "ət suyu",
+      "nanə"
     ],
-    instructions:
-      "3 stəkan un, 2 yumurta, ½ çay qaşığı duz və ½ stəkan su ilə xəmir yoğurun. İçlik üçün qiymə, soğan və doğranmış şüyüdü qarışdırın. Xəmiri nazik yayın, kvadratlar kəsib içlik qoyun və bağlayın. Qaynayan duzlu suda 5–7 dəqiqə bişirin. Üzərinə qatıq, əridilmiş yağ, sarımsaq və paprika qarışığı əlavə edib xidmət edin." ,
-    image: ""
+    "instructions": [
+      "1. Un, su, yumurta və duz ilə bərk xəmir yoğurun. Dinləndirib nazik yaymaq.",
+      "2. Qiyməyə doğranmış soğan, duz və istiot əlavə edib qarışdırın.",
+      "3. Xəmirdən kiçik kvadratlar kəsin, ortasına qiymə qoyub kənarlarını birləşdirin.",
+      "4. Et suyunu qaynadın və düşbərələri əlavə edib bişirin.",
+      "5. Bişdikdən sonra üzərinə quru nanə səpib isti servis edin."
+    ],
+    "image": "uploads/duspere.jpeg"
   },
   {
-    title: "Lavaş",
-    ingredients: [
-      "un",
-      "su",
-      "maya",
-      "duz",
-      "süd (istəyə görə)",
-      "zeytun yağı"
-    ],
-    instructions:
-      "500 g un, 10 g maya, 1 çay qaşığı duz, 150 ml ilıq süd, 150 ml su və 3 xörək qaşığı zeytun yağı ilə xəmir yoğurun. 1 saat mayalanmağa qoyun. Sonra nazik yayın və tavada və ya sobada hər iki tərəfini 1–2 dəqiqə bişirin." ,
-    image: ""
-  },
-  {
-    title: "Blincik (Russian blini)",
-    ingredients: [
-      "un",
-      "süd",
+    "title": "Kükü",
+    "category": "Breakfast",
+    "ingredients": [
       "yumurta",
-      "şəkər",
+      "ispanaq",
+      "soğan",
       "duz",
+      "istiot",
       "bitki yağı"
     ],
-    instructions:
-      "2 stəkan un, 2½ stəkan süd, 2 yumurta, 1 xörək qaşığı şəkər, ½ çay qaşığı duz və 1 xörək qaşığı bitki yağı qarışdırın. Orta atəşdə tavada hər iki tərəfini 1–2 dəqiqə bişirin. İstəyə görə pendir, ət və ya meyvə ilə servis edin." ,
-    image: ""
+    "instructions": [
+      "1. Soğanı doğrayıb azca qızardın.",
+      "2. İspanağı yuyub xırda doğrayın və soğana əlavə edin.",
+      "3. Yumurtaları çırpın, duz, istiot əlavə edin və qarışığa tökün.",
+      "4. Tavada qapaqlı şəkildə hər iki tərəfi qızarana qədər bişirin.",
+      "5. İsti və ya soyuq şəkildə servis edin."
+    ],
+    "image": "uploads/kuku.jpeg"
   },
   {
-    title: "Pancake (Amerika)",
-    ingredients: [
-      "un",
-      "baking powder",
-      "şəkər",
+    "title": "Toyuq Ləvəngisi",
+    "category": "Main",
+    "ingredients": [
+      "toyuq",
+      "soğan",
+      "qoz",
+      "narşərab",
       "duz",
-      "süd",
-      "yumurta",
-      "əridilmiş kərə yağı",
-      "vanil (istəyə görə)"
+      "istiot"
     ],
-    instructions:
-      "1½ stəkan un, 2½ çay qaşığı baking powder, ½ çay qaşığı duz və 1 xörək qaşığı şəkər qarışdırın. 1¼ stəkan süd, 1 yumurta, 3 xörək qaşığı əridilmiş kərə yağı və 2 çay qaşığı vanil əlavə edib çalın. Tavada ¼ stəkanlıq paylarla tökərək hər iki tərəfini 2–3 dəqiqə bişirin." ,
-    image: ""
+    "instructions": [
+      "1. Soğanı sürtkəcdən keçirin, suyunu süzün.",
+      "2. Qozu xırda doğrayın, narşərab, duz və istiot əlavə edin.",
+      "3. Qarışığı toyuğun içinə doldurun və kənarlarını bağlayın.",
+      "4. Sobada 180°C-də 1 saat bişirin.",
+      "5. Üzəri qızarana qədər sobada saxlayın, sonra servis edin."
+    ],
+    "image": "uploads/levengi.jpeg"
   },
   {
-    title: "Waffle (klassik)",
-    ingredients: [
-      "un",
-      "baking powder",
-      "şəkər",
+    "title": "Bozbaş",
+    "category": "Main",
+    "ingredients": [
+      "quzu əti",
+      "kartof",
+      "noxud",
+      "soğan",
+      "pomidor",
       "duz",
-      "süd",
-      "yumurta",
-      "əridilmiş kərə yağı və ya bitki yağı",
-      "vanil (istəyə görə)"
+      "istiot",
+      "zəfəran"
     ],
-    instructions:
-      "2 stəkan un, 4 çay qaşığı baking powder, 2 xörək qaşığı şəkər və ½ çay qaşığı duz qarışdırın. 1½ stəkan süd, 2 yumurta, ½ stəkan əridilmiş kərə yağı və 1 çay qaşığı vanil əlavə edib çalın. Waffle cihazında qızılı rəng alana qədər bişirin." ,
-    image: ""
+    "instructions": [
+      "1. Noxudu əvvəlcədən isladın.",
+      "2. Əti doğrayın və su ilə qaynadın, köpüyünü yığın.",
+      "3. Doğranmış soğan, kartof və pomidor əlavə edin.",
+      "4. İsladılmış noxudu da əlavə edib bişirin.",
+      "5. Duz, istiot və zəfəran əlavə edib hazır olana qədər bişirin."
+    ],
+    "image": "uploads/bozbas.jpeg"
   },
+  {
+    "title": "Qutab",
+    "category": "Main",
+    "ingredients": [
+      "un",
+      "su",
+      "duz",
+      "ispanaq",
+      "soğan",
+      "duz",
+      "istiot",
+      "bitki yağı"
+    ],
+    "instructions": [
+      "1. Un, su və duz ilə xəmir yoğurun və nazik yaymaq.",
+      "2. İspanaq və soğanı doğrayıb qovurun, duz və istiot əlavə edin.",
+      "3. Xəmirin bir tərəfinə içlik qoyub digər tərəfini qapadın.",
+      "4. Tavada hər iki tərəfini az yağla qızardın.",
+      "5. Qaynar halda qatıqla servis edin."
+    ],
+    "image": "uploads/qutab.jpeg"
+  },
+  {
+    "title": "Pirojki (Peraski)",
+    "category": "Snack",
+    "ingredients": [
+      "un",
+      "süd",
+      "maya",
+      "yumurta",
+      "duz",
+      "şəkər",
+      "kartof",
+      "soğan",
+      "bitki yağı"
+    ],
+    "instructions": [
+      "1. Süd, maya, şəkər və duz ilə mayalı xəmir hazırlayın.",
+      "2. Kartofu bişirib əzin, qızardılmış soğanla qarışdırın.",
+      "3. Xəmirdən toplar düzəldin, içlik əlavə edin və bağlayın.",
+      "4. Yağda hər tərəfini qızarana qədər bişirin.",
+      "5. Kağız dəsmalda artıq yağını çəkdirib servis edin."
+    ],
+    "image": "uploads/peraski.jpeg"
+  },
+  {
+    "title": "Sulu Küftə",
+    "category": "Soup",
+    "ingredients": [
+      "qiymə",
+      "düyü",
+      "yumurta",
+      "duz",
+      "istiot",
+      "soğan",
+      "göyərti",
+      "pomidor",
+      "kartof"
+    ],
+    "instructions": [
+      "1. Qiyməyə düyü, yumurta, duz və istiot əlavə edib yoğurun.",
+      "2. Xırda küftələr düzəldin və su ilə qaynadın.",
+      "3. Ayrı qazanda pomidor, soğan və kartof qovurun, su əlavə edin.",
+      "4. Küftələri bu qarışıma əlavə edin və bişirin.",
+      "5. Üzərinə doğranmış göyərti səpib servis edin."
+    ],
+    "image": "uploads/sulu_kufte.jpeg"
+  },
+  {
+    "title": "Lazanya",
+    "category": "Main",
+    "ingredients": [
+      "lazanya vərəqləri",
+      "qiymə",
+      "soğan",
+      "pomidor pastası",
+      "süd",
+      "un",
+      "kərə yağı",
+      "pendir",
+      "duz",
+      "istiot"
+    ],
+    "instructions": [
+      "1. Soğan və qiyməni qovurun, pomidor pastası əlavə edin.",
+      "2. Süd, un və kərə yağı ilə beşamel sousu hazırlayın.",
+      "3. Lazanya vərəqlərini qaynar suda yumşaldın.",
+      "4. Sobaya dayanıqlı qaba qat-qat vərəq, qiymə, sous və pendir düzün.",
+      "5. Üzərinə beşamel və pendir əlavə edib 180°C-də bişirin."
+    ],
+    "image": "uploads/lazanya.jpeg"
+  },
+  {
+    "title": "Sebzəli Qovurma",
+    "category": "Main",
+    "ingredients": [
+      "qoyun əti",
+      "soğan",
+      "pomidor",
+      "bibər",
+      "badımcan",
+      "duz",
+      "istiot",
+      "kərə yağı"
+    ],
+    "instructions": [
+      "1. Əti kərə yağı ilə qızardın.",
+      "2. Soğanı, sonra isə pomidor və bibəri əlavə edin.",
+      "3. Doğranmış badımcanı əlavə edin.",
+      "4. Duz və istiot əlavə edib, qapaq altında bişirin.",
+      "5. Yağlı və dadlı şəkildə isti servis edin."
+    ],
+    "image": "uploads/sebzeli_qovurma.jpeg"
+  },
+  {
+    "title": "Toyuq və Ətli Fətir",
+    "category": "Main",
+    "ingredients": [
+      "un",
+      "su",
+      "duz",
+      "toyuq əti",
+      "qiymə",
+      "soğan",
+      "duz",
+      "istiot",
+      "yumurta"
+    ],
+    "instructions": [
+      "1. Un, su və duz ilə xəmir yoğurun.",
+      "2. Toyuq ətini və qiyməni ayrıca bişirib doğrayın.",
+      "3. Soğanla birlikdə qovurun, duz və istiot əlavə edin.",
+      "4. Xəmiri yayaraq içliyi qoyun və qapağını bağlayın.",
+      "5. Üzərinə yumurta çəkib sobada 180°C-də bişirin."
+    ],
+    "image": "uploads/etli_fetir.jpeg"
+  },
+  {
+    "title": "Qızardılmış Balıq",
+    "category": "Main",
+    "ingredients": [
+      "balıq",
+      "duz",
+      "istiot",
+      "un",
+      "bitki yağı",
+      "limon"
+    ],
+    "instructions": [
+      "1. Balığı təmizləyin, duz və istiot vurun.",
+      "2. Hər iki tərəfini una batırın.",
+      "3. Qızğın yağda qızıl rəng alana qədər qızardın.",
+      "4. Kağız dəsmalda artıq yağını çəkdirin.",
+      "5. Limonla servis edin."
+    ],
+    "image": "uploads/qizardilmis_baliq.jpeg"
+  },
+  {
+    "title": "Ət Qovurma",
+    "category": "Main",
+    "ingredients": ["qıyma", "soğan", "kartof", "duz", "istiot", "zəfəran"],
+    "instructions": [
+      "1. 500 qram qıyməyi tavada öz suyunu buraxıb çəkənə qədər qovurun.",
+      "2. 2 ədəd iri soğanı doğrayıb qıyməyə əlavə edin və birlikdə qızardın.",
+      "3. 3-4 ədəd kartofu kub formasında doğrayıb əlavə edin, duz və istiot vurun.",
+      "4. Üzərinə azacıq su əlavə edib zəif odda 20 dəqiqə bişirin.",
+      "5. Bişməyə yaxın zəfəran suyu əlavə edib qarışdırın və xidmət edin."
+    ],
+    "image": "uploads/et_qovurma.jpeg"
+  },
+  {
+    "title": "Şüyüdlü Plov",
+    "category": "Main",
+    "ingredients": ["düyü", "şüyüd", "kərə yağı", "duz", "zəfəran"],
+    "instructions": [
+      "1. 2 stəkan düyünü yaxşıca yuyun və duzlu suda 15 dəqiqə isladın.",
+      "2. Su qaynadıqda düyünü əlavə edib yarıbişmiş hala gələnə qədər bişirin.",
+      "3. Şüyüdü doğrayın. Düyünü süzün və qazanda lay-lay düyü və şüyüd düzün.",
+      "4. Üstünə kərə yağı və zəfəran suyu töküb 30 dəqiqə dəmə qoyun.",
+      "5. Hazır olduqda qabın içinə boşaldıb isti halda servis edin."
+    ],
+    "image": "uploads/suyudlu_plov.jpeg"
+  },
+  {
+    "title": "Səbzi Qovurma",
+    "category": "Main",
+    "ingredients": ["qıyma", "ispanaq", "soğan", "yumurta", "duz", "istiot"],
+    "instructions": [
+      "1. 1 ədəd iri soğanı doğrayıb qovurun, üzərinə 300 qram qıyma əlavə edin.",
+      "2. Qıymə bişəndə 400 qram doğranmış ispanağı əlavə edib qarışdırın.",
+      "3. Ispanaq suyunu buraxıb çəkənə qədər bişirin, duz və istiot vurun.",
+      "4. Üzərinə 2 ədəd yumurta qırıb qarışdıraraq bişirin.",
+      "5. İsti halda plovla və ya təkcə servis edin."
+    ],
+    "image": "uploads/sebzi_qovurma.jpeg"
+  },
+  {
+    "title": "Tava Kababı",
+    "category": "Main",
+    "ingredients": ["qıyma", "soğan", "duz", "istiot", "kartof", "pomidor"],
+    "instructions": [
+      "1. 500 qram qıyməyə 1 iri doğranmış soğan, duz və istiot əlavə edib yoğurun.",
+      "2. Qıymə qarışığını tava ölçüsündə yayın.",
+      "3. Üzərinə nazik doğranmış kartof və pomidor dilimləri düzün.",
+      "4. Əvvəlcədən isidilmiş 200°C sobada 30 dəqiqə bişirin.",
+      "5. Hazır olduqda dilimləyərək süfrəyə verin."
+    ],
+    "image": "uploads/tava_kababi.jpeg"
+  },
+  {
+    "title": "Qızardılmış Toyuq",
+    "category": "Main",
+    "ingredients": ["toyuq budları", "duz", "istiot", "zəfəran", "bitki yağı"],
+    "instructions": [
+      "1. Toyuq budlarını yaxşıca yuyun və suyu süzün.",
+      "2. Üzərinə duz, istiot və zəfəran suyu əlavə edib 30 dəqiqə marinad edin.",
+      "3. Tavada yağı qızdırıb toyuqları hər iki tərəfini qızarana qədər bişirin.",
+      "4. Tava qapağını örtüb zəif odda 15 dəqiqə də bişirin.",
+      "5. İsti halda plov və ya salatla servis edin."
+    ],
+    "image": "uploads/qizardilmis_toyuq.jpeg"
+  },
+   {
+    "title": "Pendirli Sendviç",
+    "category": "Fastfood",
+    "ingredients": ["çörək", "pendir", "kərə yağı"],
+    "instructions": [
+      "1. 2 dilim çörəyin üzərinə nazik kərə yağı sürtün.",
+      "2. Arasına 2 dilim pendir qoyun.",
+      "3. Tavada hər iki tərəfini qızarana qədər bişirin.",
+      "4. Pendir əriyəndə və çörək qızıldan rəng aldıqda hazırdır."
+    ],
+    "image": "uploads/pendirli_sendvic.jpeg"
+  },
+  {
+    "title": "Toyuq Burgeri",
+    "category": "Fastfood",
+    "ingredients": ["burger çörəyi", "toyuq filesi", "marul", "pomidor", "mayonez"],
+    "instructions": [
+      "1. Toyuq filesini ədviyyatla marinadlayın və qızardın.",
+      "2. Burger çörəyini ortadan bölüb içini yüngülcə qızardın.",
+      "3. Alt çörəyin üzərinə mayonez sürtün, marul və pomidor dilimləri düzün.",
+      "4. Üzərinə qızardılmış toyuq qoyun və üst çörəklə bağlayın."
+    ],
+    "image": "uploads/toyuq_burgeri.jpeg"
+  },
+  {
+    "title": "Cheeseburger",
+    "category": "Fastfood",
+    "ingredients": ["burger çörəyi", "qiymə", "pendir", "pomidor", "marul", "ketçup"],
+    "instructions": [
+      "1. Qiymədən burger kotleti düzəldin və hər iki tərəfini tavada qızardın.",
+      "2. Kotletin üzərinə pendir qoyub əritmək üçün örtün.",
+      "3. Çörəyi kəsib qızardın, altına ketçup çəkin.",
+      "4. Marul, pomidor və pendirli kotleti yerləşdirin.",
+      "5. Üst çörəyi bağlayın və servis edin."
+    ],
+    "image": "uploads/cheeseburger.jpeg"
+  },
+  {
+    "title": "Falafel Sendviç",
+    "category": "Fastfood",
+    "ingredients": ["falafel", "lavaş", "pomidor", "xiyar", "qatıq sousu", "marul"],
+    "instructions": [
+      "1. Falafelləri qızardın.",
+      "2. Lavaşın üzərinə qatıq sousu yayın.",
+      "3. Üzərinə marul, doğranmış pomidor və xiyar əlavə edin.",
+      "4. Falafelləri düzün və lavaşı bükün."
+    ],
+    "image": "uploads/falafel_sendvic.jpeg"
+  },
+  {
+    "title": "Ton Balıqlı Sendviç",
+    "category": "Fastfood",
+    "ingredients": ["çörək", "ton balığı", "mayonez", "marul", "xiyar"],
+    "instructions": [
+      "1. Ton balığını mayonezlə qarışdırın.",
+      "2. Çörəyin üzərinə marul, ton balığı qarışığı və xiyar düzün.",
+      "3. Çörəyin digər dilimi ilə bağlayın və servis edin."
+    ],
+    "image": "uploads/tonbaligli_sendvic.jpeg"
+  },
+  {
+    "title": "Kartof Fri",
+    "category": "Fastfood",
+    "ingredients": ["kartof", "duz", "bitki yağı"],
+    "instructions": [
+      "1. Kartofları uzun-uzun doğrayın.",
+      "2. Duzlayın və qızğın yağda qızardın.",
+      "3. Qızardıqdan sonra kağız salfetin üzərinə qoyun və servis edin."
+    ],
+    "image": "uploads/kartof_fri.jpeg"
+  },
+  {
+    "title": "Toyuq Nuggets",
+    "category": "Fastfood",
+    "ingredients": ["toyuq filesi", "un", "yumurta", "çörək qırıntısı", "duz", "istiot"],
+    "instructions": [
+      "1. Toyuq filesini kub formasında doğrayın.",
+      "2. Duz və istiot əlavə edin.",
+      "3. Əvvəlcə una, sonra yumurtaya, sonda çörək qırıntısına batırın.",
+      "4. Qızğın yağda qızardın."
+    ],
+    "image": "uploads/toyuq_nuggets.jpeg"
+  },
+  {
+    "title": "Crispy Chicken",
+    "category": "Fastfood",
+    "ingredients": ["toyuq budları", "qatıq", "un", "qarğıdalı nişastası", "ədviyyat"],
+    "instructions": [
+      "1. Toyuq budlarını qatıqla ədviyyatlarda 1 saat marinad edin.",
+      "2. Un və nişastanı qarışdırıb toyuqları bu qarışığa bulayın.",
+      "3. Qızğın yağda qızardın, kağız salfetin üzərinə çıxarın."
+    ],
+    "image": "uploads/crispy_chicken.jpeg"
+  },
+  {
+    "title": "Pendirli Toplar",
+    "category": "Fastfood",
+    "ingredients": ["pendir", "un", "yumurta", "çörək qırıntısı"],
+    "instructions": [
+      "1. Pendir dənələri hazırlayıb dondurucuda 30 dəqiqə saxlayın.",
+      "2. Un, yumurta və çörək qırıntısına bulayıb qızardın.",
+      "3. Qızaran kimi servis edin."
+    ],
+    "image": "uploads/pendirli_toplar.jpeg"
+  },
+  {
+    "title": "Burrito",
+    "category": "Fastfood",
+    "ingredients": ["lavaş", "qiymə", "lobya", "qarğıdalı", "pendir", "pomidor"],
+    "instructions": [
+      "1. Qiyməni qızardın və lobya, qarğıdalı, doğranmış pomidor əlavə edin.",
+      "2. Lavaşın üzərinə qarışığı yayın, pendir səpin.",
+      "3. Büküb tavada hər iki tərəfini qızardın."
+    ],
+    "image": "uploads/burrito.jpeg"
+  },
+  {
+    "title": "Quesadilla",
+    "category": "Fastfood",
+    "ingredients": ["lavaş", "pendir", "toyuq filesi", "bibər"],
+    "instructions": [
+      "1. Toyuq və bibəri qızardın.",
+      "2. Lavaşın bir yarısına toyuq, pendir və bibər düzün.",
+      "3. Digər yarısını qatlayın və hər iki tərəfini tavada qızardın."
+    ],
+    "image": "uploads/quesadilla.jpeg"
+  },
+  {
+    "title": "Shawarma",
+    "category": "Fastfood",
+    "ingredients": ["lavaş", "toyuq filesi", "soğan", "pomidor", "turşu", "sous"],
+    "instructions": [
+      "1. Toyuq filesini ədviyyatla qızardın.",
+      "2. Lavaşın üzərinə doğranmış tərəvəzlər və toyuq düzün.",
+      "3. Sous əlavə edib bükün və qızardın."
+    ],
+    "image": "uploads/shawarma.jpeg"
+  },
+  {
+    "title": "Toyuq Dönər",
+    "category": "Fastfood",
+    "ingredients": ["lavaş", "toyuq", "soğan", "pomidor", "sous"],
+    "instructions": [
+      "1. Toyuqları nazik doğrayıb ədviyyatla bişirin.",
+      "2. Lavaşa düzün, doğranmış tərəvəzlər və sous əlavə edin.",
+      "3. Büküb tavada qızardın."
+    ],
+    "image": "uploads/toyuq_doner.jpeg"
+  },
+  {
+    "title": "Ət Dönər",
+    "category": "Fastfood",
+    "ingredients": ["lavaş", "qiymə", "soğan", "pomidor", "sous"],
+    "instructions": [
+      "1. Qiyməni ədviyyatla bişirin.",
+      "2. Lavaşa doğranmış tərəvəzlərlə birlikdə düzün.",
+      "3. Sous əlavə edin və büküb servis edin."
+    ],
+    "image": "uploads/et_doner.jpeg"
+  },
+  {
+    "title": "Kartoflu Küftə",
+    "category": "Fastfood",
+    "ingredients": ["kartof", "qiymə", "soğan", "duz", "istiot", "yumurta", "un"],
+    "instructions": [
+      "1. Kartofu qaynadıb püre halına gətirin.",
+      "2. Qiyməni və soğanı qızardın.",
+      "3. Püre ilə qiyməni qarışdırıb kürəciklər düzəldin.",
+      "4. Una, yumurtaya batırıb qızardın."
+    ],
+    "image": "uploads/kartoflu_kuftə.jpeg"
+  },
+  {
+    "title": "Göbələkli Pizza",
+    "category": "Fastfood",
+    "ingredients": ["pizza xəmir", "pomidor sousu", "pendir", "göbələk"],
+    "instructions": [
+      "1. Xəmiri yayaraq üzərinə sous çəkin.",
+      "2. Göbələk və pendir əlavə edin.",
+      "3. 200°C-də 12-15 dəqiqə bişirin."
+    ],
+    "image": "uploads/gobelekli_pizza.jpeg"
+  },
+  {
+    "title": "Marqarita Pizza",
+    "category": "Fastfood",
+    "ingredients": ["pizza xəmir", "pomidor sousu", "mozzarella pendiri", "reyhan"],
+    "instructions": [
+      "1. Xəmiri yayaraq sous çəkin.",
+      "2. Mozzarella pendiri və reyhan əlavə edin.",
+      "3. 200°C sobada 10-12 dəqiqə bişirin."
+    ],
+    "image": "uploads/marqarita_pizza.jpeg"
+  },
+   {
+    "title": "Mərci Şorbası",
+    "category": "Soup",
+    "ingredients": ["qırmızı mərci", "soğan", "yerkökü", "kartof", "kərə yağı", "duz", "istiot"],
+    "instructions": [
+      "1. Tərəvəzləri doğrayın və kərə yağı ilə qızardın.",
+      "2. Yuyulmuş mərci əlavə edib 1-2 dəqiqə qarışdırın.",
+      "3. Üzərinə 1 litr su əlavə edin, duz və istiot qatın.",
+      "4. Bütün ərzaqlar yumşaldıqda blenderlə püre halına gətirin.",
+      "5. İsti şəkildə servis edin, üstünə limon suyu da əlavə edə bilərsiniz."
+    ],
+    "image": "uploads/mercimek_sorbasi.jpeg"
+  },
+  {
+    "title": "Pomidor Şorbası",
+    "category": "Soup",
+    "ingredients": ["pomidor", "soğan", "kərə yağı", "un", "duz", "istiot", "süd"],
+    "instructions": [
+      "1. Soğanı doğrayıb kərə yağında qovurun.",
+      "2. Üzərinə un əlavə edin və 1-2 dəqiqə qarışdırın.",
+      "3. Rəndələnmiş pomidorları əlavə edib 5 dəqiqə bişirin.",
+      "4. 1 stəkan süd və su əlavə edib qarışdırın, qaynadın.",
+      "5. Blenderlə çəkib süzgəcdən keçirin və isti servis edin."
+    ],
+    "image": "uploads/pomidor_sorbasi.jpeg"
+  },
+  {
+    "title": "Əriştə Şorbası",
+    "category": "Soup",
+    "ingredients": ["əriştə", "kərə yağı", "pomidor pastası", "duz", "istiot", "ət suyu"],
+    "instructions": [
+      "1. Kərə yağında pomidor pastasını qovurun.",
+      "2. Üzərinə ət suyu əlavə edin və qaynamağa buraxın.",
+      "3. Qaynayan suya əriştə əlavə edib yumşalana qədər bişirin.",
+      "4. Duz və istiot əlavə edin.",
+      "5. İsti halda servis edin."
+    ],
+    "image": "uploads/eriste_sorbasi.jpeg"
+  },
+   {
+    "title": "Ballı Tort",
+    "category": "Dessert",
+    "ingredients": [
+      "yumurta",
+      "şəkər tozu",
+      "bal",
+      "soda",
+      "un",
+      "qaymaq"
+    ],
+    "instructions": [
+      "1. 2 ədəd yumurtanı 1 stəkan şəkərlə çalın.",
+      "2. Üzərinə 3 xörək qaşığı bal və 1 çay qaşığı soda əlavə edib qarışdırın.",
+      "3. Qarışığı buxar üzərində 5-7 dəqiqə qızdırın, üzərinə 2.5 stəkan un əlavə edib xəmir yoğurun.",
+      "4. Xəmiri 4-5 hissəyə bölüb hər birini nazik yayıb 180°C sobada 5-7 dəqiqə bişirin.",
+      "5. Soyuduqdan sonra layları qaymaqla aralayın.",
+      "6. Üstünü istəyə görə bal və qozla bəzəyin.",
+      "7. Soyuducuda bir neçə saat saxlayın və servis edin."
+    ],
+    "image": "uploads/balli_tort.jpeg"
+  },
+  {
+    "title": "Napaleon Tortu",
+    "category": "Dessert",
+    "ingredients": [
+      "un",
+      "yağ",
+      "yumurta",
+      "süd",
+      "şəkər tozu",
+      "nişasta",
+      "vanilin"
+    ],
+    "instructions": [
+      "1. 3 stəkan un və 200 qram kərə yağı ilə qum kimi qarışım alın.",
+      "2. 1 yumurta və azca su əlavə edib xəmir yoğurun, soyuducuda saxlayın.",
+      "3. 500 ml süd, 1 yumurta, 1 stəkan şəkər, 2 x.q. nişasta və vanilinlə krem hazırlayın.",
+      "4. Xəmiri 6 hissəyə bölüb nazik yayıb 200°C sobada bişirin.",
+      "5. Layları kremlə aralayaraq yığın.",
+      "6. Üzərinə qırıntı səpin və soyuducuda saxlayın.",
+      "7. 4-5 saatdan sonra servis edin."
+    ],
+    "image": "uploads/napaleon_tortu.jpeg"
+  },
+  {
+    "title": "Tiramisu",
+    "category": "Dessert",
+    "ingredients": [
+      "mascarpone pendiri",
+      "şəkər tozu",
+      "yumurta",
+      "espresso",
+      "ladyfinger biskvit",
+      "kakao"
+    ],
+    "instructions": [
+      "1. 3 yumurtanın sarısını 1/2 stəkan şəkərlə çalın.",
+      "2. Üzərinə 250 q mascarpone pendiri əlavə edin və qarışdırın.",
+      "3. Ladyfinger biskvitlərini soyuq espressoya batırın.",
+      "4. Qat-qat biskvit və kremi düzün.",
+      "5. Üstünü kakao ilə səpin.",
+      "6. Soyuducuda ən az 4 saat saxlayın və servis edin."
+    ],
+    "image": "uploads/tiramisu.jpeg"
+  },
+  {
+    "title": "Şokoladlı Muffin",
+    "category": "Dessert",
+    "ingredients": [
+      "yumurta",
+      "şəkər tozu",
+      "süd",
+      "bitki yağı",
+      "kakao",
+      "un",
+      "qabartma tozu",
+      "şokolad qırıqları"
+    ],
+    "instructions": [
+      "1. 2 yumurta və 3/4 stəkan şəkəri mikserlə çalın.",
+      "2. 1/2 stəkan süd və 1/3 stəkan bitki yağı əlavə edin.",
+      "3. 1/2 stəkan kakao, 1 stəkan un, 1 paket qabartma tozu əlavə edib qarışdırın.",
+      "4. Şokolad qırıqlarını əlavə edin.",
+      "5. Xəmiri muffin qəliblərinə tökün.",
+      "6. 180°C sobada 20 dəqiqə bişirin."
+    ],
+    "image": "uploads/sokoladli_muffin.jpeg"
+  },
+  {
+    "title": "Biskvit Ruleti",
+    "category": "Dessert",
+    "ingredients": [
+      "yumurta",
+      "şəkər tozu",
+      "un",
+      "vanilin",
+      "marmelad"
+    ],
+    "instructions": [
+      "1. 4 yumurta və 1 stəkan şəkəri mikserlə ağarana qədər çalın.",
+      "2. Üzərinə 1 stəkan un və 1 paket vanilin əlavə edin.",
+      "3. Xəmiri yağlanmış soba kağızına tökün və 180°C sobada 12-15 dəqiqə bişirin.",
+      "4. Bişmiş biskviti isti-isti kağızla birlikdə rulet şəklində bükün.",
+      "5. Soyuduqdan sonra açın, içini marmeladla doldurub yenidən bükün.",
+      "6. Üzərini istəyə görə şəkər tozu ilə bəzəyin."
+    ],
+    "image": "uploads/biskvit_ruleti.jpeg"
+  },
+   {
+    "title": "San Sebastian Cheesecake",
+    "category": "Dessert",
+    "ingredients": [
+      "krem pendir",
+      "yumurta",
+      "şəkər tozu",
+      "krema",
+      "un",
+      "vanilin"
+    ],
+    "instructions": [
+      "1. 600 q krem pendiri və 1 stəkan şəkəri mikserlə 3-4 dəqiqə çalın.",
+      "2. 4 ədəd yumurtanı bir-bir əlavə edərək çalın.",
+      "3. 1 stəkan krema, 2 x.q. un və 1 paket vanilin əlavə edib qarışdırın.",
+      "4. Qarışığı yağlı kağız sərilmiş qəlibə tökün.",
+      "5. 210°C sobada 35-40 dəqiqə bişirin, üstü qəhvəyi yanıq rəngə çatana qədər.",
+      "6. Sobadan çıxardıqdan sonra tam soyudun və soyuducuda 4-5 saat saxlayın.",
+      "7. Dilimləyib servis edin."
+    ],
+    "image": "uploads/san_sebastian.jpeg"
+  },
+  {
+    "title": "Meyvəli Tort",
+    "category": "Dessert",
+    "ingredients": [
+      "yumurta",
+      "şəkər tozu",
+      "un",
+      "krema",
+      "vanilin",
+      "mövsümi meyvələr"
+    ],
+    "instructions": [
+      "1. 4 yumurta və 1 stəkan şəkəri mikserlə ağarana qədər çalın.",
+      "2. 1 stəkan un və 1 paket vanilin əlavə edib qarışdırın.",
+      "3. Xəmiri yağlanmış formaya tökün və 180°C sobada 25-30 dəqiqə bişirin.",
+      "4. Soyumuş biskviti eninə iki hissəyə bölün.",
+      "5. Ara qatlara krema çəkib doğranmış meyvələr düzün.",
+      "6. Üstünü də krema və meyvə ilə bəzəyin.",
+      "7. Soyuducuda 1-2 saat saxlayıb servis edin."
+    ],
+    "image": "uploads/meyveli_tort.jpeg"
+  },
+  {
+    "title": "Islak Kek",
+    "category": "Dessert",
+    "ingredients": [
+      "yumurta",
+      "şəkər tozu",
+      "süd",
+      "bitki yağı",
+      "kakao",
+      "un",
+      "qabartma tozu",
+      "vanilin"
+    ],
+    "instructions": [
+      "1. 3 ədəd yumurta və 1 stəkan şəkəri çalın.",
+      "2. 1 stəkan süd, 1 stəkan yağ, 3 x.q. kakao və vanilin əlavə edib qarışdırın.",
+      "3. Qarışımdan 1 stəkan ayırın (sos üçün).",
+      "4. Qalanına 1.5 stəkan un və 1 paket qabartma tozu əlavə edib qarışdırın.",
+      "5. Yağlanmış soba qabına töküb 180°C sobada 25-30 dəqiqə bişirin.",
+      "6. Bişmiş keksin üzərinə əvvəlcədən ayırdığınız kakaolu qarışığı tökün.",
+      "7. Kek islanana qədər gözləyin və soyuducuda saxlayın."
+    ],
+    "image": "uploads/islak_kek.jpeg"
+  },
+   {
+    "title": "Badambura",
+    "category": "Dessert",
+    "ingredients": [
+      "un",
+      "süd",
+      "maya",
+      "yağ",
+      "şəkər tozu",
+      "badam",
+      "hil",
+      "duz"
+    ],
+    "instructions": [
+      "1. 1 stəkan ilıq südə 1 yemək qaşığı şəkər və 1 çay qaşığı maya əlavə edin, 10 dəqiqə saxlayın.",
+      "2. 3 stəkan un, 1 çimdik duz və 100 qram ərinmiş yağı əlavə edib yumşaq xəmir yoğurun. Üzərini örtüb 1 saat dincə qoyun.",
+      "3. İçlik üçün: döyülmüş badam, şəkər tozu və hil qarışdırılır.",
+      "4. Xəmiri nazik yay, aralarına yağ çəkərək 5-6 qat qatlayın, rulon kimi bükün və dilimləyin.",
+      "5. Hər dilimi açaraq içinə içlik qoyun və formalaşdırın.",
+      "6. Üzərinə yumurta sarısı çəkib 180°C-də 25-30 dəqiqə bişirin."
+    ],
+    "image": "uploads/badambura.jpeg"
+  },
+  {
+    "title": "Biskvit Ruleti",
+    "category": "Dessert",
+    "ingredients": [
+      "yumurta",
+      "şəkər tozu",
+      "un",
+      "vanilin",
+      "qaymaq",
+      "şokolad"
+    ],
+    "instructions": [
+      "1. 4 yumurta ilə 1 stəkan şəkər tozunu ağarana qədər çalın.",
+      "2. 1 stəkan un və vanilin əlavə edib qarışdırın.",
+      "3. Qarışığı yağlı kağız sərilmiş soba sinisinə tökün və 180°C-də 10-12 dəqiqə bişirin.",
+      "4. Bişən kimi isti-isti rulet formasında bükün və soyumağa qoyun.",
+      "5. Açıb içini qaymaq və əridilmiş şokoladla doldurun, yenidən bükün.",
+      "6. Üzərinə pudra şəkəri səpə bilərsiniz."
+    ],
+    "image": "uploads/biskvit_ruleti.jpeg"
+  },
+  {
+    "title": "Lokma",
+    "category": "Dessert",
+    "ingredients": [
+      "un",
+      "maya",
+      "şəkər",
+      "süd",
+      "duz",
+      "yağ",
+      "limon suyu"
+    ],
+    "instructions": [
+      "1. 1 stəkan ilıq südə 1 yemək qaşığı şəkər və 1 çay qaşığı maya əlavə edin, 10 dəqiqə gözləyin.",
+      "2. 2 stəkan un, 1 çimdik duz və mayalı qarışığı əlavə edib yumşaq xəmir hazırlayın.",
+      "3. Üzərini örtüb 1 saat mayalandırın.",
+      "4. Xəmirdən kiçik toplar hazırlayıb qızğın yağda qızardın.",
+      "5. Şərbət üçün 1 stəkan şəkəri yarım stəkan su və 1 çay qaşığı limon suyu ilə qaynadın.",
+      "6. Qızaran lokmaları şərbətə batırıb servis edin."
+    ],
+    "image": "uploads/lokma.jpeg"
+  },
+  {
+    "title": "Qaymaqlı Keks",
+    "category": "Dessert",
+    "ingredients": [
+      "yumurta",
+      "şəkər tozu",
+      "qaymaq",
+      "un",
+      "qabartma tozu",
+      "vanilin"
+    ],
+    "instructions": [
+      "1. 3 yumurta ilə 1 stəkan şəkər tozunu çalın.",
+      "2. Üzərinə 1 stəkan qaymaq və vanilin əlavə edib qarışdırın.",
+      "3. 1.5 stəkan un və 1 paket qabartma tozu əlavə edin, yumşaq xəmir alın.",
+      "4. Qarışığı yağlanmış qəlibə tökün.",
+      "5. 180°C sobada 35-40 dəqiqə bişirin.",
+      "6. İstəyə görə üzərinə pudra şəkəri səpə bilərsiniz."
+    ],
+    "image": "uploads/qaymaqli_keks.jpeg"
+  },
+  {
+    "title": "Nanəli Limonlu Çay",
+    "category": "icki",
+    "ingredients": ["limon", "nanə", "su", "bal", "qara çay"],
+    "instructions": [
+      "1. 2 stəkan suyu qaynadın.",
+      "2. İçinə 1 çay qaşığı quru qara çay, 1 dilimlənmiş limon və 1 dəstə təzə nanə əlavə edin.",
+      "3. 5-7 dəqiqə dəmləyin.",
+      "4. İstəyə görə 1 çay qaşığı bal əlavə edib qarışdırın və süzərək xidmət edin."
+    ],
+    "image": "uploads/naneli_limonlu_cay.jpeg"
+  },
+  {
+    "title": "Zəncəfilli Bal Çayı",
+    "category": "icki",
+    "ingredients": ["zəncəfil", "bal", "limon", "su"],
+    "instructions": [
+      "1. 2 stəkan suyu qaynadın.",
+      "2. 1 xörək qaşığı doğranmış təzə zəncəfili suya əlavə edin.",
+      "3. 10 dəqiqə qaynadın, sonra 1 çay qaşığı bal və 1 dilim limon əlavə edib süzün.",
+      "4. İsti şəkildə xidmət edin."
+    ],
+    "image": "uploads/zencefilli_bal_cayi.jpeg"
+  },
+  {
+    "title": "İsti Şokolad",
+    "category": "icki",
+    "ingredients": ["kakao tozu", "süd", "şəkər tozu", "vanil"] ,
+    "instructions": [
+      "1. 2 stəkan südü qazana tökün və isidin.",
+      "2. İçinə 2 xörək qaşığı kakao tozu, 2 xörək qaşığı şəkər və 1 çimdik vanil əlavə edib qarışdırın.",
+      "3. Qarışım qaynayana qədər qarışdıraraq bişirin və sonra fincana süzərək təqdim edin."
+    ],
+    "image": "uploads/isti_sokolad.jpeg"
+  },
+  {
+    "title": "Türk Qəhvəsi",
+    "category": "icki",
+    "ingredients": ["qəhvə tozu", "su", "şəkər"] ,
+    "instructions": [
+      "1. Cezveyə 1 fincan su, 1 çay qaşığı türk qəhvəsi və istəyə görə şəkər əlavə edin.",
+      "2. Aşağı odda qarışdırmadan köpük yaranana qədər bişirin.",
+      "3. Köpüyü fincana tökün, sonra qalanını da əlavə edib xidmət edin."
+    ],
+    "image": "uploads/turk_qehvesi.jpeg"
+  },
+  {
+    "title": "Meyvəli Kompot",
+    "category": "icki",
+    "ingredients": ["alma", "armud", "gavalı", "şəkər", "su"] ,
+    "instructions": [
+      "1. 2-3 növ meyvəni doğrayın və 2 litr suya əlavə edin.",
+      "2. 5-6 xörək qaşığı şəkər əlavə edin.",
+      "3. 20-25 dəqiqə orta odda qaynadın.",
+      "4. Soyudub süzərək xidmət edin."
+    ],
+    "image": "uploads/meyve_kompot.jpeg"
+  },
+  {
+    "title": "Limonad",
+    "category": "icki",
+    "ingredients": ["limon", "şəkər", "su", "nanə"] ,
+    "instructions": [
+      "1. 2 limonun suyunu sıxın və 1 limonu dilimləyin.",
+      "2. 1 litr suya əlavə edin və 4 xörək qaşığı şəkərlə qarışdırın.",
+      "3. Bir neçə təzə nanə yarpağı da əlavə edib soyudun və təqdim edin."
+    ],
+    "image": "uploads/limonad.jpeg"
+  },
+  {
+    "title": "Smoothie",
+    "category": "icki",
+    "ingredients": ["banan", "çiyələk", "qatıq", "bal"] ,
+    "instructions": [
+      "1. 1 banan və 4-5 ədəd çiyələyi doğrayın.",
+      "2. 1 stəkan qatıq və 1 çay qaşığı bal əlavə edin.",
+      "3. Blenderdən keçirin və soyudulmuş halda xidmət edin."
+    ],
+    "image": "uploads/smoothie.jpeg"
+  },
+  {
+    "title": "Meyvə Şirəsi",
+    "category": "icki",
+    "ingredients": ["portağal", "alma", "yerkökü"] ,
+    "instructions": [
+      "1. Meyvələri yuyub doğrayın və şirəçəkəndən keçirin.",
+      "2. Təzə və soyudulmuş halda xidmət edin."
+    ],
+    "image": "uploads/meyve_siresi.jpeg"
+  },
+  {
+    "title": "Iced Coffee",
+    "category": "icki",
+    "ingredients": ["qəhvə", "süd", "buz", "şəkər"] ,
+    "instructions": [
+      "1. 1 stəkan qəhvə dəmləyin və soyudun.",
+      "2. İçinə 1/2 stəkan süd və 1 çay qaşığı şəkər əlavə edin.",
+      "3. Buz kubları ilə birlikdə stəkanda qarışdırıb xidmət edin."
+    ],
+    "image": "uploads/iced_coffee.jpeg"
+  },
+  {
+    "title": "Milkshake - Şokoladlı",
+    "category": "icki",
+    "ingredients": ["süd", "şokolad dondurma", "kakao"] ,
+    "instructions": [
+      "1. 1 stəkan süd, 2 top şokolad dondurma və 1 çay qaşığı kakao blenderə əlavə edin.",
+      "2. Qarışdırın və soyudulmuş halda təqdim edin."
+    ],
+    "image": "uploads/milkshake_sokolad.jpeg"
+  },
+  {
+    "title": "Milkshake - Vanilli",
+    "category": "icki",
+    "ingredients": ["süd", "vanil dondurma"] ,
+    "instructions": [
+      "1. 1 stəkan süd və 2 top vanil dondurmanı blenderdə qarışdırın.",
+      "2. Soyudulmuş halda təqdim edin."
+    ],
+    "image": "uploads/milkshake_vanil.jpeg"
+  },
+  {
+    "title": "Milkshake - Bananlı",
+    "category": "icki",
+    "ingredients": ["süd", "banan", "vanil dondurma"] ,
+    "instructions": [
+      "1. 1 banan, 1 stəkan süd və 1 top vanil dondurmanı blenderdə qarışdırın.",
+      "2. Soyudulmuş halda təqdim edin."
+    ],
+    "image": "uploads/milkshake_banan.jpeg"
+  },
+  {
+    "title": "Milkshake - Çiyələkli",
+    "category": "icki",
+    "ingredients": ["süd", "çiyələk", "vanil dondurma"] ,
+    "instructions": [
+      "1. 4-5 çiyələk, 1 stəkan süd və 1 top vanil dondurmanı blenderdə qarışdırın.",
+      "2. Soyudulmuş halda təqdim edin."
+    ],
+    "image": "uploads/milkshake_ciyelek.jpeg"
+  }
 
 
 

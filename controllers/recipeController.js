@@ -57,3 +57,20 @@ exports.getRecipeById = async (req, res) => {
     res.status(500).json({ message: 'Server xətası' });
   }
 };
+
+// ✅ Yeni: Kategoriya ilə reseptləri axtar
+exports.getRecipesByCategory = async (req, res) => {
+  try {
+    const category = req.query.category;
+    if (!category) return res.status(400).json({ error: 'Category is required' });
+
+    const recipes = await Recipe.find({
+      category: { $regex: category, $options: 'i' }
+    });
+
+    res.status(200).json(recipes);
+  } catch (error) {
+    console.error('Filter error:', error);
+    res.status(500).json({ error: 'Category-based filter failed' });
+  }
+};
