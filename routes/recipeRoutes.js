@@ -1,53 +1,35 @@
 const express = require('express');
-const router = express.Router();
-const recipeController = require('../controllers/recipeController');
+const multer = require('multer');
 const verifyToken = require('../middlewares/verifyToken');
-const upload = require('../middlewares/upload');
-const Recipe = require('../models/Recipe');
+const {
+  createRecipe,
+  searchRecipes,
+  getRecipeById,
+  getRecipesByCategory,
+  getAllRecipes,
+} = require('../controllers/recipeController');
 
-// ✅ Resept yarat
-router.post('/', verifyToken, upload.single('image'), recipeController.createRecipe);
+const router = express.Router();
 
-// ✅ Axtarış (ingredient ilə)
-router.get('/search', verifyToken, recipeController.searchRecipes);
-
-// ✅ Ingredient filtrinə görə reseptlər
-router.get('/', async (req, res) => {
-  const { ingredient } = req.query;
-  let filter = {};
-
-  if (ingredient) {
-    const ingredientsArray = ingredient.split(',').map(i => i.trim());
-    filter = { ingredients: { $all: ingredientsArray } };
-  }
-
-  try {
-    const recipes = await Recipe.find(filter);
-    res.json(recipes);
-  } catch (err) {
-    console.error(err);
-    res.status(500).json({ message: 'Server xətası' });
-  }
+const storage = multer.diskStorage({
+  destination: (req, file, cb) => cb(null, 'uploads/'),
+  filename: (req, file, cb) => cb(null, Date.now() + '-' + file.originalname),
 });
+const upload = multer({ storage });
 
-// ✅ Yeni: Kategoriya ilə filter
-router.get('/category/search', async (req, res) => {
-  try {
-    const category = req.query.category;
-    if (!category) return res.status(400).json({ error: 'Category is required' });
+// 🔓 Bütün reseptlər (Home page üçün)
+router.get('/', getAllRecipes);
 
-    const recipes = await Recipe.find({
-      category: { $regex: category, $options: 'i' }
-    });
+// 🔐 Ərzaqlara görə axtarış
+router.get('/search', verifyToken, searchRecipes);
 
-    res.status(200).json(recipes);
-  } catch (error) {
-    console.error('Filter error:', error);
-    res.status(500).json({ error: 'Category-based filter failed' });
-  }
-});
+// 🔐 Kategoriya ilə filtr
+router.get('/category/search', verifyToken, getRecipesByCategory);
 
-// ✅ Resept ID ilə
-router.get('/:id', recipeController.getRecipeById);
+// 🔐 ID ilə resepti al
+router.get('/:id', verifyToken, getRecipeById);
+
+// 🔐 Yeni resept əlavə et (şəkil ilə)
+router.post('/', verifyToken, upload.single('image'), createRecipe);
 
 module.exports = router;

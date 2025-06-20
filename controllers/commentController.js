@@ -55,23 +55,31 @@ exports.toggleLike = async (req, res) => {
     res.status(500).json({ error: 'Like dəyişdirilə bilmədi' });
   }
 };
-
 exports.deleteComment = async (req, res) => {
   try {
     const comment = await Comment.findById(req.params.id);
+
     if (!comment) return res.status(404).json({ error: 'Şərh tapılmadı' });
 
-    if (comment.user.toString() !== req.userId) {
+    const userField = comment.user;
+
+    const userIdStr =
+      typeof userField === 'object' && userField !== null
+        ? userField._id?.toString()
+        : userField?.toString();
+
+    if (userIdStr !== req.userId) {
       return res.status(403).json({ error: 'Silməyə icazəniz yoxdur' });
     }
 
-    await comment.remove();
+    await comment.deleteOne();
     res.json({ message: 'Şərh silindi' });
   } catch (err) {
-    console.error('Silinmə xətası:', err);
+    console.error('Silinmə xətası:', err.message || err);
     res.status(500).json({ error: 'Şərh silinmədi' });
   }
 };
+
 
 exports.replyToComment = async (req, res) => {
   try {
