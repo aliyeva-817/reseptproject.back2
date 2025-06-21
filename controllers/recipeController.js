@@ -2,7 +2,7 @@ const Recipe = require('../models/Recipe');
 
 exports.createRecipe = async (req, res) => {
   try {
-    const { title, ingredients, instructions, category } = req.body;
+    const { title, ingredients, instructions, category, isPremium } = req.body;
     const image = req.file ? req.file.filename : null;
 
     if (!title || !ingredients || !instructions || !image || !category) {
@@ -21,7 +21,8 @@ exports.createRecipe = async (req, res) => {
       instructions: instructionSteps,
       image,
       category,
-      user: req.userId
+      isPremium: isPremium === 'true' || isPremium === true, // ✅ Əlavə olundu
+      user: req.userId,
     });
 
     res.status(201).json({ message: 'Recipe yaradıldı', recipe: newRecipe });
@@ -44,7 +45,7 @@ exports.searchRecipes = async (req, res) => {
 
   try {
     const recipes = await Recipe.find({
-      ingredients: { $in: ingredientArray }
+      ingredients: { $in: ingredientArray },
     });
 
     res.json(recipes);
@@ -65,7 +66,7 @@ exports.getRecipeById = async (req, res) => {
         instructions: recipe.instructions
           .split('.')
           .map(s => s.trim())
-          .filter(Boolean)
+          .filter(Boolean),
       };
     }
 
@@ -82,7 +83,7 @@ exports.getRecipesByCategory = async (req, res) => {
     if (!category) return res.status(400).json({ error: 'Category is required' });
 
     const recipes = await Recipe.find({
-      category: { $regex: category, $options: 'i' }
+      category: { $regex: category, $options: 'i' },
     });
 
     res.status(200).json(recipes);
@@ -92,7 +93,6 @@ exports.getRecipesByCategory = async (req, res) => {
   }
 };
 
-// ✅ Ingredient-lərə görə axtarış (çoxlu və detallı uyğunluq)
 exports.searchByIngredient = async (req, res) => {
   const { ingredient } = req.query;
   if (!ingredient) {
@@ -115,13 +115,11 @@ exports.searchByIngredient = async (req, res) => {
       const lowerIngredients = recipe.ingredients.map(i => i.toLowerCase());
 
       return terms.every(term => {
-        // İki və daha çox sözlü term varsa, yalnız dəqiq uyğunluq
         if (term.split(' ').length > 1) {
           return lowerIngredients.includes(term);
         } else {
-          // tək sözlüdürsə, yalnız `===` və ya ayırıcı ilə kəskin uyğunluq
           return lowerIngredients.some(i => {
-            const words = i.split(/\s+/); // çox söz varsa ayır
+            const words = i.split(/\s+/);
             return words.includes(term);
           });
         }
@@ -139,15 +137,22 @@ exports.searchByIngredient = async (req, res) => {
   }
 };
 
-
-
-
 exports.getPremiumRecipes = async (req, res) => {
   try {
     const premiumRecipes = await Recipe.find({ isPremium: true });
     res.status(200).json(premiumRecipes);
   } catch (err) {
-    res.status(500).json({ error: 'Premium reseptlər alınmadı' });
+    console.error('Premium reseptlər alınarkən xəta:', err);
+    res.status(500).json({ error: 'Premium reseptlər yüklənmədi' });
+  }
+};
+
+exports.getAllPremiumRecipes = async (req, res) => {
+  try {
+    const recipes = await Recipe.find({ isPremium: true });
+    res.json(recipes);
+  } catch (err) {
+    res.status(500).json({ message: 'Premium reseptlər alınmadı' });
   }
 };
 

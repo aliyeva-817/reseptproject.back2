@@ -6,6 +6,7 @@ const cookieParser = require('cookie-parser');
 const http = require('http');
 const { Server } = require('socket.io');
 
+// DB və routelar
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const recipeRoutes = require('./routes/recipeRoutes');
@@ -13,32 +14,62 @@ const favoriteRoutes = require('./routes/favoriteRoutes');
 const userRoutes = require('./routes/userRoutes');
 const commentRoutes = require('./routes/commentRoutes');
 const messageRoutes = require('./routes/messageRoutes');
+const stripeRoutes = require('./routes/stripeRoutes');
 
+// Express və server
 const app = express();
 const server = http.createServer(app);
+
+// DB bağlantısı
 connectDB();
 
-app.use(cors({ origin: [/localhost:\d+$/], credentials: true }));
+// ✅ CORS ayarları (bütün `localhost` portlarına icazə)
+const corsOptions = {
+  origin: (origin, callback) => {
+    if (!origin || /^http:\/\/localhost:\d+$/.test(origin)) {
+      callback(null, true);
+    } else {
+      callback(new Error('CORS not allowed from this origin'));
+    }
+  },
+  credentials: true,
+  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  allowedHeaders: ['Content-Type', 'Authorization'],
+};
+
+app.use(cors(corsOptions));
 app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static('uploads'));
 
-// ✅ Socket.IO konfiqurasiyası
+// ✅ Stripe route
+app.use('/api/stripe', stripeRoutes);
+
+// ✅ Socket.IO düzgün CORS ilə
 const io = new Server(server, {
-  cors: { origin: [/localhost:\d+$/], credentials: true },
+  cors: {
+    origin: (origin, callback) => {
+      if (!origin || /^http:\/\/localhost:\d+$/.test(origin)) {
+        callback(null, true);
+      } else {
+        callback(new Error('Socket.IO CORS error'));
+      }
+    },
+    credentials: true,
+  },
 });
 
-// ✅ Global online istifadəçi siyahısı
+// ✅ Global istifadəçi xəritəsi
 const onlineUsers = new Map();
 
-// ✅ Socket və istifadəçi xəritəsini `req` obyektinə əlavə et
+// ✅ Req-ə əlavə et
 app.use((req, res, next) => {
   req.io = io;
   req.ioUsers = onlineUsers;
   next();
 });
 
-// ✅ API routelar
+// ✅ API routeları
 app.use('/api/auth', authRoutes);
 app.use('/api/recipes', recipeRoutes);
 app.use('/api/favorites', favoriteRoutes);
@@ -46,7 +77,7 @@ app.use('/api/comments', commentRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/messages', messageRoutes);
 
-// ✅ Socket.IO əlaqələri
+// ✅ Socket hadisələri
 io.on('connection', (socket) => {
   console.log('Yeni istifadəçi qoşuldu:', socket.id);
 
@@ -55,7 +86,6 @@ io.on('connection', (socket) => {
     console.log('İstifadəçi əlavə olundu:', userId);
   });
 
-  // ✅ Mesaj göndərildi
   socket.on('sendMessage', (message) => {
     const receiverSocketId = onlineUsers.get(message.receiverId);
     if (receiverSocketId) {
@@ -63,7 +93,6 @@ io.on('connection', (socket) => {
     }
   });
 
-  // ✅ Mesaj redaktə olundu (real vaxt)
   socket.on('editMessage', (data) => {
     const receiverSocketId = onlineUsers.get(data.receiverId);
     if (receiverSocketId) {
@@ -71,7 +100,6 @@ io.on('connection', (socket) => {
     }
   });
 
-  // ✅ Mesaj silindi (real vaxt)
   socket.on('deleteMessage', ({ messageId, receiverId }) => {
     const receiverSocketId = onlineUsers.get(receiverId);
     if (receiverSocketId) {
@@ -79,7 +107,6 @@ io.on('connection', (socket) => {
     }
   });
 
-  // ✅ İstifadəçi bağlantını kəsdi
   socket.on('disconnect', () => {
     console.log('İstifadəçi ayrıldı:', socket.id);
     for (const [userId, sockId] of onlineUsers.entries()) {
@@ -91,5 +118,6 @@ io.on('connection', (socket) => {
   });
 });
 
+// ✅ Serveri işə sal
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`Server running on port ${PORT}`));

@@ -1934,8 +1934,21 @@ module.exports = [
       "Zəfəran suyu əlavə edib dəmə qoyun."
     ],
     "image": "uploads/kartof_plov.jpg",
-    isPremium: false
-  }
+    isPremium: true
+  },
+  {
+  title: "pendirli burger",
+  category: "Fastfood",
+  ingredients: ["ət", "pendir", "çörək", "pomidor", "kahı"],
+  instructions: [
+    "Əti qızardın.",
+    "Çörəyi kəsin və arasına pendir, ət və tərəvəzləri düzün.",
+    "Hazır burgeri servis edin."
+  ],
+  image: "uploads/cheeseburger.jpg",
+  isPremium: true
+}
+
 
 
 

@@ -8,6 +8,8 @@ const {
   getRecipesByCategory,
   searchByIngredient,
   getAllRecipes,
+  getPremiumRecipes,
+  getAllPremiumRecipes // ✅ Əlavə
 } = require('../controllers/recipeController');
 
 const router = express.Router();
@@ -18,19 +20,23 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-// Bütün reseptlər
+// ✅ Bütün reseptlər (hamıya açıq)
 router.get('/', getAllRecipes);
 
-// Ingredient ilə axtarış (JWT olmadan)
+// ✅ Ingredient ilə axtarış (hamıya açıq)
 router.get('/search', searchByIngredient);
 
-// Kategoriya ilə filtr
-router.get('/category/search', verifyToken, getRecipesByCategory);
+// ✅ Kategoriya ilə axtarış (hamıya açıq)
+router.get('/category/search', getRecipesByCategory);
 
-// Yeni resept əlavə et
+// ✅ Premium reseptlər (hamıya açıq)
+router.get('/premium', getPremiumRecipes);
+
+// ✅ Yeni resept əlavə et (yalnız daxil olmuş istifadəçilər üçün)
 router.post('/', verifyToken, upload.single('image'), createRecipe);
 
-// Resepti ID ilə al
-router.get('/:id', verifyToken, getRecipeById);
+// ✅ Resepti ID ilə al (hamıya açıq)
+router.get('/:id', getRecipeById);
+router.get('/premium', getAllPremiumRecipes);
 
 module.exports = router;

@@ -10,6 +10,11 @@ ingredients: {
   type: [String],
   required: true,
 },
+isPremium: {
+  type: Boolean,
+  default: false,
+},
+
 
   image: String,
   category: String,
