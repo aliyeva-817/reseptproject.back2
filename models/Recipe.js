@@ -19,4 +19,5 @@ ingredients: {
   },
 }, { timestamps: true });
 
+
 module.exports = mongoose.model('Recipe', recipeSchema);

@@ -9,7 +9,8 @@ module.exports = [
       "Üzərinə 2-3 ədəd yumurta əlavə edin.",
       "Yaxşıca qarışdırın və bişirin."
     ],
-    image: "uploads/pomidor_yumurta.jpg"
+    image: "uploads/pomidor_yumurta.jpg",
+    isPremium: false
   },
   {
     title: "Kakaolu Keks",
@@ -34,7 +35,8 @@ module.exports = [
       "180°C-də əvvəlcədən isidilmiş sobada 30-35 dəqiqə bişirin.",
       "Çöp ilə yoxlayın – təmiz çıxırsa, hazırdır!"
     ],
-    image: "uploads/kakaolu_keks2.jpg"
+    image: "uploads/kakaolu_keks2.jpg",
+    isPremium: false
   },
   
   {
@@ -64,7 +66,8 @@ module.exports = [
       "0.5 stəkan su töküb, qapağını örtün.",
       "Zəif odda 45-60 dəqiqə bişirin."
     ],
-    image: "uploads/etli_buglama.jpg"
+    image: "uploads/etli_buglama.jpg",
+    isPremium: false
   },
   {
     title: "Dondurma",
@@ -87,7 +90,8 @@ module.exports = [
       "4-6 saat sonra tam donmuş halda çıxarın və 1 çimdik duz əlavə edin.",
       "Servis etmədən əvvəl yaxşıca qarışdırın."
     ],
-    image: "uploads/dondurma.jpg"
+    image: "uploads/dondurma.jpg",
+    isPremium: false
   },
    {
     title: "Şah Plov",
@@ -104,7 +108,8 @@ module.exports = [
       "Üzərini yuxa ilə bağlayın, üstünə 250 qr kərə yağı səpin.",
       "200°C-də sobada 1–2 saat dəmləyin. Lavaş qızardıqda plov hazırdır."
     ],
-    image: "uploads/sah_plov.jpg"
+    image: "uploads/sah_plov.jpg",
+    isPremium: false
   },
   {
     title: "Əridilmiş Qənd (Karamel)",
@@ -118,7 +123,8 @@ module.exports = [
       "Şəkər qızılı rəng alanda ocaqdan götürün.",
       "Sos halı üçün: içərisinə 1 x.q. kərə yağı və ya 2-3 x.q. qaymaq əlavə edin və qarışdırın."
     ],
-    image: "uploads/karamel.jpeg"
+    image: "uploads/karamel.jpeg",
+    isPremium: false
   },
   {
     title: "Sucuklu Tost",
@@ -132,7 +138,8 @@ module.exports = [
       "Tost aparatında və ya tavada hər iki tərəfini qızardın.",
       "Pendir əriyəndə tost hazırdır."
     ],
-    image: "uploads/sucuklu_tost.webp"
+    image: "uploads/sucuklu_tost.webp",
+    isPremium: false
   },
   {
     "title": "Üzümlü Keks",
@@ -146,7 +153,8 @@ module.exports = [
       "Yağlanmış qəlibə tökün.",
       "180°C-də 30-35 dəqiqə bişirin."
     ],
-    "image": "uploads/uzumlu_keks.webp"
+    "image": "uploads/uzumlu_keks.webp",
+    isPremium: false
   },
   {
     "title": "Makaron Salatı",
@@ -159,7 +167,8 @@ module.exports = [
       "Duz və istiot səpərək qarışdırın.",
       "Soyuducuda 30 dəqiqə saxlayıb servis edin."
     ],
-    "image": "uploads/makaron_salati.jpg"
+    "image": "uploads/makaron_salati.jpg",
+    isPremium: false
   },
   {
     "title": "Kartof Salatı",
@@ -174,7 +183,8 @@ module.exports = [
       "Üzərinə göyərti və turşu xiyar əlavə edin.",
       "Soyuq servis edin."
     ],
-    "image": "uploads/kartof_salati.webp"
+    "image": "uploads/kartof_salati.webp",
+    isPremium: false
   },
   {
     "title": "Hot Dog",
@@ -188,7 +198,8 @@ module.exports = [
       "Doğranmış xiyar, soğan və pendir əlavə edin.",
       "İsti halda servis edin."
     ],
-    "image": "uploads/hotdog.jpg"
+    "image": "uploads/hotdog.jpg",
+    isPremium: false
   },
   {
     "title": "Spagetti",
@@ -202,7 +213,8 @@ module.exports = [
       "Spagettini sousa əlavə edib qarışdırın.",
       "Üzərinə pendir səpib isti halda servis edin."
     ],
-    "image": "uploads/spagetti.jpg"
+    "image": "uploads/spagetti.jpg",
+    isPremium: false
   },
   {
     "title": "Qril Toyuq",
@@ -215,7 +227,8 @@ module.exports = [
       "Qril və ya tavada hər iki tərəfini tam bişənədək qızardın.",
       "İsti halda servis edin."
     ],
-    "image": "uploads/qril_toyuq.avif"
+    "image": "uploads/qril_toyuq.avif",
+    isPremium: false
   },
   {
     "title": "Qozlu Konfetlər",
@@ -228,7 +241,8 @@ module.exports = [
       "Əlinizlə kiçik toplar düzəldin.",
       "İstəyə görə qoz, kokos və ya kakao tozuna bulayıb soyuducuda saxlayın."
     ],
-    "image": "uploads/qozlu_konfet.jpg"
+    "image": "uploads/qozlu_konfet.jpg",
+    isPremium: false
   },
   {
     "title": "Qaymaqlı Toyuq",
@@ -241,7 +255,8 @@ module.exports = [
       "Qaymaq və ədviyyatları əlavə edib 10-15 dəqiqə bişirin.",
       "Üzərinə doğranmış cəfəri və ya rozmarin səpib servis edin."
     ],
-    "image": "uploads/qaymaqli_toyuq2.jpg"
+    "image": "uploads/qaymaqli_toyuq2.jpg",
+    isPremium: false
   },
   {
     "title": "Limonlu Kek",
@@ -255,7 +270,8 @@ module.exports = [
       "Qarışığı yağlanmış qəlibə tökün.",
       "180°C-də 35-40 dəqiqə bişirin."
     ],
-    "image": "uploads/limonlu_kek.webp"
+    "image": "uploads/limonlu_kek.webp",
+    isPremium: false
   },
   {
     "title": "Kremli Göbələk Şorbası",
@@ -270,7 +286,8 @@ module.exports = [
       "Qaynadıqdan sonra qaymaq əlavə edin və bir az daha bişirin.",
       "Üzərini doğranmış göyərti ilə bəzəyin və servis edin."
     ],
-    "image": "uploads/gobelek_sorbasi.jpg"
+    "image": "uploads/gobelek_sorbasi.jpg",
+    isPremium: false
   },
   {
     "title": "Tuna Salatı",
@@ -284,7 +301,8 @@ module.exports = [
       "İstəyə görə dilimlənmiş qaynadılmış yumurta əlavə edin.",
       "Kahı yarpaqları üzərinə servis edin."
     ],
-    "image": "uploads/tuna_salati.jpg"
+    "image": "uploads/tuna_salati.jpg",
+    isPremium: false
   },
   {
     "title": "Sezar Salatı",
@@ -312,7 +330,8 @@ module.exports = [
       "İstəyə görə qızardılmış toyuq dilimləri əlavə edin.",
       "Sousu üzərinə gəzdirib qarışdırın."
     ],
-    "image": "uploads/sezar_salati.jpg"
+    "image": "uploads/sezar_salati.jpg",
+    isPremium: false
   },
   {
     "title": "İspanaq Qovurması",
@@ -334,7 +353,8 @@ module.exports = [
       "Duz, istiot və qırmızı bibər əlavə edib qarışdırın.",
       "İstəyə görə qatıqla servis edin."
     ],
-    "image": "uploads/ispanaq_qovurmasi.jpg"
+    "image": "uploads/ispanaq_qovurmasi.jpg",
+    isPremium: false
   },
   {
     "title": "Kakaolu Qurabiye",
@@ -357,7 +377,8 @@ module.exports = [
       "Üzərinə şokolad və ya qoz əlavə edə bilərsiniz.",
       "180°C-də 12–15 dəqiqə bişirin."
     ],
-    "image": "uploads/kakaolu_qurabiye.jpeg"
+    "image": "uploads/kakaolu_qurabiye.jpeg",
+    isPremium: false
   },
   {
     "title": "Toyuq Supu",
@@ -383,7 +404,8 @@ module.exports = [
       "Vermişel və ya düyü əlavə edib 5–7 dəqiqə bişirin.",
       "Sonda duz, istiot və göyərti əlavə edin."
     ],
-    "image": "uploads/toyuq_supu.jpg"
+    "image": "uploads/toyuq_supu.jpg",
+    isPremium: false
   },
   {
     "title": "Lahmacun",
@@ -415,7 +437,8 @@ module.exports = [
       "220°C-də 8–10 dəqiqə bişirin.",
       "Üzərinə limon sıxaraq və cəfəri ilə servis edin."
     ],
-    "image": "uploads/lahmacun.webp"
+    "image": "uploads/lahmacun.webp",
+    isPremium: false
   },
   {
     "title": "Toyuq Plovu",
@@ -436,7 +459,8 @@ module.exports = [
       "Toyuq suyu və ədviyyatları əlavə edib qapaqlı bişirin.",
       "Toyuqları ayrıca qızardıb plovun yanında servis edə bilərsiniz."
     ],
-    "image": "uploads/toyuqlu_plov.jpg"
+    "image": "uploads/toyuqlu_plov.jpg",
+    isPremium: false
   },
   {
     "title": "Ətli Pide",
@@ -462,7 +486,8 @@ module.exports = [
       "Xəmiri kündələyin, yayaraq içliyi qoyun və kənarlarını bükün.",
       "200°C-də sobada 20 dəqiqə bişirin."
     ],
-    "image": "uploads/toyuqli_pide.jpeg"
+    "image": "uploads/toyuqli_pide.jpeg",
+    isPremium: false
   },
   {
     "title": "Acılı Əzmə",
@@ -489,7 +514,8 @@ module.exports = [
       "Üzərinə 2 x.q. narşərab, 0.5 dəstə doğranmış kişniş, 1 ç.q. duz, 0.5 ç.q. istiot, paprika, pul bibər və quru nanə əlavə edib qarışdırın.",
       "Soyuducuda saxlayıb kabab yanında servis edin."
     ],
-    "image": "uploads/acili_ezme.jpg"
+    "image": "uploads/acili_ezme.jpg",
+    isPremium: false
   },
   {
     "title": "Şəkərbura",
@@ -513,7 +539,8 @@ module.exports = [
       "Xəmirdən kündələr götürüb içliklə doldurun, şəkərbura formasında büküb naxışlayın.",
       "160–170°C sobada üstü qızarmadan bişirin."
     ],
-    "image": "uploads/sekerbura.jpg"
+    "image": "uploads/sekerbura.jpg",
+    isPremium: false
   },
  {
     "title": "Plov",
@@ -527,7 +554,8 @@ module.exports = [
       "1 ç.q. zəfəranı isti suda dəmləyin və üstünə tökün",
       "Qapağı dəsmalla örtüb zəif odda 30–40 dəqiqə dəmləyin"
     ],
-    "image": "uploads/plov.jpg"
+    "image": "uploads/plov.jpg",
+    isPremium: false
   },
   {
     "title": "Gürzə",
@@ -541,7 +569,8 @@ module.exports = [
       "Duzlu suda qaynadaraq bişirin",
       "Sous üçün: 1 ç.q. bibər pastası, 2 x.q. su, doğranmış şüyüd, 2 x.q. zeytun yağı, nanə və sarıkökü qarışdırın və bişmiş gürzənin üzərinə tökün"
     ],
-    "image": "uploads/gurze.jpg"
+    "image": "uploads/gurze.jpg",
+    isPremium: false
   },
   {
     "title": "Karamel dadında tort",
@@ -556,7 +585,8 @@ module.exports = [
       "Krem üçün: 150 q labne və 1 banka qatılaşdırılmış südü qarışdırın",
       "Soyumuş tortun içini və üzünü krem ilə örtün"
     ],
-    "image": "uploads/karamel_tort2.jpg"
+    "image": "uploads/karamel_tort2.jpg",
+    isPremium: false
   },
   {
     "title": "Paytaxt Salatı",
@@ -571,7 +601,8 @@ module.exports = [
       "Sos üçün: 2 x.q. smetana, 3 x.q. mayonez və 1 ç.q. xardalı qarışdırın",
       "Sosu salata əlavə edib qarışdırın"
     ],
-    "image": "uploads/paytaxt_salati.jpg"
+    "image": "uploads/paytaxt_salati.jpg",
+    isPremium: false
   },
   {
     "title": "Mimoza Salatı",
@@ -584,7 +615,8 @@ module.exports = [
       "Salatı qat-qat düzün: kartof → mayonez → ton balığı → soğan → kök → mayonez → yumurta ağı → mayonez → yumurta sarısı",
       "Üzərinə doğranmış şüyüd səpərək servis edin"
     ],
-    "image": "uploads/mimoza_salati.jpg"
+    "image": "uploads/mimoza_salati.jpg",
+    isPremium: false
   },
   {
     "title": "Çoban Salatı",
@@ -597,7 +629,8 @@ module.exports = [
       "Üzərinə 2 x.q. zeytun yağı, 1 x.q. limon suyu, duz, istiot əlavə edin",
       "İstəyə görə 1/2 ç.q. sumak və ya pul bibər də əlavə edin və qarışdırın"
     ],
-    "image": "uploads/coban_salati.jpg"
+    "image": "uploads/coban_salati.jpg",
+    isPremium: false
   },
   {
     "title": "Mangal Salatı",
@@ -608,7 +641,8 @@ module.exports = [
       "Qabığını soyub doğrayın və qaba yığın.",
       "Üzərinə 2 x.q. zeytun yağı, duz, istiot və 2 x.q. doğranmış cəfəri əlavə edib qarışdırın."
     ],
-    "image": "uploads/mangal_salati.webp"
+    "image": "uploads/mangal_salati.webp",
+    isPremium: false
   },
   {
     "title": "Nar Salatı",
@@ -622,7 +656,8 @@ module.exports = [
       "Hər qata duz və istiot əlavə edin.",
       "Üstünə nar və 2/3 stəkan qoz səpərək 1–2 saat soyuducuda saxlayın."
     ],
-    "image": "uploads/nar_salati.jpg"
+    "image": "uploads/nar_salati.jpg",
+    isPremium: false
   },
   {
     "title": "Göbələk Salatı",
@@ -637,7 +672,8 @@ module.exports = [
       "4 x.q. mayonez, duz, istiot əlavə edib qarışdırın.",
       "Üzərinə doğranmış 1 dəstə şüyüd səpib servis edin."
     ],
-    "image": "uploads/gobelek_salati.png"
+    "image": "uploads/gobelek_salati.png",
+    isPremium: false
   },
   {
     "title": "Toyuq Salatı",
@@ -651,7 +687,8 @@ module.exports = [
       "Sos üçün 2 x.q. zeytun yağı, 1 x.q. limon suyu, 1 ç.q. xardal, duz və istiotu qarışdırın.",
       "Sosu salata töküb qarışdırın."
     ],
-    "image": "uploads/toyuq_salati.jpg"
+    "image": "uploads/toyuq_salati.jpg",
+    isPremium: false
   },
   {
     "title": "Hamburger",
@@ -663,7 +700,8 @@ module.exports = [
       "Orta atəşdə hər iki tərəfini 4–6 dəq bişirin.",
       "Hamburger çörəyinə köftə, pendir, ketçup, xardal və salat qoyub servis edin."
     ],
-    "image": "uploads/hamburger.avif"
+    "image": "uploads/hamburger.avif",
+    isPremium: false
   },
  {
     "title": "Düşbərə (mantı)",
@@ -676,7 +714,8 @@ module.exports = [
       "Qaynayan duzlu suda 5–7 dəq bişirin.",
       "Üzərinə qatıq, əridilmiş yağ, sarımsaq və paprika əlavə edib servis edin."
     ],
-    "image": "uploads/dusbere.jpg"
+    "image": "uploads/dusbere.jpg",
+    isPremium: false
   },
   {
     "title": "Lavaş",
@@ -687,7 +726,8 @@ module.exports = [
       "Xəmiri 1 saat mayalanmağa qoyun.",
       "Nazik yayın və tavada/sobada hər iki tərəfini 1–2 dəq bişirin."
     ],
-    "image": "uploads/lavas.jpg"
+    "image": "uploads/lavas.jpg",
+    isPremium: false
   },
   {
     "title": "Blincik",
@@ -698,7 +738,8 @@ module.exports = [
       "Tavada hər iki tərəfini 1–2 dəq bişirin.",
       "İstəyə görə pendir, ət və ya meyvə ilə servis edin."
     ],
-    "image": "uploads/bilincik.jpg"
+    "image": "uploads/bilincik.jpg",
+    isPremium: false
   },
   {
     "title": "Pancake (Amerika)",
@@ -709,7 +750,8 @@ module.exports = [
       "1¼ st süd, 1 yumurta, 3 x.q. əridilmiş kərə yağı və 2 ç.q. vanil əlavə edin.",
       "Qarışımı ¼ st ölçüsü ilə tavaya tökün və hər iki tərəfini 2–3 dəq bişirin."
     ],
-    "image": "uploads/pancake.webp"
+    "image": "uploads/pancake.webp",
+    isPremium: false
   },
   {
     "title": "Waffle",
@@ -720,7 +762,8 @@ module.exports = [
       "1½ st süd, 2 yumurta, ½ st əridilmiş kərə yağı və 1 ç.q. vanil əlavə edin.",
       "Qarışımı waffle cihazında qızılı rəng alana qədər bişirin."
     ],
-    "image": "uploads/waffle.jpg"
+    "image": "uploads/waffle.jpg",
+    isPremium: false
   },
   {
     "title": "Kaşarlı Tost",
@@ -732,7 +775,8 @@ module.exports = [
       "Tost aparatına qoyub 4-5 dəqiqə ərzində pendir əriyənə qədər bişirin.",
       "İsti halda servis edin."
     ],
-    "image": "uploads/kasarli_tost.webp"
+    "image": "uploads/kasarli_tost.webp",
+    isPremium: false
   },
   {
     "title": "Üç Bacı Dolması",
@@ -745,7 +789,8 @@ module.exports = [
       "Qazana düzərək azacıq su əlavə edin və qapaqlı şəkildə 40 dəqiqə bişirin.",
       "İsti halda servis edin."
     ],
-    "image": "uploads/ucbaci_dolmasi.jpg"
+    "image": "uploads/ucbaci_dolmasi.jpg",
+    isPremium: false
   },
    {
     "title": "Yarpaq Dolması",
@@ -767,7 +812,8 @@ module.exports = [
       "Qazana düzərək üzərinə su və 50 q kərə yağı əlavə edin.",
       "Üstünə boşqab qoyub zəif odda 45 dəqiqə bişirin."
     ],
-    "image": "uploads/yarpaq_dolmasi.jpg"
+    "image": "uploads/yarpaq_dolmasi.jpg",
+    isPremium: false
   },
   {
     "title": "Paxlava",
@@ -791,7 +837,8 @@ module.exports = [
       "180°C sobada 35-40 dəqiqə bişirin.",
       "Sobadan çıxardıqdan sonra üzərinə 2 xörək qaşığı bal səpin."
     ],
-    "image": "uploads/paxlava.jpg"
+    "image": "uploads/paxlava.jpg",
+    isPremium: false
   },
   {
     "title": "Şorqoğal",
@@ -814,7 +861,8 @@ module.exports = [
       "Üzərinə yumurta sarısı sürtün.",
       "180°C-də 25-30 dəqiqə bişirin."
     ],
-    "image": "uploads/sorqogal.jpg"
+    "image": "uploads/sorqogal.jpg",
+    isPremium: false
   },
   {
     "title": "Avokadolu Tost",
@@ -835,7 +883,8 @@ module.exports = [
       "Üzərinə istəyə görə 1 ədəd qaynadılmış və ya yarıbişmiş yumurta əlavə edin.",
       "İstəyə görə küncüt və ya çili lopası ilə bəzəyin və dərhal servis edin."
     ],
-    "image": "uploads/avokadolu_tost.webp"
+    "image": "uploads/avokadolu_tost.webp",
+    isPremium: false
   },
   {
     "title": "Omlet",
@@ -855,7 +904,8 @@ module.exports = [
       "Omletin altı qızardıqda, üstünü qatlayın və bir neçə saniyə daha bişirin.",
       "İsti-isti servis edin."
     ],
-    "image": "uploads/omlet.jpg"
+    "image": "uploads/omlet.jpg",
+    isPremium: false
   },
   {
     "title": "Yulaf Sıyığı (Porridge)",
@@ -875,7 +925,8 @@ module.exports = [
       "Üzərinə dilimlənmiş banan və istəyə görə qoz, darçın əlavə edin.",
       "İsti şəkildə servis edin."
     ],
-    "image": "uploads/yulaf_siyigi.jpg"
+    "image": "uploads/yulaf_siyigi.jpg",
+    isPremium: false
   },
    {
     "title": "Kükü",
@@ -895,7 +946,8 @@ module.exports = [
       "Tavada qapaqlı şəkildə hər iki tərəfi qızarana qədər bişirin.",
       "İsti və ya soyuq şəkildə servis edin."
     ],
-    "image": "uploads/kuku.jpg"
+    "image": "uploads/kuku.jpg",
+    isPremium: false
   },
   {
     "title": "Toyuq Ləvəngisi",
@@ -915,7 +967,8 @@ module.exports = [
       "Sobada 180°C-də 1 saat bişirin.",
       "Üzəri qızarana qədər sobada saxlayın, sonra servis edin."
     ],
-    "image": "uploads/toyuq_levengisi.jpg"
+    "image": "uploads/toyuq_levengisi.jpg",
+    isPremium: false
   },
   {
     "title": "Bozbaş",
@@ -937,7 +990,8 @@ module.exports = [
       "Isladılmış noxudu da əlavə edib bişirin.",
       "Duz, istiot və zəfəran əlavə edib hazır olana qədər bişirin."
     ],
-    "image": "uploads/bozbas.jpg"
+    "image": "uploads/bozbas.jpg",
+    isPremium: false
   },
   {
     "title": "Qutab",
@@ -961,7 +1015,8 @@ module.exports = [
       "Tavada hər iki tərəfini az yağla qızardın.",
       "Qaynar halda qatıqla servis edin."
     ],
-    "image": "uploads/qutab.jpg"
+    "image": "uploads/qutab.jpg",
+    isPremium: false
   },
   {
     "title": "Peraşki",
@@ -984,7 +1039,8 @@ module.exports = [
       "Yağda hər tərəfini qızarana qədər bişirin.",
       "Kağız dəsmalda artıq yağını çəkdirib servis edin."
     ],
-    "image": "uploads/peraski.jpg"
+    "image": "uploads/peraski.jpg",
+    isPremium: false
   },
  {
     "title": "Sulu Küftə",
@@ -1007,7 +1063,8 @@ module.exports = [
       "Küftələri bu qarışıma əlavə edin və bişirin.",
       "Üzərinə doğranmış göyərti səpib servis edin."
     ],
-    "image": "uploads/sulu_kufte.webp"
+    "image": "uploads/sulu_kufte.webp",
+    isPremium: false
   },
   {
     "title": "Lazanya",
@@ -1031,7 +1088,8 @@ module.exports = [
       "Sobaya dayanıqlı qaba qat-qat vərəq, qiymə, sous və pendir düzün.",
       "Üzərinə beşamel və pendir əlavə edib 180°C-də bişirin."
     ],
-    "image": "uploads/lazanya.webp"
+    "image": "uploads/lazanya.webp",
+    isPremium: false
   },
   {
     "title": "Sebzəli Qovurma",
@@ -1053,7 +1111,8 @@ module.exports = [
       "Duz və istiot əlavə edib, qapaq altında bişirin.",
       "Yağlı və dadlı şəkildə isti servis edin."
     ],
-    "image": "uploads/sebzeli_qovurma.jpg"
+    "image": "uploads/sebzeli_qovurma.jpg",
+    isPremium: false
   },
   {
     "title": "Toyuq və Ətli Fətir",
@@ -1076,7 +1135,8 @@ module.exports = [
       "Xəmiri yayaraq içliyi qoyun və qapağını bağlayın.",
       "Üzərinə yumurta çəkib sobada 180°C-də bişirin."
     ],
-    "image": "uploads/toyuqlu_fetir.jpg"
+    "image": "uploads/toyuqlu_fetir.jpg",
+    isPremium: false
   },
   {
     "title": "Qızardılmış Balıq",
@@ -1096,7 +1156,8 @@ module.exports = [
       "Kağız dəsmalda artıq yağını çəkdirin.",
       "Limonla servis edin."
     ],
-    "image": "uploads/qizardilmis_baliq.jpg"
+    "image": "uploads/qizardilmis_baliq.jpg",
+    isPremium: false
   },
   {
     "title": "Ət Qovurma",
@@ -1116,7 +1177,8 @@ module.exports = [
       "Üzərinə azacıq su əlavə edib zəif odda 20 dəqiqə bişirin.",
       "Bişməyə yaxın zəfəran suyu əlavə edib qarışdırın və xidmət edin."
     ],
-    "image": "uploads/et_qovurma.jpg"
+    "image": "uploads/et_qovurma.jpg",
+    isPremium: false
   },
   {
     "title": "Şüyüdlü Plov",
@@ -1135,7 +1197,8 @@ module.exports = [
       "Üstünə kərə yağı və zəfəran suyu töküb 30 dəqiqə dəmə qoyun.",
       "Hazır olduqda qabın içinə boşaldıb isti halda servis edin."
     ],
-    "image": "uploads/suyudlu_plov.avif"
+    "image": "uploads/suyudlu_plov.avif",
+    isPremium: false
   },
   {
     "title": "Qızardılmış Toyuq",
@@ -1148,7 +1211,8 @@ module.exports = [
       "Tava qapağını örtüb zəif odda 15 dəqiqə də bişirin.",
       "İsti halda plov və ya salatla servis edin."
     ],
-    "image": "uploads/qizardilmis_toyuq.jpg"
+    "image": "uploads/qizardilmis_toyuq.jpg",
+    isPremium: false
   },
   {
     "title": "Pendirli Sendviç",
@@ -1160,7 +1224,8 @@ module.exports = [
       "Tavada hər iki tərəfini qızarana qədər bişirin.",
       "Pendir əriyəndə və çörək qızıldan rəng aldıqda hazırdır."
     ],
-    "image": "uploads/pendirli_sendvic.jpg"
+    "image": "uploads/pendirli_sendvic.jpg",
+    isPremium: false
   },
   {
     "title": "Toyuq Burgeri",
@@ -1172,7 +1237,8 @@ module.exports = [
       "Alt çörəyin üzərinə mayonez sürtün, marul və pomidor dilimləri düzün.",
       "Üzərinə qızardılmış toyuq qoyun və üst çörəklə bağlayın."
     ],
-    "image": "uploads/toyuq_burgeri.jpg"
+    "image": "uploads/toyuq_burgeri.jpg",
+    isPremium: false
   },
   {
     "title": "Cheeseburger",
@@ -1185,7 +1251,8 @@ module.exports = [
       "Marul, pomidor və pendirli kotleti yerləşdirin.",
       "Üst çörəyi bağlayın və servis edin."
     ],
-    "image": "uploads/cheese_burger.jpg"
+    "image": "uploads/cheese_burger.jpg",
+    isPremium: false
   },
   {
     "title": "Falafel Sendviç",
@@ -1197,7 +1264,8 @@ module.exports = [
       "Üzərinə marul, doğranmış pomidor və xiyar əlavə edin.",
       "Falafelləri düzün və lavaşı bükün."
     ],
-    "image": "uploads/falafel_sendvic.png"
+    "image": "uploads/falafel_sendvic.png",
+    isPremium: false
   },
   {
     "title": "Ton Balıqlı Sendviç",
@@ -1208,7 +1276,8 @@ module.exports = [
       "Çörəyin üzərinə marul, ton balığı qarışığı və xiyar düzün.",
       "Çörəyin digər dilimi ilə bağlayın və servis edin."
     ],
-    "image": "uploads/tonbalik_sendvic.jpg"
+    "image": "uploads/tonbalik_sendvic.jpg",
+    isPremium: false
   },
   {
     "title": "Kartof Fri",
@@ -1219,7 +1288,8 @@ module.exports = [
       "Duzlayın və qızğın yağda qızardın.",
       "Qızardıqdan sonra kağız salfetin üzərinə qoyun və servis edin."
     ],
-    "image": "uploads/kartof_fri.jpg"
+    "image": "uploads/kartof_fri.jpg",
+    isPremium: false
   },
   {
     "title": "Toyuq Nuggets",
@@ -1231,7 +1301,8 @@ module.exports = [
       "Əvvəlcə una, sonra yumurtaya, sonda çörək qırıntısına batırın.",
       "Qızğın yağda qızardın."
     ],
-    "image": "uploads/toyuq_nuggets.jpg"
+    "image": "uploads/toyuq_nuggets.jpg",
+    isPremium: false
   },
   {
     "title": "Crispy Chicken",
@@ -1242,7 +1313,8 @@ module.exports = [
       "Un və nişastanı qarışdırıb toyuqları bu qarışığa bulayın.",
       "Qızğın yağda qızardın, kağız salfetin üzərinə çıxarın."
     ],
-    "image": "uploads/crispy.jpg"
+    "image": "uploads/crispy.jpg",
+    isPremium: false
   },
   {
     "title": "Pendirli Toplar",
@@ -1253,7 +1325,8 @@ module.exports = [
       "Un, yumurta və çörək qırıntısına bulayıb qızardın.",
       "Qızaran kimi servis edin."
     ],
-    "image": "uploads/pendirli_toplar.avif"
+    "image": "uploads/pendirli_toplar.avif",
+    isPremium: false
   },
   {
     "title": "Burrito",
@@ -1264,7 +1337,8 @@ module.exports = [
       "Lavaşın üzərinə qarışığı yayın, pendir səpin.",
       "Büküb tavada hər iki tərəfini qızardın."
     ],
-    "image": "uploads/burrito.webp"
+    "image": "uploads/burrito.webp",
+    isPremium: false
   },
   {
     "title": "Quesadilla",
@@ -1275,7 +1349,8 @@ module.exports = [
       "Lavaşın bir yarısına toyuq, pendir və bibər düzün.",
       "Digər yarısını qatlayın və hər iki tərəfini tavada qızardın."
     ],
-    "image": "uploads/quesadilla.jpeg"
+    "image": "uploads/quesadilla.jpeg",
+    isPremium: false
   },
   {
     "title": "Shawarma",
@@ -1286,7 +1361,8 @@ module.exports = [
       "Lavaşın üzərinə doğranmış tərəvəzlər və toyuq düzün.",
       "Sous əlavə edib bükün və qızardın."
     ],
-    "image": "uploads/saurma.jpg"
+    "image": "uploads/saurma.jpg",
+    isPremium: false
   },
   {
     "title": "Toyuq Dönər",
@@ -1297,7 +1373,8 @@ module.exports = [
       "Lavaşa düzün, doğranmış tərəvəzlər və sous əlavə edin.",
       "Büküb tavada qızardın."
     ],
-    "image": "uploads/toyuq_doner.jpg"
+    "image": "uploads/toyuq_doner.jpg",
+    isPremium: false
   },
   {
     "title": "Ət Dönər",
@@ -1308,7 +1385,8 @@ module.exports = [
       "Lavaşa doğranmış tərəvəzlərlə birlikdə düzün.",
       "Sous əlavə edin və büküb servis edin."
     ],
-    "image": "uploads/et_doner.jpg"
+    "image": "uploads/et_doner.jpg",
+    isPremium: false
   },
   {
     "title": "Kartoflu Küftə",
@@ -1320,7 +1398,8 @@ module.exports = [
       "Püre ilə qiyməni qarışdırıb kürəciklər düzəldin.",
       "Una, yumurtaya batırıb qızardın."
     ],
-    "image": "uploads/kartoflu_kufte.jpg"
+    "image": "uploads/kartoflu_kufte.jpg",
+    isPremium: false
   },
   {
     "title": "Göbələkli Pizza",
@@ -1331,7 +1410,8 @@ module.exports = [
       "Göbələk və pendir əlavə edin.",
       "200°C-də 12-15 dəqiqə bişirin."
     ],
-    "image": "uploads/gobelekli_pizza.jpg"
+    "image": "uploads/gobelekli_pizza.jpg",
+    isPremium: false
   },
   {
     "title": "Marqarita Pizza",
@@ -1342,7 +1422,8 @@ module.exports = [
       "Mozzarella pendiri və reyhan əlavə edin.",
       "200°C sobada 10-12 dəqiqə bişirin."
     ],
-    "image": "uploads/marqaritta_pizza.webp"
+    "image": "uploads/marqaritta_pizza.webp",
+    isPremium: false
   },
   {
     "title": "Mərci Şorbası",
@@ -1355,7 +1436,8 @@ module.exports = [
       "Bütün ərzaqlar yumşaldıqda blenderlə püre halına gətirin.",
       "İsti şəkildə servis edin, üstünə limon suyu da əlavə edə bilərsiniz."
     ],
-    "image": "uploads/merci_sorbasi.jpg"
+    "image": "uploads/merci_sorbasi.jpg",
+    isPremium: false
   },
   {
     "title": "Pomidor Şorbası",
@@ -1368,7 +1450,8 @@ module.exports = [
       "1 stəkan süd və su əlavə edib qarışdırın, qaynadın.",
       "Blenderlə çəkib süzgəcdən keçirin və isti servis edin."
     ],
-    "image": "uploads/pomidor_sorbasi.jpg"
+    "image": "uploads/pomidor_sorbasi.jpg",
+    isPremium: false
   },
   {
     "title": "Əriştə Şorbası",
@@ -1381,7 +1464,8 @@ module.exports = [
       "Duz və istiot əlavə edin.",
       "İsti halda servis edin."
     ],
-    "image": "uploads/eriste_sorbasi.jpg"
+    "image": "uploads/eriste_sorbasi.jpg",
+    isPremium: false
   },
   {
     "title": "Ballı Tort",
@@ -1396,7 +1480,8 @@ module.exports = [
       "Üstünü istəyə görə bal və qozla bəzəyin.",
       "Soyuducuda bir neçə saat saxlayın və servis edin."
     ],
-    "image": "uploads/balli_tort.jpg"
+    "image": "uploads/balli_tort.jpg",
+    isPremium: false
   },
   {
     "title": "Napaleon Tortu",
@@ -1411,7 +1496,8 @@ module.exports = [
       "Üzərinə qırıntı səpin və soyuducuda saxlayın.",
       "4-5 saatdan sonra servis edin."
     ],
-    "image": "uploads/napaleon_tortu.jpg"
+    "image": "uploads/napaleon_tortu.jpg",
+    isPremium: false
   },
    {
     "title": "Tiramisu",
@@ -1432,7 +1518,8 @@ module.exports = [
       "Üstünü kakao ilə səpin.",
       "Soyuducuda saxlayın və servis edin."
     ],
-    "image": "uploads/tiramisu.jpg"
+    "image": "uploads/tiramisu.jpg",
+    isPremium: false
   },
   {
     "title": "Şokoladlı Muffin",
@@ -1455,7 +1542,8 @@ module.exports = [
       "Xəmiri muffin qəliblərinə tökün.",
       "Sobada bişirin."
     ],
-    "image": "uploads/sokoladli_muffin.jpg"
+    "image": "uploads/sokoladli_muffin.jpg",
+    isPremium: false
   },
   {
     "title": "Biskvit Ruleti",
@@ -1475,7 +1563,8 @@ module.exports = [
       "Soyuyanda açın, marmeladla doldurub yenidən bükün.",
       "Şəkər tozu ilə bəzəyin."
     ],
-    "image": "uploads/biskvit_ruleti.jpg"
+    "image": "uploads/biskvit_ruleti.jpg",
+    isPremium: false
   },
   {
     "title": "San Sebastian Cheesecake",
@@ -1497,7 +1586,8 @@ module.exports = [
       "Soyudub soyuducuda saxlayın.",
       "Dilimləyib servis edin."
     ],
-    "image": "uploads/sansebastian.jpg"
+    "image": "uploads/sansebastian.jpg",
+    isPremium: true
   },
   {
     "title": "Meyvəli Tort",
@@ -1519,7 +1609,8 @@ module.exports = [
       "Üstünü də bəzəyin.",
       "Soyuducuda saxlayıb servis edin."
     ],
-    "image": "uploads/meyveli_tort.jpg"
+    "image": "uploads/meyveli_tort.jpg",
+    isPremium: false
   },
   {
     "title": "Islak Kek",
@@ -1543,7 +1634,8 @@ module.exports = [
       "Üzərinə ayırdığınız qarışığı tökün.",
       "Soyuducuda saxlayın."
     ],
-    "image": "uploads/islak_kek.webp"
+    "image": "uploads/islak_kek.webp",
+    isPremium: false
   },
   {
     "title": "Badambura",
@@ -1566,7 +1658,8 @@ module.exports = [
       "Dilimləyib içinə içlik qoyub formalaşdırın.",
       "Üzərinə yumurta sarısı çəkib bişirin."
     ],
-    "image": "uploads/badambura.jpg"
+    "image": "uploads/badambura.jpg",
+    isPremium: false
   },
    {
     "title": "Lokma",
@@ -1588,7 +1681,8 @@ module.exports = [
       "Şərbət üçün 1 stəkan şəkəri yarım stəkan su və 1 çay qaşığı limon suyu ilə qaynadın.",
       "Qızaran lokmaları şərbətə batırıb servis edin."
     ],
-    "image": "uploads/lokma.avif"
+    "image": "uploads/lokma.avif",
+    isPremium: false
   },
   {
     "title": "Qaymaqlı Keks",
@@ -1609,7 +1703,8 @@ module.exports = [
       "180°C sobada 35-40 dəqiqə bişirin.",
       "İstəyə görə üzərinə pudra şəkəri səpə bilərsiniz."
     ],
-    "image": "uploads/qaymaqli_keks.jpg"
+    "image": "uploads/qaymaqli_keks.jpg",
+    isPremium: false
   },
   {
     "title": "Nanəli Limonlu Çay",
@@ -1627,7 +1722,8 @@ module.exports = [
       "5-7 dəqiqə dəmləyin.",
       "İstəyə görə 1 çay qaşığı bal əlavə edib qarışdırın və süzərək xidmət edin."
     ],
-    "image": "uploads/nane_limoncay.jpg"
+    "image": "uploads/nane_limoncay.jpg",
+    isPremium: false
   },
   {
     "title": "Zəncəfilli Bal Çayı",
@@ -1644,7 +1740,8 @@ module.exports = [
       "10 dəqiqə qaynadın, sonra 1 çay qaşığı bal və 1 dilim limon əlavə edib süzün.",
       "İsti şəkildə xidmət edin."
     ],
-    "image": "uploads/zencefilli_cay.jpg"
+    "image": "uploads/zencefilli_cay.jpg",
+    isPremium: false
   },
    {
     "title": "İsti Şokolad",
@@ -1655,7 +1752,8 @@ module.exports = [
       "İçinə 2 xörək qaşığı kakao tozu, 2 xörək qaşığı şəkər və 1 çimdik vanil əlavə edib qarışdırın.",
       "Qarışım qaynayana qədər qarışdıraraq bişirin və sonra fincana süzərək təqdim edin."
     ],
-    "image": "uploads/istisokolad.jpg"
+    "image": "uploads/istisokolad.jpg",
+    isPremium: false
   },
   {
     "title": "Türk Qəhvəsi",
@@ -1678,7 +1776,8 @@ module.exports = [
       "20-25 dəqiqə orta odda qaynadın.",
       "Soyudub süzərək xidmət edin."
     ],
-    "image": "uploads/meyveli_kompot.jpg"
+    "image": "uploads/meyveli_kompot.jpg",
+    isPremium: false
   },
   {
     "title": "Limonad",
@@ -1689,7 +1788,8 @@ module.exports = [
       "1 litr suya əlavə edin və 4 xörək qaşığı şəkərlə qarışdırın.",
       "Bir neçə təzə nanə yarpağı da əlavə edib soyudun və təqdim edin."
     ],
-    "image": "uploads/limonad.jpg"
+    "image": "uploads/limonad.jpg",
+    isPremium: false
   },
   {
     "title": "Smoothie",
@@ -1700,7 +1800,8 @@ module.exports = [
       "1 stəkan qatıq və 1 çay qaşığı bal əlavə edin.",
       "Blenderdən keçirin və soyudulmuş halda xidmət edin."
     ],
-    "image": "uploads/smoothie.webp"
+    "image": "uploads/smoothie.webp",
+    isPremium: false
   },
   {
     "title": "Meyvə Şirəsi",
@@ -1710,7 +1811,8 @@ module.exports = [
       "Meyvələri yuyub doğrayın və şirəçəkəndən keçirin.",
       "Təzə və soyudulmuş halda xidmət edin."
     ],
-    "image": "uploads/meyve_siresi.jpg"
+    "image": "uploads/meyve_siresi.jpg",
+    isPremium: false
   },
   {
     "title": "Iced Coffee",
@@ -1721,7 +1823,8 @@ module.exports = [
       "İçinə 1/2 stəkan süd və 1 çay qaşığı şəkər əlavə edin.",
       "Buz kubları ilə birlikdə stəkanda qarışdırıb xidmət edin."
     ],
-    "image": "uploads/iced_coffee.jpg"
+    "image": "uploads/iced_coffee.jpg",
+    isPremium: false
   },
   {
     "title": "Milkshake - Şokoladlı",
@@ -1731,7 +1834,8 @@ module.exports = [
       "1 stəkan süd, 2 top şokolad dondurma və 1 çay qaşığı kakao blenderə əlavə edin.",
       "Qarışdırın və soyudulmuş halda təqdim edin."
     ],
-    "image": "uploads/sokoladlim.webp"
+    "image": "uploads/sokoladlim.webp",
+    isPremium: false
   },
   {
     "title": "Milkshake - Vanilli",
@@ -1741,7 +1845,9 @@ module.exports = [
       "1 stəkan süd və 2 top vanil dondurmanı blenderdə qarışdırın.",
       "Soyudulmuş halda təqdim edin."
     ],
-    "image": "uploads/vanillim.jpg"
+    "image": "uploads/vanillim.jpg",
+    isPremium: false
+
   },
   {
     "title": "Milkshake - Bananlı",
@@ -1751,7 +1857,8 @@ module.exports = [
       "1 banan, 1 stəkan süd və 1 top vanil dondurmanı blenderdə qarışdırın.",
       "Soyudulmuş halda təqdim edin."
     ],
-    "image": "uploads/bananlim.jpg"
+    "image": "uploads/bananlim.jpg",
+    isPremium: false
   },
   {
     "title": "Milkshake - Çiyələkli",
@@ -1761,7 +1868,8 @@ module.exports = [
       "4-5 çiyələk, 1 stəkan süd və 1 top vanil dondurmanı blenderdə qarışdırın.",
       "Soyudulmuş halda təqdim edin."
     ],
-    "image": "uploads/ciyeleklim.jpeg"
+    "image": "uploads/ciyeleklim.jpeg",
+    isPremium: false
   },
     {
     "title": "Reyhan Kompotu",
@@ -1773,7 +1881,8 @@ module.exports = [
       "15-20 dəqiqə qaynadın, sonra soyumağa qoyun.",
       "Soyuducuda saxlayıb soyuq şəkildə təqdim edin."
     ],
-    "image": "uploads/reyhan_kompotu.jpeg"
+    "image": "uploads/reyhan_kompotu.jpeg",
+    isPremium: false
   },
   {
     "title": "Almalı Piroq",
@@ -1785,7 +1894,8 @@ module.exports = [
       "2-3 doğranmış alma və darçın əlavə edin.",
       "Qəlibə töküb 180°C-də 30 dəqiqə bişirin."
     ],
-    "image": "uploads/almali_piroq.jpg"
+    "image": "uploads/almali_piroq.jpg",
+    isPremium: false
   },
   {
     "title": "Magnolia",
@@ -1797,7 +1907,8 @@ module.exports = [
       "Stəkanlara biskvit qırıntıları, dilimlənmiş banan və krem qat-qat düzün.",
       "Soyuducuda 1-2 saat saxlayıb təqdim edin."
     ],
-    "image": "uploads/magnollia.avif"
+    "image": "uploads/magnollia.avif",
+    isPremium: true
   },
   {
     "title": "Paxla Plov",
@@ -1809,7 +1920,8 @@ module.exports = [
       "Qazana qat-qat paxla və düyü əlavə edin.",
       "Üstünə yağ əlavə edib dəmə qoyun. Şüyüdlə bəzəyin."
     ],
-    "image": "uploads/paxla_plov.jpg"
+    "image": "uploads/paxla_plov.jpg",
+    isPremium: false
   },
   {
     "title": "Kartof Plov",
@@ -1821,7 +1933,8 @@ module.exports = [
       "Üzərinə qat-qat düyü qoyun və kərə yağı əlavə edin.",
       "Zəfəran suyu əlavə edib dəmə qoyun."
     ],
-    "image": "uploads/kartof_plov.jpg"
+    "image": "uploads/kartof_plov.jpg",
+    isPremium: false
   }
 
 

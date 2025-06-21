@@ -9,7 +9,6 @@ exports.createRecipe = async (req, res) => {
       return res.status(400).json({ message: 'Bütün sahələr doldurulmalıdır' });
     }
 
-    // instructions sahəsini düzgün array formatına çevir
     const instructionSteps = Array.isArray(instructions)
       ? instructions
       : typeof instructions === 'string'
@@ -60,7 +59,6 @@ exports.getRecipeById = async (req, res) => {
     let recipe = await Recipe.findById(req.params.id);
     if (!recipe) return res.status(404).json({ message: 'Resept tapılmadı' });
 
-    // instructions əgər string-dirsə, parçala
     if (typeof recipe.instructions === 'string') {
       recipe = {
         ...recipe.toObject(),
@@ -94,11 +92,69 @@ exports.getRecipesByCategory = async (req, res) => {
   }
 };
 
+// ✅ Ingredient-lərə görə axtarış (çoxlu və detallı uyğunluq)
+exports.searchByIngredient = async (req, res) => {
+  const { ingredient } = req.query;
+  if (!ingredient) {
+    return res.status(400).json({ error: 'Ərzaq adı tələb olunur' });
+  }
+
+  const terms = ingredient
+    .split(',')
+    .map(i => i.trim().toLowerCase())
+    .filter(Boolean);
+
+  if (terms.length === 0) {
+    return res.status(400).json({ error: 'Ərzaq adı tələb olunur' });
+  }
+
+  try {
+    const recipes = await Recipe.find();
+
+    const filtered = recipes.filter(recipe => {
+      const lowerIngredients = recipe.ingredients.map(i => i.toLowerCase());
+
+      return terms.every(term => {
+        // İki və daha çox sözlü term varsa, yalnız dəqiq uyğunluq
+        if (term.split(' ').length > 1) {
+          return lowerIngredients.includes(term);
+        } else {
+          // tək sözlüdürsə, yalnız `===` və ya ayırıcı ilə kəskin uyğunluq
+          return lowerIngredients.some(i => {
+            const words = i.split(/\s+/); // çox söz varsa ayır
+            return words.includes(term);
+          });
+        }
+      });
+    });
+
+    if (filtered.length === 0) {
+      return res.status(404).json({ message: 'Uyğun resept tapılmadı.' });
+    }
+
+    res.json(filtered);
+  } catch (err) {
+    console.error('Ingredient ilə axtarış xətası:', err);
+    res.status(500).json({ error: 'Server xətası' });
+  }
+};
+
+
+
+
+exports.getPremiumRecipes = async (req, res) => {
+  try {
+    const premiumRecipes = await Recipe.find({ isPremium: true });
+    res.status(200).json(premiumRecipes);
+  } catch (err) {
+    res.status(500).json({ error: 'Premium reseptlər alınmadı' });
+  }
+};
+
 exports.getAllRecipes = async (req, res) => {
   try {
     let recipes = await Recipe.find().sort({ createdAt: -1 });
 
-    // instructions əgər string-dirsə, parçala
     recipes = recipes.map(recipe => {
       if (typeof recipe.instructions === 'string') {
         return {
@@ -109,7 +165,7 @@ exports.getAllRecipes = async (req, res) => {
             .filter(Boolean),
         };
       }
-      return recipe.toObject(); // array isə olduğu kimi
+      return recipe.toObject();
     });
 
     res.status(200).json(recipes);

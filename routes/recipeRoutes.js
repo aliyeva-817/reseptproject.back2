@@ -6,6 +6,7 @@ const {
   searchRecipes,
   getRecipeById,
   getRecipesByCategory,
+  searchByIngredient,
   getAllRecipes,
 } = require('../controllers/recipeController');
 
@@ -17,19 +18,19 @@ const storage = multer.diskStorage({
 });
 const upload = multer({ storage });
 
-// 🔓 Bütün reseptlər (Home page üçün)
+// Bütün reseptlər
 router.get('/', getAllRecipes);
 
-// 🔐 Ərzaqlara görə axtarış
-router.get('/search', verifyToken, searchRecipes);
+// Ingredient ilə axtarış (JWT olmadan)
+router.get('/search', searchByIngredient);
 
-// 🔐 Kategoriya ilə filtr
+// Kategoriya ilə filtr
 router.get('/category/search', verifyToken, getRecipesByCategory);
 
-// 🔐 ID ilə resepti al
-router.get('/:id', verifyToken, getRecipeById);
-
-// 🔐 Yeni resept əlavə et (şəkil ilə)
+// Yeni resept əlavə et
 router.post('/', verifyToken, upload.single('image'), createRecipe);
+
+// Resepti ID ilə al
+router.get('/:id', verifyToken, getRecipeById);
 
 module.exports = router;
