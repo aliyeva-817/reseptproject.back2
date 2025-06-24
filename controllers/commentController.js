@@ -12,7 +12,12 @@ exports.addComment = async (req, res) => {
     });
 
     await comment.save();
-    const populatedComment = await Comment.findById(comment._id).populate('user', 'name');
+
+    // ✅ Burada həm user, həm də replies.user-ləri doldururuq
+    const populatedComment = await Comment.findById(comment._id)
+      .populate('user', 'name')
+      .populate('replies.user', 'name');
+
     res.status(201).json(populatedComment);
   } catch (err) {
     console.error('Şərh əlavə xətası:', err);
