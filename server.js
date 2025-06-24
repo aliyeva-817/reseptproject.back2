@@ -15,6 +15,8 @@ const userRoutes = require('./routes/userRoutes');
 const commentRoutes = require('./routes/commentRoutes');
 const messageRoutes = require('./routes/messageRoutes');
 const stripeRoutes = require('./routes/stripeRoutes');
+const adminRoutes = require('./routes/adminRoutes');
+
 
 // Express və server
 const app = express();
@@ -42,8 +44,11 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static('uploads'));
 
+
 // ✅ Stripe route
 app.use('/api/stripe', stripeRoutes);
+app.use('/api/admin', adminRoutes); // ✅ Yeni admin login routu
+
 
 // ✅ Socket.IO düzgün CORS ilə
 const io = new Server(server, {
