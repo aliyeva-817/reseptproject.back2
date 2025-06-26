@@ -16,7 +16,8 @@ const {
   deleteCategory,
   getAllComments,
   deleteComment,
-  getNotifications, // ✅ Əlavə olundu
+  getNotifications,
+  changeUserRole // ✅ Əlavə olundu
 } = require("../controllers/adminController");
 
 // 🔐 Admin giriş
@@ -28,6 +29,7 @@ router.get("/stats", verifyToken, isAdmin, getAdminStats);
 // 👥 İstifadəçilər
 router.get("/users", verifyToken, isAdmin, getAllUsers);
 router.delete("/users/:id", verifyToken, isAdmin, deleteUser);
+router.put("/users/:id/role", verifyToken, isAdmin, changeUserRole); // ✅ Rol dəyiş route
 
 // 📦 Reseptlər
 router.get("/recipes", verifyToken, isAdmin, getAllRecipes);
@@ -46,6 +48,6 @@ router.get("/comments", verifyToken, isAdmin, getAllComments);
 router.delete("/comments/:id", verifyToken, isAdmin, deleteComment);
 
 // 🔔 Bildirişlər
-router.get("/notifications", verifyToken, isAdmin, getNotifications); // ✅ Əlavə olundu
+router.get("/notifications", verifyToken, isAdmin, getNotifications);
 
 module.exports = router;

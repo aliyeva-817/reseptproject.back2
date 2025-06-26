@@ -1,5 +1,7 @@
 const Recipe = require('../models/Recipe');
+const User = require('../models/User');
 
+// ✅ Yarat
 exports.createRecipe = async (req, res) => {
   try {
     const { title, ingredients, instructions, category, isPremium } = req.body;
@@ -15,14 +17,18 @@ exports.createRecipe = async (req, res) => {
         ? instructions.split('.').map(s => s.trim()).filter(Boolean)
         : [];
 
+    const user = await User.findById(req.userId);
+    const isAdminRecipe = user?.isAdmin === true;
+
     const newRecipe = await Recipe.create({
       title,
       ingredients: ingredients.split(',').map(i => i.trim()),
       instructions: instructionSteps,
       image,
       category,
-      isPremium: isPremium === 'true' || isPremium === true, // ✅ Əlavə olundu
+      isPremium: isPremium === 'true' || isPremium === true,
       user: req.userId,
+      addedByAdmin: isAdminRecipe, // ✅ əlavə edildi
     });
 
     res.status(201).json({ message: 'Recipe yaradıldı', recipe: newRecipe });
@@ -32,6 +38,7 @@ exports.createRecipe = async (req, res) => {
   }
 };
 
+// ✅ Ingredient ilə sadə axtarış
 exports.searchRecipes = async (req, res) => {
   const { ingredients } = req.query;
 
@@ -39,14 +46,12 @@ exports.searchRecipes = async (req, res) => {
     return res.status(400).json({ message: 'Ingredient yazılmalıdır' });
   }
 
-  const ingredientArray = ingredients
-    .split(',')
-    .map((i) => i.trim().toLowerCase());
+  const ingredientArray = ingredients.split(',').map(i => i.trim().toLowerCase());
 
   try {
     const recipes = await Recipe.find({
       ingredients: { $in: ingredientArray },
-    });
+    }).populate('user', 'username isAdmin');
 
     res.json(recipes);
   } catch (err) {
@@ -55,18 +60,16 @@ exports.searchRecipes = async (req, res) => {
   }
 };
 
+// ✅ Detala görə resept
 exports.getRecipeById = async (req, res) => {
   try {
-    let recipe = await Recipe.findById(req.params.id);
+    let recipe = await Recipe.findById(req.params.id).populate('user', 'username isAdmin');
     if (!recipe) return res.status(404).json({ message: 'Resept tapılmadı' });
 
     if (typeof recipe.instructions === 'string') {
       recipe = {
         ...recipe.toObject(),
-        instructions: recipe.instructions
-          .split('.')
-          .map(s => s.trim())
-          .filter(Boolean),
+        instructions: recipe.instructions.split('.').map(s => s.trim()).filter(Boolean),
       };
     }
 
@@ -77,6 +80,7 @@ exports.getRecipeById = async (req, res) => {
   }
 };
 
+// ✅ Kateqoriyaya görə reseptlər
 exports.getRecipesByCategory = async (req, res) => {
   try {
     const category = req.query.category;
@@ -84,7 +88,7 @@ exports.getRecipesByCategory = async (req, res) => {
 
     const recipes = await Recipe.find({
       category: { $regex: category, $options: 'i' },
-    });
+    }).populate('user', 'username isAdmin');
 
     res.status(200).json(recipes);
   } catch (error) {
@@ -93,53 +97,59 @@ exports.getRecipesByCategory = async (req, res) => {
   }
 };
 
+// ✅ Ətraflı ingredient axtarışı
+// ✅ Ətraflı ingredient axtarışı (dəqiqləşdirilmiş və tolerant versiya)
 exports.searchByIngredient = async (req, res) => {
   const { ingredient } = req.query;
   if (!ingredient) {
     return res.status(400).json({ error: 'Ərzaq adı tələb olunur' });
   }
 
-  const terms = ingredient
+  const normalize = str =>
+    str
+      .toLowerCase()
+      .replace(/ə/g, 'e')
+      .replace(/ı/g, 'i')
+      .replace(/ö/g, 'o')
+      .replace(/ü/g, 'u')
+      .replace(/ç/g, 'c')
+      .replace(/ş/g, 's')
+      .replace(/ğ/g, 'g');
+
+  const searchTerms = ingredient
     .split(',')
-    .map(i => i.trim().toLowerCase())
+    .map(i => normalize(i.trim()))
     .filter(Boolean);
 
-  if (terms.length === 0) {
-    return res.status(400).json({ error: 'Ərzaq adı tələb olunur' });
-  }
-
   try {
-    const recipes = await Recipe.find();
+    const allRecipes = await Recipe.find().populate('user', 'username isAdmin');
 
-    const filtered = recipes.filter(recipe => {
-      const lowerIngredients = recipe.ingredients.map(i => i.toLowerCase());
+    const matched = allRecipes.filter(recipe => {
+      const normalizedIngredients = recipe.ingredients.map(i => normalize(i));
 
-      return terms.every(term => {
-        if (term.split(' ').length > 1) {
-          return lowerIngredients.includes(term);
-        } else {
-          return lowerIngredients.some(i => {
-            const words = i.split(/\s+/);
-            return words.includes(term);
-          });
-        }
-      });
+      return searchTerms.every(term =>
+        normalizedIngredients.some(ing =>
+          ing.includes(term) || ing.split(/\s+/).includes(term)
+        )
+      );
     });
 
-    if (filtered.length === 0) {
+    if (matched.length === 0) {
       return res.status(404).json({ message: 'Uyğun resept tapılmadı.' });
     }
 
-    res.json(filtered);
+    res.json(matched);
   } catch (err) {
-    console.error('Ingredient ilə axtarış xətası:', err);
+    console.error('Axtarış xətası:', err);
     res.status(500).json({ error: 'Server xətası' });
   }
 };
 
+
+// ✅ Premium reseptlər
 exports.getPremiumRecipes = async (req, res) => {
   try {
-    const premiumRecipes = await Recipe.find({ isPremium: true });
+    const premiumRecipes = await Recipe.find({ isPremium: true }).populate('user', 'username isAdmin');
     res.status(200).json(premiumRecipes);
   } catch (err) {
     console.error('Premium reseptlər alınarkən xəta:', err);
@@ -149,25 +159,25 @@ exports.getPremiumRecipes = async (req, res) => {
 
 exports.getAllPremiumRecipes = async (req, res) => {
   try {
-    const recipes = await Recipe.find({ isPremium: true });
+    const recipes = await Recipe.find({ isPremium: true }).populate('user', 'username isAdmin');
     res.json(recipes);
   } catch (err) {
     res.status(500).json({ message: 'Premium reseptlər alınmadı' });
   }
 };
 
+// ✅ Bütün reseptlər
 exports.getAllRecipes = async (req, res) => {
   try {
-    let recipes = await Recipe.find().sort({ createdAt: -1 });
+    let recipes = await Recipe.find()
+      .sort({ createdAt: -1 })
+      .populate('user', 'username isAdmin');
 
     recipes = recipes.map(recipe => {
       if (typeof recipe.instructions === 'string') {
         return {
           ...recipe.toObject(),
-          instructions: recipe.instructions
-            .split('.')
-            .map(s => s.trim())
-            .filter(Boolean),
+          instructions: recipe.instructions.split('.').map(s => s.trim()).filter(Boolean),
         };
       }
       return recipe.toObject();
@@ -179,3 +189,14 @@ exports.getAllRecipes = async (req, res) => {
     res.status(500).json({ message: 'Server xətası' });
   }
 };
+// 🔒 Auth ilə yalnız login olmuş istifadəçinin reseptləri
+exports.getMyRecipes = async (req, res) => {
+  try {
+    const myRecipes = await Recipe.find({ user: req.userId }).sort({ createdAt: -1 });
+    res.status(200).json(myRecipes);
+  } catch (err) {
+    console.error('Mənim reseptlərimi alarkən xəta:', err);
+    res.status(500).json({ message: 'Server xətası' });
+  }
+};
+
