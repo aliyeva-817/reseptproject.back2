@@ -181,3 +181,21 @@ exports.getNotifications = async (req, res) => {
     res.status(500).json({ message: "Bildirişlər alınmadı", error: err.message });
   }
 };
+// 👤 İstifadəçi rolu dəyiş
+exports.changeUserRole = async (req, res) => {
+  const { id } = req.params;
+  const { isAdmin } = req.body;
+
+  try {
+    const user = await User.findById(id);
+    if (!user) return res.status(404).json({ message: "İstifadəçi tapılmadı" });
+
+    user.isAdmin = isAdmin;
+    await user.save();
+
+    res.status(200).json({ message: `İstifadəçinin rolu uğurla dəyişdirildi: ${isAdmin ? 'Admin' : 'İstifadəçi'}` });
+  } catch (err) {
+    res.status(500).json({ message: "Rol dəyişdirilmədi", error: err.message });
+  }
+};
+

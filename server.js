@@ -15,7 +15,11 @@ const userRoutes = require('./routes/userRoutes');
 const commentRoutes = require('./routes/commentRoutes');
 const messageRoutes = require('./routes/messageRoutes');
 const stripeRoutes = require('./routes/stripeRoutes');
+
 const adminRoutes = require('./routes/adminRoutes');
+const mealRoutes = require('./routes/mealRoutes');
+const shoppingListRoutes = require('./routes/shoppingListRoutes');
+
 
 
 // Express və server
@@ -35,7 +39,7 @@ const corsOptions = {
     }
   },
   credentials: true,
-  methods: ['GET', 'POST', 'PUT', 'DELETE'],
+  methods: ['GET', 'POST', 'PUT', 'DELETE', 'PATCH'],
   allowedHeaders: ['Content-Type', 'Authorization'],
 };
 
@@ -47,6 +51,8 @@ app.use('/uploads', express.static('uploads'));
 
 // ✅ Stripe route
 app.use('/api/stripe', stripeRoutes);
+app.use('/api/meals', mealRoutes);
+app.use('/api/shopping-list', shoppingListRoutes);
 app.use('/api/admin', adminRoutes); // ✅ Yeni admin login routu
 
 

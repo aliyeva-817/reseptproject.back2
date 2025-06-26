@@ -3,13 +3,13 @@ const multer = require('multer');
 const verifyToken = require('../middlewares/verifyToken');
 const {
   createRecipe,
-  searchRecipes,
+  searchByIngredient,
   getRecipeById,
   getRecipesByCategory,
-  searchByIngredient,
   getAllRecipes,
   getPremiumRecipes,
-  getAllPremiumRecipes // ✅ Əlavə
+  getMyRecipes,
+  getAllPremiumRecipes
 } = require('../controllers/recipeController');
 
 const router = express.Router();
@@ -23,7 +23,7 @@ const upload = multer({ storage });
 // ✅ Bütün reseptlər (hamıya açıq)
 router.get('/', getAllRecipes);
 
-// ✅ Ingredient ilə axtarış (hamıya açıq)
+// ✅ Ətraflı ingredient axtarışı (hamıya açıq)
 router.get('/search', searchByIngredient);
 
 // ✅ Kategoriya ilə axtarış (hamıya açıq)
@@ -32,11 +32,16 @@ router.get('/category/search', getRecipesByCategory);
 // ✅ Premium reseptlər (hamıya açıq)
 router.get('/premium', getPremiumRecipes);
 
-// ✅ Yeni resept əlavə et (yalnız daxil olmuş istifadəçilər üçün)
+// ✅ Bütün premium reseptlər (admin və s. üçün ayrıca route varsa istifadə edilə bilər)
+router.get('/premium/all', getAllPremiumRecipes);
+
+// ✅ İstifadəçinin öz reseptləri (yalnız login olan)
+router.get('/my', verifyToken, getMyRecipes);
+
+// ✅ Yeni resept əlavə et
 router.post('/', verifyToken, upload.single('image'), createRecipe);
 
-// ✅ Resepti ID ilə al (hamıya açıq)
+// ✅ ID ilə resept al (hamıya açıq)
 router.get('/:id', getRecipeById);
-router.get('/premium', getAllPremiumRecipes);
 
 module.exports = router;
