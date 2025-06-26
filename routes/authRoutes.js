@@ -9,6 +9,8 @@ const {
   login,
   logout,
   getProfile, 
+    sendResetOtp,
+  resetPasswordWithOtp
 } = require("../controllers/authController");
 
 const verifyToken = require("../middlewares/verifyToken"); 
@@ -42,5 +44,16 @@ router.get("/profile", (req, res, next) => {
   console.log("➡️ GET /profile çağırıldı");
   next();
 }, verifyToken, getProfile);
+// ✅ Şifrə bərpası üçün OTP göndərilməsi
+router.post("/send-reset-otp", (req, res, next) => {
+  console.log("➡️ POST /send-reset-otp çağırıldı");
+  next();
+}, sendResetOtp);
+
+// ✅ OTP ilə şifrəni yeniləmək
+router.post("/reset-password", (req, res, next) => {
+  console.log("➡️ POST /reset-password çağırıldı");
+  next();
+}, resetPasswordWithOtp);
 
 module.exports = router;
