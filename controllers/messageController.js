@@ -1,10 +1,38 @@
 const Message = require('../models/Message');
 
-// Mesaj göndər
+// MESAJ GÖNDƏR (Real-Time ilə)
+// MESAJ GÖNDƏR (Real-Time ilə)
 exports.sendMessage = async (req, res) => {
   try {
     const { senderId, receiverId, content } = req.body;
-    const message = await Message.create({ sender: senderId, receiver: receiverId, content });
+
+    const message = await Message.create({
+      sender: senderId,
+      receiver: receiverId,
+      content,
+      edited: false,
+    });
+
+    const messagePayload = {
+      _id: message._id,
+      senderId,
+      receiverId,
+      text: message.content,
+      createdAt: message.createdAt,
+      edited: false,
+    };
+
+    // Qarşı tərəfə göndər
+    const receiverSocketId = req.ioUsers.get(receiverId);
+    if (receiverSocketId) {
+      req.io.to(receiverSocketId).emit('getMessage', messagePayload);
+    }
+
+    // Göndərən tərəfə də real vaxtda göndər (bunu etməmişdin)
+    const senderSocketId = req.ioUsers.get(senderId);
+    if (senderSocketId) {
+      req.io.to(senderSocketId).emit('getMessage', messagePayload);
+    }
 
     res.status(201).json(message);
   } catch (err) {
@@ -12,69 +40,88 @@ exports.sendMessage = async (req, res) => {
   }
 };
 
-// Mesajları götür
+
+// MESAJLARI GÖTÜR
 exports.getConversation = async (req, res) => {
   const { userId, recipientId } = req.params;
   try {
     const messages = await Message.find({
       $or: [
         { sender: userId, receiver: recipientId },
-        { sender: recipientId, receiver: userId }
+        { sender: recipientId, receiver: userId },
       ]
     }).sort({ createdAt: 1 });
 
     res.json(messages);
   } catch (err) {
-    res.status(500).json({ message: "Xəta baş verdi", error: err.message });
+    res.status(500).json({ message: 'Xəta baş verdi', error: err.message });
   }
 };
 
-// Mesaj sil
+// MESAJ SİL
 exports.deleteMessage = async (req, res) => {
-  const { messageId } = req.params;
-  const userId = req.userId;
+  try {
+    const { messageId } = req.params;
+    const userId = req.userId;
 
-  const message = await Message.findById(messageId);
-  if (!message || message.sender.toString() !== userId) {
-    return res.status(403).json({ message: 'İcazə yoxdur' });
+    const message = await Message.findById(messageId);
+    if (!message) {
+      return res.status(404).json({ message: 'Mesaj tapılmadı' });
+    }
+
+    if (message.sender.toString() !== userId) {
+      return res.status(403).json({ message: 'İcazə yoxdur' });
+    }
+
+    await Message.findByIdAndDelete(messageId);
+
+    const receiverSocketId = req.ioUsers.get(message.receiver.toString());
+    if (receiverSocketId) {
+      req.io.to(receiverSocketId).emit('messageDeleted', { messageId });
+    }
+
+    res.status(200).json({ message: 'Mesaj silindi' });
+  } catch (err) {
+    res.status(500).json({ message: 'Silinmə zamanı xəta', error: err.message });
   }
-
-  await Message.findByIdAndDelete(messageId);
-
-  // Socket.IO emit üçün: req.io istifadə edilir
-  req.io.to(req.ioUsers.get(message.receiver.toString())).emit('messageDeleted', {
-    messageId,
-  });
-
-  res.status(200).json({ message: 'Mesaj silindi' });
 };
 
-// Mesaj redaktə
+// MESAJ REDAKTƏ ET
 exports.editMessage = async (req, res) => {
-  const { messageId } = req.params;
-  const { newText } = req.body;
-  const userId = req.userId;
+  try {
+    const { messageId } = req.params;
+    const { newText } = req.body;
+    const userId = req.userId;
 
-  const message = await Message.findById(messageId);
-  if (!message || message.sender.toString() !== userId) {
-    return res.status(403).json({ message: 'İcazə yoxdur' });
+    const message = await Message.findById(messageId);
+    if (!message) {
+      return res.status(404).json({ message: 'Mesaj tapılmadı' });
+    }
+
+    if (message.sender.toString() !== userId) {
+      return res.status(403).json({ message: 'İcazə yoxdur' });
+    }
+
+    message.content = newText;
+    message.edited = true;
+    await message.save();
+
+    const receiverSocketId = req.ioUsers.get(message.receiver.toString());
+    if (receiverSocketId) {
+      req.io.to(receiverSocketId).emit('messageEdited', {
+        _id: message._id,
+        text: message.content,
+        edited: true,
+      });
+    }
+
+    res.status(200).json({ message: 'Mesaj redaktə olundu', updatedMessage: message });
+  } catch (err) {
+    res.status(500).json({ message: 'Redaktə zamanı xəta', error: err.message });
   }
-
-  message.content = newText;
-  message.edited = true;
-  await message.save();
-
-  // Socket.IO emit ilə qarşı tərəfə bildirilir
-  req.io.to(req.ioUsers.get(message.receiver.toString())).emit('messageEdited', {
-    _id: message._id,
-    text: message.content,
-    edited: true,
-  });
-
-  res.status(200).json({ message: 'Mesaj redaktə olundu', updatedMessage: message });
 };
 
-// Sohbəti təmizlə (yalnız öz baxışından)
+// SOHBƏTİ TƏMİZLƏ (yalnız öz baxışından)
 exports.clearConversation = async (req, res) => {
   const { userId } = req.params;
   const currentUserId = req.userId;
@@ -83,5 +130,6 @@ exports.clearConversation = async (req, res) => {
     return res.status(403).json({ message: 'İcazə yoxdur' });
   }
 
+  // Real təmizləmə əməlliyyatı yoxdur – sadəcə görünüşdən silinir
   res.status(200).json({ message: "Söhbət yalnız sizdən təmizləndi." });
 };

@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const http = require('http');
 const { Server } = require('socket.io');
 
-// DB və routelar
+// ROUTES
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const recipeRoutes = require('./routes/recipeRoutes');
@@ -14,28 +14,23 @@ const favoriteRoutes = require('./routes/favoriteRoutes');
 const userRoutes = require('./routes/userRoutes');
 const commentRoutes = require('./routes/commentRoutes');
 const messageRoutes = require('./routes/messageRoutes');
+const chatRoutes = require('./routes/chatRoutes');
 const stripeRoutes = require('./routes/stripeRoutes');
-
 const adminRoutes = require('./routes/adminRoutes');
 const mealRoutes = require('./routes/mealRoutes');
 const shoppingListRoutes = require('./routes/shoppingListRoutes');
 
-
-
-// Express və server
 const app = express();
 const server = http.createServer(app);
-
-// DB bağlantısı
 connectDB();
 
-// ✅ CORS ayarları (bütün `localhost` portlarına icazə)
+// CORS
 const corsOptions = {
   origin: (origin, callback) => {
     if (!origin || /^http:\/\/localhost:\d+$/.test(origin)) {
       callback(null, true);
     } else {
-      callback(new Error('CORS not allowed from this origin'));
+      callback(new Error('CORS not allowed'));
     }
   },
   credentials: true,
@@ -48,15 +43,11 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static('uploads'));
 
+// GLOBAL ONLINE USERS MAP
+const onlineUsers = new Map();
+const unreadMessages = new Map(); // 🆕 Yeni xəritə
 
-// ✅ Stripe route
-app.use('/api/stripe', stripeRoutes);
-app.use('/api/meals', mealRoutes);
-app.use('/api/shopping-list', shoppingListRoutes);
-app.use('/api/admin', adminRoutes); // ✅ Yeni admin login routu
-
-
-// ✅ Socket.IO düzgün CORS ilə
+// SOCKET.IO
 const io = new Server(server, {
   cors: {
     origin: (origin, callback) => {
@@ -70,65 +61,105 @@ const io = new Server(server, {
   },
 });
 
-// ✅ Global istifadəçi xəritəsi
-const onlineUsers = new Map();
-
-// ✅ Req-ə əlavə et
+// ADD io AND onlineUsers TO req
 app.use((req, res, next) => {
   req.io = io;
   req.ioUsers = onlineUsers;
   next();
 });
 
-// ✅ API routeları
+// ROUTES
 app.use('/api/auth', authRoutes);
 app.use('/api/recipes', recipeRoutes);
 app.use('/api/favorites', favoriteRoutes);
 app.use('/api/comments', commentRoutes);
 app.use('/api/users', userRoutes);
 app.use('/api/messages', messageRoutes);
+app.use('/api/chat', chatRoutes);
+app.use('/api/stripe', stripeRoutes);
+app.use('/api/meals', mealRoutes);
+app.use('/api/shopping-list', shoppingListRoutes);
+app.use('/api/admin', adminRoutes);
 
-// ✅ Socket hadisələri
+// SOCKET EVENTS
 io.on('connection', (socket) => {
-  console.log('Yeni istifadəçi qoşuldu:', socket.id);
+  console.log('🔌 Yeni istifadəçi qoşuldu:', socket.id);
 
   socket.on('addUser', (userId) => {
     onlineUsers.set(userId, socket.id);
-    console.log('İstifadəçi əlavə olundu:', userId);
+    console.log('🧑‍💻 Istifadəçi əlavə olundu:', userId);
+    io.emit('onlineUsers', Array.from(onlineUsers.keys()));
   });
 
-  socket.on('sendMessage', (message) => {
-    const receiverSocketId = onlineUsers.get(message.receiverId);
+  socket.on('sendMessage', ({ _id, senderId, receiverId, text, content, createdAt, edited, emoji }) => {
+    const receiverSocketId = onlineUsers.get(receiverId);
+    const senderSocketId = onlineUsers.get(senderId);
+
+    const messagePayload = {
+      _id,
+      senderId,
+      receiverId,
+      text: text || content,
+      createdAt,
+      edited,
+      emoji
+    };
+
     if (receiverSocketId) {
-      io.to(receiverSocketId).emit('getMessage', message);
+      io.to(receiverSocketId).emit('getMessage', messagePayload);
+      io.to(receiverSocketId).emit('newNotification', {
+        from: senderId,
+        text: 'Yeni mesajınız var',
+      });
+    } else {
+      // 🆕 Əgər qarşı tərəf offline-dursa, unreadMessages-a əlavə et
+      const existing = unreadMessages.get(receiverId) || [];
+      unreadMessages.set(receiverId, [...existing, messagePayload]);
+    }
+
+    if (senderSocketId) {
+      io.to(senderSocketId).emit('getMessage', messagePayload);
     }
   });
 
-  socket.on('editMessage', (data) => {
-    const receiverSocketId = onlineUsers.get(data.receiverId);
+  socket.on('editMessage', ({ _id, text, receiverId }) => {
+    const receiverSocketId = onlineUsers.get(receiverId);
     if (receiverSocketId) {
-      io.to(receiverSocketId).emit('getEditedMessage', data);
+      io.to(receiverSocketId).emit('messageEdited', { _id, text });
     }
   });
 
   socket.on('deleteMessage', ({ messageId, receiverId }) => {
     const receiverSocketId = onlineUsers.get(receiverId);
     if (receiverSocketId) {
-      io.to(receiverSocketId).emit('getDeletedMessage', messageId);
+      io.to(receiverSocketId).emit('messageDeleted', { messageId });
+    }
+  });
+
+  // 🆕 Client chat-i açanda oxunmamış mesajları göndər
+  socket.on('joinChat', ({ userId, partnerId }) => {
+    const unread = unreadMessages.get(userId) || [];
+    const related = unread.filter((msg) => msg.senderId === partnerId);
+    if (related.length) {
+      related.forEach((msg) => {
+        io.to(socket.id).emit('getMessage', msg);
+      });
+      unreadMessages.set(userId, unread.filter((msg) => msg.senderId !== partnerId));
     }
   });
 
   socket.on('disconnect', () => {
-    console.log('İstifadəçi ayrıldı:', socket.id);
     for (const [userId, sockId] of onlineUsers.entries()) {
       if (sockId === socket.id) {
         onlineUsers.delete(userId);
         break;
       }
     }
+    io.emit('onlineUsers', Array.from(onlineUsers.keys()));
+    console.log('❌ İstifadəçi ayrıldı:', socket.id);
   });
 });
 
-// ✅ Serveri işə sal
+// RUN SERVER
 const PORT = process.env.PORT || 5000;
-server.listen(PORT, () => console.log(`Server running on port ${PORT}`));
+server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));

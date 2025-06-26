@@ -25,15 +25,15 @@ exports.register = async (req, res) => {
   try {
     console.log("[register] İstifadəçi adı yoxlanılır:", username);
     const existingUsername = await User.findOne({ username });
-    if (existingUsername) {
-      return res.status(400).json({ message: "Bu istifadəçi adı artıq mövcuddur." });
-    }
+   if (existingUsername) {
+  return res.status(400).json({ message: "Bu istifadəçi adı artıq istifadə olunub" });
+}
 
     console.log("[register] Email yoxlanılır:", email);
     const existingEmail = await User.findOne({ email });
     if (existingEmail) {
-      return res.status(400).json({ message: "Bu email artıq mövcuddur." });
-    }
+  return res.status(400).json({ message: "Bu email artıq istifadə olunub" });
+}
 
     console.log("[register] Şifrə hash edilir");
     const hashedPassword = await bcrypt.hash(password, 10);
@@ -169,5 +169,50 @@ exports.getProfile = async (req, res) => {
   } catch (err) {
     console.error("❌ Profil məlumatları alınmadı:", err);
     res.status(500).json({ message: "Profil yüklənmədi." });
+  }
+};
+exports.sendResetOtp = async (req, res) => {
+  const { email } = req.body;
+
+  try {
+    const user = await User.findOne({ email });
+    if (!user) return res.status(404).json({ message: "İstifadəçi tapılmadı" });
+
+    const otp = Math.floor(100000 + Math.random() * 900000).toString();
+    const otpExpires = new Date(Date.now() + 10 * 60 * 1000); // 10 dəq etibarlı
+
+    user.otp = otp;
+    user.otpExpires = otpExpires;
+    await user.save();
+
+    await sendOTP(email, otp);
+
+    res.status(200).json({ message: "OTP emailə göndərildi" });
+  } catch (err) {
+    res.status(500).json({ message: "OTP göndərilmədi", error: err.message });
+  }
+};
+
+// ✅ Yeni əlavə: OTP ilə şifrəni sıfırla
+exports.resetPasswordWithOtp = async (req, res) => {
+  const { email, otp, newPassword } = req.body;
+
+  try {
+    const user = await User.findOne({ email });
+    if (!user) return res.status(404).json({ message: "İstifadəçi tapılmadı" });
+
+    if (user.otp !== otp || user.otpExpires < Date.now()) {
+      return res.status(400).json({ message: "OTP etibarsız və ya vaxtı keçib" });
+    }
+
+    const hashed = await bcrypt.hash(newPassword, 10);
+    user.password = hashed;
+    user.otp = null;
+    user.otpExpires = null;
+    await user.save();
+
+    res.status(200).json({ message: "Şifrə uğurla yeniləndi" });
+  } catch (err) {
+    res.status(500).json({ message: "Şifrə yenilənmədi", error: err.message });
   }
 };
