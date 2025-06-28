@@ -96,9 +96,6 @@ exports.getRecipesByCategory = async (req, res) => {
     res.status(500).json({ error: 'Category-based filter failed' });
   }
 };
-
-// ✅ Ətraflı ingredient axtarışı
-// ✅ Ətraflı ingredient axtarışı (dəqiqləşdirilmiş və tolerant versiya)
 exports.searchByIngredient = async (req, res) => {
   const { ingredient } = req.query;
   if (!ingredient) {
@@ -114,11 +111,12 @@ exports.searchByIngredient = async (req, res) => {
       .replace(/ü/g, 'u')
       .replace(/ç/g, 'c')
       .replace(/ş/g, 's')
-      .replace(/ğ/g, 'g');
+      .replace(/ğ/g, 'g')
+      .trim();
 
   const searchTerms = ingredient
     .split(',')
-    .map(i => normalize(i.trim()))
+    .map(i => normalize(i))
     .filter(Boolean);
 
   try {
@@ -127,11 +125,18 @@ exports.searchByIngredient = async (req, res) => {
     const matched = allRecipes.filter(recipe => {
       const normalizedIngredients = recipe.ingredients.map(i => normalize(i));
 
-      return searchTerms.every(term =>
-        normalizedIngredients.some(ing =>
-          ing.includes(term) || ing.split(/\s+/).includes(term)
-        )
-      );
+      return searchTerms.every(term => {
+        if (term.includes(' ')) {
+          // "kere yagi" kimi konkret tərkiblər üçün tam uyğunluq tələb et
+          return normalizedIngredients.includes(term);
+        } else {
+          // "un", "yag" kimi sözlər üçün yalnız həmin sözün keçdiyi tərkibləri qəbul et
+          return normalizedIngredients.some(ing => {
+            const words = ing.split(' ');
+            return words.includes(term); // məsələn, "qarğıdalı un" → ["qarğıdalı", "un"]
+          });
+        }
+      });
     });
 
     if (matched.length === 0) {
@@ -144,6 +149,7 @@ exports.searchByIngredient = async (req, res) => {
     res.status(500).json({ error: 'Server xətası' });
   }
 };
+
 
 
 // ✅ Premium reseptlər
