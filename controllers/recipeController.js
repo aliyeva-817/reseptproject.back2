@@ -206,3 +206,23 @@ exports.getMyRecipes = async (req, res) => {
   }
 };
 
+// ✅ Resepti sil
+exports.deleteRecipe = async (req, res) => {
+  try {
+    const recipe = await Recipe.findById(req.params.id);
+    if (!recipe) {
+      return res.status(404).json({ error: 'Resept tapılmadı' });
+    }
+
+    // Yalnız sahibi və ya admin silə bilər
+    if (recipe.user.toString() !== req.userId) {
+      return res.status(403).json({ error: 'Bu resepti silməyə icazəniz yoxdur' });
+    }
+
+    await Recipe.findByIdAndDelete(req.params.id);
+    res.status(200).json({ message: 'Resept uğurla silindi' });
+  } catch (err) {
+    console.error('Silinmə xətası:', err);
+    res.status(500).json({ error: 'Server xətası' });
+  }
+};

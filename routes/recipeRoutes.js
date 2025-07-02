@@ -6,11 +6,13 @@ const {
   searchByIngredient,
   getRecipeById,
   getRecipesByCategory,
+  deleteRecipe,
   getAllRecipes,
   getPremiumRecipes,
   getMyRecipes,
   getAllPremiumRecipes
 } = require('../controllers/recipeController');
+
 
 const router = express.Router();
 
@@ -22,6 +24,7 @@ const upload = multer({ storage });
 
 // ✅ Bütün reseptlər (hamıya açıq)
 router.get('/', getAllRecipes);
+router.delete('/:id', verifyToken, deleteRecipe);
 
 // ✅ Ətraflı ingredient axtarışı (hamıya açıq)
 router.get('/search', searchByIngredient);

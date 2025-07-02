@@ -1569,7 +1569,7 @@ module.exports = [
     isPremium: false
   },
   {
-    "title": "San Sebastian Cheesecake",
+    "title": "San Sebastian",
     "category": "Dessert",
     "ingredients": [
       "krem pendir",
