@@ -4,7 +4,7 @@ exports.addFavorite = async (req, res) => {
   try {
     const { recipeId } = req.body;
 
-    // Debug: yoxla userId və recipeId gəlirmi
+  
     console.log('userId:', req.userId);
     console.log('recipeId:', recipeId);
 
@@ -19,7 +19,7 @@ exports.addFavorite = async (req, res) => {
 
     res.status(201).json(fav);
   } catch (err) {
-    console.error('Favorit əlavə edilərkən xəta:', err); // Əsas error log
+    console.error('Favorit əlavə edilərkən xəta:', err); 
     res.status(500).json({ error: 'Failed to add favorite' });
   }
 };

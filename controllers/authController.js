@@ -3,7 +3,7 @@ const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 const sendOTP = require("../utils/sendOTP");
 
-// Token yaratma funksiyası
+
 const generateTokens = (user) => {
   console.log("[generateTokens] Token yaradılır üçün user ID:", user._id);
   const accessToken = jwt.sign({ id: user._id }, process.env.JWT_SECRET, {
@@ -16,7 +16,7 @@ const generateTokens = (user) => {
   return { accessToken, refreshToken };
 };
 
-// Qeydiyyat (yalnız username, email, password)
+
 exports.register = async (req, res) => {
   console.log("🔥 FUNKSİYA İŞƏ DÜŞDÜ");
   console.log("📥 Gələn body:", req.body);
@@ -148,13 +148,13 @@ exports.login = async (req, res) => {
   }
 };
 
-// Çıxış
+
 exports.logout = (req, res) => {
   console.log("🔥 FUNKSİYA İŞƏ DÜŞDÜ - logout");
   res.status(200).json({ message: "Çıxış olundu." });
 };
 
-// Profil məlumatlarını alma
+
 exports.getProfile = async (req, res) => {
   console.log("🔥 FUNKSİYA İŞƏ DÜŞDÜ - getProfile");
   try {
@@ -179,7 +179,7 @@ exports.sendResetOtp = async (req, res) => {
     if (!user) return res.status(404).json({ message: "İstifadəçi tapılmadı" });
 
     const otp = Math.floor(100000 + Math.random() * 900000).toString();
-    const otpExpires = new Date(Date.now() + 10 * 60 * 1000); // 10 dəq etibarlı
+    const otpExpires = new Date(Date.now() + 10 * 60 * 1000); 
 
     user.otp = otp;
     user.otpExpires = otpExpires;
@@ -193,7 +193,7 @@ exports.sendResetOtp = async (req, res) => {
   }
 };
 
-// ✅ Yeni əlavə: OTP ilə şifrəni sıfırla
+
 exports.resetPasswordWithOtp = async (req, res) => {
   const { email, otp, newPassword } = req.body;
 

@@ -1,7 +1,8 @@
 const Recipe = require('../models/Recipe');
 const User = require('../models/User');
 
-// ✅ Yarat
+
+
 exports.createRecipe = async (req, res) => {
   try {
     const { title, ingredients, instructions, category, isPremium } = req.body;
@@ -28,7 +29,7 @@ exports.createRecipe = async (req, res) => {
       category,
       isPremium: isPremium === 'true' || isPremium === true,
       user: req.userId,
-      addedByAdmin: isAdminRecipe, // ✅ əlavə edildi
+      addedByAdmin: isAdminRecipe, 
     });
 
     res.status(201).json({ message: 'Recipe yaradıldı', recipe: newRecipe });
@@ -38,7 +39,7 @@ exports.createRecipe = async (req, res) => {
   }
 };
 
-// ✅ Ingredient ilə sadə axtarış
+
 exports.searchRecipes = async (req, res) => {
   const { ingredients } = req.query;
 
@@ -60,11 +61,13 @@ exports.searchRecipes = async (req, res) => {
   }
 };
 
-// ✅ Detala görə resept
+
 exports.getRecipeById = async (req, res) => {
   try {
     let recipe = await Recipe.findById(req.params.id).populate('user', 'username isAdmin');
     if (!recipe) return res.status(404).json({ message: 'Resept tapılmadı' });
+      console.log('Recipe user:', recipe.user);          
+    console.log('addedByAdmin:', recipe.addedByAdmin);  
 
     if (typeof recipe.instructions === 'string') {
       recipe = {
@@ -80,7 +83,7 @@ exports.getRecipeById = async (req, res) => {
   }
 };
 
-// ✅ Kateqoriyaya görə reseptlər
+
 exports.getRecipesByCategory = async (req, res) => {
   try {
     const category = req.query.category;
@@ -127,13 +130,12 @@ exports.searchByIngredient = async (req, res) => {
 
       return searchTerms.every(term => {
         if (term.includes(' ')) {
-          // "kere yagi" kimi konkret tərkiblər üçün tam uyğunluq tələb et
+          
           return normalizedIngredients.includes(term);
         } else {
-          // "un", "yag" kimi sözlər üçün yalnız həmin sözün keçdiyi tərkibləri qəbul et
+          
           return normalizedIngredients.some(ing => {
             const words = ing.split(' ');
-            return words.includes(term); // məsələn, "qarğıdalı un" → ["qarğıdalı", "un"]
           });
         }
       });
@@ -151,8 +153,6 @@ exports.searchByIngredient = async (req, res) => {
 };
 
 
-
-// ✅ Premium reseptlər
 exports.getPremiumRecipes = async (req, res) => {
   try {
     const premiumRecipes = await Recipe.find({ isPremium: true }).populate('user', 'username isAdmin');
@@ -172,7 +172,7 @@ exports.getAllPremiumRecipes = async (req, res) => {
   }
 };
 
-// ✅ Bütün reseptlər
+
 exports.getAllRecipes = async (req, res) => {
   try {
     let recipes = await Recipe.find()
@@ -206,7 +206,6 @@ exports.getMyRecipes = async (req, res) => {
   }
 };
 
-// ✅ Resepti sil
 exports.deleteRecipe = async (req, res) => {
   try {
     const recipe = await Recipe.findById(req.params.id);
@@ -214,7 +213,7 @@ exports.deleteRecipe = async (req, res) => {
       return res.status(404).json({ error: 'Resept tapılmadı' });
     }
 
-    // Yalnız sahibi və ya admin silə bilər
+  
     if (recipe.user.toString() !== req.userId) {
       return res.status(403).json({ error: 'Bu resepti silməyə icazəniz yoxdur' });
     }

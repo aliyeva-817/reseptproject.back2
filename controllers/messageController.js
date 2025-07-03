@@ -1,7 +1,7 @@
 const Message = require('../models/Message');
 
-// MESAJ GÖNDƏR (Real-Time ilə)
-// MESAJ GÖNDƏR (Real-Time ilə)
+
+
 exports.sendMessage = async (req, res) => {
   try {
     const { senderId, receiverId, content } = req.body;
@@ -22,7 +22,7 @@ exports.sendMessage = async (req, res) => {
       edited: false,
     };
 
-    // Qarşı tərəfə göndər
+   
     const receiverSocketId = req.ioUsers.get(receiverId);
     if (receiverSocketId) {
       req.io.to(receiverSocketId).emit('getMessage', messagePayload);
@@ -41,7 +41,7 @@ exports.sendMessage = async (req, res) => {
 };
 
 
-// MESAJLARI GÖTÜR
+
 exports.getConversation = async (req, res) => {
   const { userId, recipientId } = req.params;
   try {
@@ -86,7 +86,7 @@ exports.deleteMessage = async (req, res) => {
   }
 };
 
-// MESAJ REDAKTƏ ET
+
 exports.editMessage = async (req, res) => {
   try {
     const { messageId } = req.params;
@@ -121,7 +121,7 @@ exports.editMessage = async (req, res) => {
   }
 };
 
-// SOHBƏTİ TƏMİZLƏ (yalnız öz baxışından)
+
 exports.clearConversation = async (req, res) => {
   const { userId } = req.params;
   const currentUserId = req.userId;
@@ -130,6 +130,6 @@ exports.clearConversation = async (req, res) => {
     return res.status(403).json({ message: 'İcazə yoxdur' });
   }
 
-  // Real təmizləmə əməlliyyatı yoxdur – sadəcə görünüşdən silinir
+ 
   res.status(200).json({ message: "Söhbət yalnız sizdən təmizləndi." });
 };

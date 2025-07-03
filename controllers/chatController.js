@@ -1,8 +1,8 @@
-// controllers/chatController.js
+
 const Message = require('../models/Message');
 const User = require('../models/User');
 
-// Sidebar üçün yazışılan istifadəçiləri al
+
 exports.getMyChats = async (req, res) => {
   try {
     const userId = req.userId;
@@ -26,7 +26,7 @@ exports.getMyChats = async (req, res) => {
   }
 };
 
-// Sidebar-dan söhbəti sil (yalnız bu istifadəçi üçün)
+
 exports.clearChatWithUser = async (req, res) => {
   try {
     const userId = req.userId;
@@ -35,7 +35,7 @@ exports.clearChatWithUser = async (req, res) => {
     const targetUser = await User.findOne({ username: targetUsername });
     if (!targetUser) return res.status(404).json({ message: 'İstifadəçi tapılmadı' });
 
-    // Silinmə frontend-də local olaraq həyata keçiriləcək
+    
     res.status(200).json({ message: 'Söhbət sidebar-dan silindi' });
   } catch (err) {
     res.status(500).json({ message: 'Silinmə zamanı xəta', error: err.message });

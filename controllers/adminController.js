@@ -3,11 +3,11 @@ const Recipe = require("../models/Recipe");
 const Category = require("../models/Category");
 const Payment = require("../models/Payment");
 const Comment = require("../models/Comment");
-const Notification = require("../models/Notification"); // ✅ Əlavə olundu
+const Notification = require("../models/Notification"); 
 const bcrypt = require("bcryptjs");
 const jwt = require("jsonwebtoken");
 
-// Token yaradıcı
+
 const generateTokens = (user) => {
   const accessToken = jwt.sign({ id: user._id, isAdmin: user.isAdmin }, process.env.JWT_SECRET, {
     expiresIn: "1d",
@@ -18,7 +18,7 @@ const generateTokens = (user) => {
   return { accessToken, refreshToken };
 };
 
-// 🔐 Admin login
+
 exports.adminLogin = async (req, res) => {
   const { email, password } = req.body;
   try {
@@ -41,7 +41,7 @@ exports.adminLogin = async (req, res) => {
   }
 };
 
-// 📊 Statistika
+
 exports.getAdminStats = async (req, res) => {
   try {
     const userCount = await User.countDocuments();
@@ -62,7 +62,7 @@ exports.getAdminStats = async (req, res) => {
   }
 };
 
-// 👥 İstifadəçilər
+
 exports.getAllUsers = async (req, res) => {
   try {
     const users = await User.find().select("-password");
@@ -82,7 +82,7 @@ exports.deleteUser = async (req, res) => {
   }
 };
 
-// 📦 Reseptlər
+
 exports.getAllRecipes = async (req, res) => {
   try {
     const recipes = await Recipe.find().populate("user", "username email");
@@ -102,7 +102,7 @@ exports.deleteRecipe = async (req, res) => {
   }
 };
 
-// 💰 Ödənişlər
+
 exports.getAllPayments = async (req, res) => {
   try {
     const payments = await Payment.find()
@@ -114,7 +114,7 @@ exports.getAllPayments = async (req, res) => {
   }
 };
 
-// 📂 Kateqoriyalar
+
 exports.getAllCategories = async (req, res) => {
   try {
     const categories = await Category.find();
@@ -148,7 +148,7 @@ exports.deleteCategory = async (req, res) => {
   }
 };
 
-// 💬 Şərhlər
+
 exports.getAllComments = async (req, res) => {
   try {
     const comments = await Comment.find()
@@ -170,7 +170,7 @@ exports.deleteComment = async (req, res) => {
   }
 };
 
-// 🔔 Bildirişlər
+
 exports.getNotifications = async (req, res) => {
   try {
     const notifications = await Notification.find()
@@ -181,7 +181,7 @@ exports.getNotifications = async (req, res) => {
     res.status(500).json({ message: "Bildirişlər alınmadı", error: err.message });
   }
 };
-// 👤 İstifadəçi rolu dəyiş
+
 exports.changeUserRole = async (req, res) => {
   const { id } = req.params;
   const { isAdmin } = req.body;

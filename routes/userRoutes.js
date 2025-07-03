@@ -3,7 +3,7 @@ const router = express.Router();
 const verifyToken = require("../middlewares/verifyToken");
 const User = require("../models/User");
 
-// İstifadəçi axtarışı (username ilə)
+
 router.get("/search", verifyToken, async (req, res) => {
   try {
     const { q } = req.query;
@@ -12,7 +12,7 @@ router.get("/search", verifyToken, async (req, res) => {
     }
 
     const users = await User.find({
-      username: { $regex: q, $options: "i" },  // Case insensitive axtarış
+      username: { $regex: q, $options: "i" },  
     }).select("username _id");
 
     res.json(users);

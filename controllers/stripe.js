@@ -15,15 +15,15 @@ const createCheckoutSession = async (req, res) => {
               name: title,
               images: [image],
             },
-            unit_amount: 499, // $4.99
+            unit_amount: 499, 
           },
           quantity: 1,
         },
       ],
       mode: 'payment',
       success_url: `${origin}/payment-success?recipeId=${recipeId}`,
-  // dinamik URL
-      cancel_url: `${origin}/payment-cancel`,    // dinamik URL
+
+      cancel_url: `${origin}/payment-cancel`,  
       metadata: {
         recipeId,
         userId: req.userId,

@@ -13,7 +13,7 @@ exports.addComment = async (req, res) => {
 
     await comment.save();
 
-    // ✅ Burada həm user, həm də replies.user-ləri doldururuq
+    
     const populatedComment = await Comment.findById(comment._id)
       .populate('user', 'name')
       .populate('replies.user', 'name');

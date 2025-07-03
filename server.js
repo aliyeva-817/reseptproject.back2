@@ -24,7 +24,6 @@ const app = express();
 const server = http.createServer(app);
 connectDB();
 
-// CORS
 const corsOptions = {
   origin: (origin, callback) => {
     if (!origin || /^http:\/\/localhost:\d+$/.test(origin)) {
@@ -43,11 +42,11 @@ app.use(express.json());
 app.use(cookieParser());
 app.use('/uploads', express.static('uploads'));
 
-// GLOBAL ONLINE USERS MAP
-const onlineUsers = new Map();
-const unreadMessages = new Map(); // 🆕 Yeni xəritə
 
-// SOCKET.IO
+const onlineUsers = new Map();
+const unreadMessages = new Map(); 
+
+
 const io = new Server(server, {
   cors: {
     origin: (origin, callback) => {
@@ -81,7 +80,7 @@ app.use('/api/meals', mealRoutes);
 app.use('/api/shopping-list', shoppingListRoutes);
 app.use('/api/admin', adminRoutes);
 
-// SOCKET EVENTS
+
 io.on('connection', (socket) => {
   console.log('🔌 Yeni istifadəçi qoşuldu:', socket.id);
 
@@ -112,7 +111,7 @@ io.on('connection', (socket) => {
         text: 'Yeni mesajınız var',
       });
     } else {
-      // 🆕 Əgər qarşı tərəf offline-dursa, unreadMessages-a əlavə et
+     
       const existing = unreadMessages.get(receiverId) || [];
       unreadMessages.set(receiverId, [...existing, messagePayload]);
     }
@@ -136,7 +135,7 @@ io.on('connection', (socket) => {
     }
   });
 
-  // 🆕 Client chat-i açanda oxunmamış mesajları göndər
+ 
   socket.on('joinChat', ({ userId, partnerId }) => {
     const unread = unreadMessages.get(userId) || [];
     const related = unread.filter((msg) => msg.senderId === partnerId);
@@ -160,6 +159,6 @@ io.on('connection', (socket) => {
   });
 });
 
-// RUN SERVER
+
 const PORT = process.env.PORT || 5000;
 server.listen(PORT, () => console.log(`🚀 Server running on port ${PORT}`));
