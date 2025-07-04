@@ -129,15 +129,9 @@ exports.searchByIngredient = async (req, res) => {
       const normalizedIngredients = recipe.ingredients.map(i => normalize(i));
 
       return searchTerms.every(term => {
-        if (term.includes(' ')) {
-          
-          return normalizedIngredients.includes(term);
-        } else {
-          
-          return normalizedIngredients.some(ing => {
-            const words = ing.split(' ');
-          });
-        }
+        return normalizedIngredients.some(ing =>
+          ing.includes(term) && new RegExp(`\\b${term}\\b`).test(ing)
+        );
       });
     });
 

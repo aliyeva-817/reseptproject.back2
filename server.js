@@ -6,7 +6,7 @@ const cookieParser = require('cookie-parser');
 const http = require('http');
 const { Server } = require('socket.io');
 
-// ROUTES
+
 const connectDB = require('./config/db');
 const authRoutes = require('./routes/authRoutes');
 const recipeRoutes = require('./routes/recipeRoutes');
@@ -18,6 +18,7 @@ const chatRoutes = require('./routes/chatRoutes');
 const stripeRoutes = require('./routes/stripeRoutes');
 const adminRoutes = require('./routes/adminRoutes');
 const mealRoutes = require('./routes/mealRoutes');
+
 const shoppingListRoutes = require('./routes/shoppingListRoutes');
 
 const app = express();
@@ -60,14 +61,13 @@ const io = new Server(server, {
   },
 });
 
-// ADD io AND onlineUsers TO req
+
 app.use((req, res, next) => {
   req.io = io;
   req.ioUsers = onlineUsers;
   next();
 });
 
-// ROUTES
 app.use('/api/auth', authRoutes);
 app.use('/api/recipes', recipeRoutes);
 app.use('/api/favorites', favoriteRoutes);
